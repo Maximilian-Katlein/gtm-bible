@@ -12,6 +12,7 @@
 | [AI Building](themen/ai-building.md) | Agenten, Claude Code, MCP, Produkte mit AI bauen |
 | [Open-Weight-Modelle](themen/open-weight-modelle.md) | neue Modelle, Lizenzen, Hardware, Benchmarks mit Herkunft |
 | [Sovereign AI](themen/sovereign-ai.md) | EU AI Act, europäische Modelle und Clouds, Datenhoheit |
+| [Content, Storytelling und Kommunikation](themen/content-kommunikation.md) | Storytelling, klar sprechen, überzeugen, Video |
 
 Dazu [Personen](personen/): alles, was ausgewählte Praktiker lehren, über alle ihre Inhalte hinweg.
 
