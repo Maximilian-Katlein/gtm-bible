@@ -1,23 +1,37 @@
 # Disruptive AI-Geschäftsideen
 
-Diese Seite sammelt, wie Gründer KI-Geschäftsideen finden und prüfen, wo vertikale KI-Anbieter Schutz vor Wettbewerb haben und welche Signale aus dem KI-Hardwaremarkt belastbar sind. Sie hält fest, was belegt ist, unter welchen Bedingungen es gilt und wo Quellen sich widersprechen.
+Diese Seite sammelt, wie Gründer KI-Geschäftsideen finden und prüfen, wo vertikale KI-Anbieter Schutz vor Wettbewerb haben, wie sich Publikum und Wissen mit geringen Kosten monetarisieren lassen und welche Signale aus KI-Hardware und Websuche belastbar sind. Sie hält fest, was belegt ist, unter welchen Bedingungen es gilt und wo Quellen sich widersprechen.
 
-Stand: 2026-11-14 · 3 Quellen · 15 Learnings
+Stand: 2026-11-15 · 7 Quellen · 24 Learnings
 
 ## Taktiken und Abläufe
+
+### Ideensuche über Reddit
 
 - **Mittelgroße, wachsende Subreddits statt der größten.** Für die Ideensuche Subreddits mit 10.000 bis 100.000 Mitgliedern filtern und nach Wachstum sortieren. Laut Isenberg deutet die mittlere Größe auf neuere, gerade trendende Communities hin und beantwortet so die Why-now-Frage. Gilt für Einzelgründer und Nebenprojekte, deren Zielgruppe auf Reddit aktiv ist. Beleg: Anekdote. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
 - **Drei Fragen je Community.** Beim Durchsehen notieren: Ist das interessant? Habe ich einen unfairen Vorteil durch eigene Betroffenheit oder Kontakte? Kann ich dafür etwas bauen? Besonders sinnvoll bei persönlichem Bezug zur Nische. Beleg: Anekdote. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
 - **Zeitfenster wechseln, regelmäßig wiederholen.** Wachstum täglich, wöchentlich und monatlich ansehen, weil die Tagesansicht Treffer zeigt, die in der Monatsansicht untergehen. Die Trending-Liste alle paar Wochen erneut prüfen. Beleg: Anekdote. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
 - **Feste Auswertungsreihenfolge.** Erst Pain and Anger (Probleme), dann Advice Requests (Leute, die fragen, was sie kaufen sollen), zuletzt Solution Requests (bestehende Lösungen und Wettbewerb). Upvotes und Kommentare beachten. Schwellenwerte nennt die Quelle nicht, Zahlungsbereitschaft wird nicht geprüft. Beleg: Anekdote. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
 - **Beispiel Designagentur aus Reddit-Schmerz.** Aus Beiträgen von Startup-Gründern, deren Websites schön aussehen, aber nicht konvertieren, entwarf Isenberg eine Designagentur mit Fokus auf Copy und Conversion. Wireframe in wenigen Stunden in Framer, danach Posts darüber. Wie daraus Kunden wurden, bleibt offen. Beleg: Anekdote. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
+
+### Vertikale KI und Automatisierung
+
 - **Beispiel vertikale KI mit multimodaler Hürde.** Patentarbeit gilt als Legal Tech, verlangt aber die Verarbeitung von chemischen Strukturen, technischen Zeichnungen, Sequenzen, Gleichungen und Tabellen. Diese Hürde hielten 2023 viele Kunden für unüberwindbar, sie schützt Spezialanbieter. Gilt für vertikale KI in technischen Fachbranchen. Beleg: eigene Daten. [Solve Intelligence](../quellen/2026/11/2026-11-14-solve-intelligence-millions-in-revenue-with-zero-salespeople.md)
+- **Klassifikator vor eine teure Eingangs-Queue setzen.** Einen Betrieb suchen, bei dem eingehende Informationen teuer oder langsam abgearbeitet werden, und ein schnelles Modell davorschalten. Beispiel aus der Quelle: ein Vermittler lokaler Dienstleistungen, der Anfragen sofort dem passenden Anbieter zuordnet. Gilt für Startups und SMB; ein umgesetzter Fall wird nicht gezeigt. Beleg: Behauptung ohne Beleg. [Jev-Video](../quellen/2026/11/2026-11-15-jev-is-here-how-to-use-it.md)
+
+### Geschäftsmodelle mit geringen Kosten
+
+- **Mit KI klein starten, dann gezielt aufstocken.** Der Gastgeber startete sein Medienunternehmen mit KI fast ohne Betriebskosten, neun Monate bis ein Jahr zu zweit. Erst danach stellte er Editor, Social-Poster und Grafiker ein, um die Content-Geschwindigkeit zu erhöhen. Gilt für digitale Medien- und Content-Unternehmen. Beleg: eigene Daten. [GaryVee-Interview](../quellen/2026/11/2026-11-15-garyvee-reveals-how-he-runs-his-400m-year-agency.md)
+- **Newsletter-Nische rückwärts aus der Monetarisierung wählen.** Bei Werbemodell zuerst fragen, wer das Publikum erreichen muss. Laut Denk sind kleine, kaufkräftige Zielgruppen für B2B-Werbetreibende wertvoller als Massenreichweite. Gilt bei Werbung als Einkommensmodell und Zielgruppe mit hoher Kaufkraft. Beleg: Behauptung ohne Beleg. [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
 
 ## Zahlen und Richtwerte
 
 - **10.000 bis 100.000 Mitglieder** als Suchfenster für wachsende Subreddits. Beleg: Anekdote. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
 - **Seven-Figure-Business aus der Reddit-Methode.** Isenberg nennt designscientist.com ein siebenstelliges Geschäft aus dieser Methode und sagt, Reddit-Ideen hätten ihm mehrere Multi-Millionen-Unternehmen gebracht. Umsatz, Zeitraum und Anteil der Reddit-Recherche am Erfolg belegt er nicht. Beleg: Behauptung ohne Beleg. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
 - **250 Milliarden US-Dollar NVIDIA/OpenAI.** Einziger konkreter Betrag im Bericht: ein Deal zwischen NVIDIA und OpenAI, den CFO Colette Kress laut WSJ zurückfahren wollte. Laufzeit, Struktur und Anteil an Zirkelfinanzierung sind unbekannt, die Bezugsbasis ebenfalls. Beleg: Behauptung ohne Beleg. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
+- **5.000 CMOs oder 50.000 technische KI-Leser** nennt Denk als Publikumsgrößen, die für B2B-Werbetreibende wertvoller sind als Massenreichweite. Beleg: Behauptung ohne Beleg. [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
+- **Rund 1.000 Verkäufe zu 10 $, rund 10.000 $ Umsatz aus vorhandenem Material.** Denk verkaufte ein bestehendes Vortragsdeck plus 30-Minuten-Video nach drei Bewerbungen im Newsletter, die Umwandlung zum Produkt dauerte 10 Minuten. Dazu Beratungsstunden zu 1.000 $ mit vier Buchungen. Bedingung: Publikum von 130.000 Lesern, Inhalte bereits fertig. Beleg: eigene Daten. [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
+- **8 Teilnehmer zu je 10.000 $ für fünf Tage.** Auf die Ankündigung eines Founder Masterminds im Newsletter kamen etwa 40 Bewerbungen. Laut Denk sein margenstärkstes Produkt. Bedingung: genaue Kenntnis der Zielgruppe, laut Umfrage 60 % Gründer. Beleg: eigene Daten. [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
 
 ## Werkzeuge
 
@@ -28,6 +42,9 @@ Stand: 2026-11-14 · 3 Quellen · 15 Learnings
 
 - „I think the fact that everything is scarce is fantastic for us“: Ein TechPowerUp-Kommentar zitiert diesen Satz und deutet ihn im Licht des NVIDIA-Berichts. Urheber, Datum und Kontext nennt das Material nicht. Beleg: Behauptung ohne Beleg. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
 - „these are people screaming they want these products to exist“: Isenbergs Beschreibung der Advice Requests als stärkstes Nachfragesignal. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
+- „find a business with an expensive queue of incoming information and then just put Jev at the front of that queue.“: Kurzform des Klassifikator-Musters. [Jev-Video](../quellen/2026/11/2026-11-15-jev-is-here-how-to-use-it.md)
+- „If you wrote a newsletter to 5,000 CMOs, that audience is so valuable“: Denks Argument für kleine, kaufkräftige Nischen. [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
+- „the ability to build a company with low OPEX if you can utilize AI“: Begründung des Gastgebers für den kostenarmen Start. [GaryVee-Interview](../quellen/2026/11/2026-11-15-garyvee-reveals-how-he-runs-his-400m-year-agency.md)
 
 ## Warnungen und Fehler
 
@@ -35,6 +52,8 @@ Stand: 2026-11-14 · 3 Quellen · 15 Learnings
 - **Vom Hersteller finanzierte Nachfrage.** Laut WSJ-Bericht investierte NVIDIA in KI-Startups, die das Kapital für NVIDIA-GPUs und Rechenzentren ausgaben. Ein Teil der sichtbaren GPU-Nachfrage wäre damit vom Hersteller selbst finanziert. Nur zitiert nach WSJ über Wccftech, keine Dokumente. Beleg: Behauptung ohne Beleg. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
 - **Überangebot beim Hersteller ist nicht Knappheit beim Käufer.** Der Bericht beschreibt eine „Lawine“ von TSMC-GPUs ohne unmittelbare Käufer, die Überschrift spricht trotzdem von Knappheit. Bei Marktberichten zu Compute-Knappheit beide Signale getrennt lesen. Beleg: Behauptung ohne Beleg. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
 - **Neuigkeitswert prüfen.** Ein Kommentar verweist auf einen Guardian-Artikel vom 2025-12-28 zur Zirkelfinanzierung bei NVIDIA. Neu wären am Bericht nur die behauptete Absicht und der interne Streit. Der verlinkte Artikel wurde nicht gelesen. Beleg: Behauptung ohne Beleg. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
+- **Bot-Hinweise vertreiben Nutzer.** Ein Kommentator nutzt Google wegen ständiger Hinweise auf verdächtige Aktivität seiner IP seit Monaten nicht mehr, ein anderer seit Jahren nicht. Genannt werden DuckDuckGo, Brave Search und Kagi, jeweils ohne Begründung oder Vergleich. Gilt für Nutzer auf betroffenen Adressen im Consumer-Kontext. Beleg: Anekdote. [HN, Google-Login](../quellen/2026/11/2026-11-15-tell-hn-google-search-to-start-locking-down-search-behind-a.md)
+- **Login-Pflicht schließt Menschen ohne Smartphone aus.** Eine YouTube-Kontoerstellung scheiterte laut Bericht daran, dass ein Smartphone erwartet wurde. Das trifft auch Nutzer an geteilten oder öffentlichen Rechnern. Beleg: Anekdote. [HN, Google-Login](../quellen/2026/11/2026-11-15-tell-hn-google-search-to-start-locking-down-search-behind-a.md)
 
 ## Strittig
 
@@ -42,9 +61,16 @@ Stand: 2026-11-14 · 3 Quellen · 15 Learnings
   - Seite A: NVIDIA finanzierte Startups, die das Geld in NVIDIA-GPUs und Rechenzentren steckten, und erzeugte so einen Teil der Nachfrage selbst. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
   - Seite B: Beteiligungen mit Abschlag an Wachstumsfirmen, deren Investition als margenstarker Umsatz zurückfließt, sind verbreitetes Corporate Venturing. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
   - Bedingung, die den Unterschied vermutlich erklärt: Lesart B trägt nur, wenn die Empfänger später aus eigenen Einnahmen zahlen können. Genau diese Zahlungsfähigkeit bestreitet der Bericht für kleine Cloud-Anbieter. Beide Seiten stammen aus derselben Quelle (Bericht und Kommentar), beide ohne Beleg.
+- **Warum werden die Hürden für abgemeldete Websuche schärfer?**
+  - Erklärung A: Residential-Proxy-Botnetze. [HN, Google-Login](../quellen/2026/11/2026-11-15-tell-hn-google-search-to-start-locking-down-search-behind-a.md)
+  - Erklärung B: eine Flut von KI-Scrapern und Agenten. Ein Kommentar spitzt das zu: Dieselben Konzerne betrieben die Suche und die KI-Systeme, die sie belasten, und schadeten sich damit selbst. Meinung ohne Daten. [HN, Google-Login](../quellen/2026/11/2026-11-15-tell-hn-google-search-to-start-locking-down-search-behind-a.md)
+  - Erklärung C: eine bewusste Login-Strategie nach dem Vorbild sozialer Netzwerke. [HN, Google-Login](../quellen/2026/11/2026-11-15-tell-hn-google-search-to-start-locking-down-search-behind-a.md)
+  - Bedingung, die den Unterschied vermutlich erklärt: unklar, alle drei Erklärungen stammen aus Kommentaren desselben Threads und sind unbelegt. Wer Produkte auf Websuche baut, sollte keine davon als gesichert annehmen. Beleg: Behauptung ohne Beleg.
 
 ## Offene Fragen
 
 - Wie prüft man nach der Reddit-Suche Zahlungsbereitschaft, Marktgröße und Wettbewerb, und ab welchen Upvote- oder Kommentarzahlen ist ein Signal stark genug? Die Quelle nennt weder Vorgehen noch Schwellenwerte. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
 - Welcher Anteil der GPU-Nachfrage ist tatsächlich herstellerfinanziert, und wie ist der 250-Milliarden-Deal strukturiert? [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
 - Hält die multimodale Hürde in technischen Fachbranchen noch, seit 2023 die Modelle bei Bildern, Tabellen und Formeln zugelegt haben? [Solve Intelligence](../quellen/2026/11/2026-11-14-solve-intelligence-millions-in-revenue-with-zero-salespeople.md)
+- Funktioniert das Klassifikator-vor-Queue-Muster in der Praxis, und welche Branchen haben die teuersten Eingangs-Queues? Die Quelle zeigt keinen umgesetzten Fall. [Jev-Video](../quellen/2026/11/2026-11-15-jev-is-here-how-to-use-it.md)
+- Lassen sich Denks Produktzahlen ohne ein bestehendes Publikum von 130.000 Lesern annähernd erreichen? [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)

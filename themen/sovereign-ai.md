@@ -1,8 +1,8 @@
 # Sovereign AI
 
-Diese Seite sammelt, was Unternehmen beachten müssen, wenn sie KI-Modelle unabhängig von einzelnen Anbietern, Regionen und Vertragsbedingungen betreiben wollen. Sie fasst Belege zu Verfügbarkeit, Hardware- und Compute-Kosten, lokalem und Offline-Betrieb, Lizenzen und Offenheit, Code-Prüfung, Cloud-Bindung von Agenten-Tools und politischer Verzerrung offener Modelle zusammen.
+Diese Seite sammelt, was Unternehmen beachten müssen, wenn sie KI-Modelle unabhängig von einzelnen Anbietern, Regionen und Vertragsbedingungen betreiben wollen. Sie fasst Belege zu Verfügbarkeit, Hardware- und Compute-Kosten, lokalem und Offline-Betrieb, Lizenzen und Offenheit, Herkunft und Rechtsstatus von Trainingsdaten, Code-Prüfung, Cloud-Bindung von Agenten-Tools und politischer Verzerrung offener Modelle zusammen.
 
-Stand: 2026-11-14 · 15 Quellen · 33 Learnings
+Stand: 2026-11-15 · 18 Quellen · 37 Learnings
 
 ## Was mehrfach belegt ist
 
@@ -18,15 +18,16 @@ Stand: 2026-11-14 · 15 Quellen · 33 Learnings
   - *Bedingung:* Kommerzielle, souveräne und Sovereign-AI-Setups, insbesondere in der EU. Bei Inkling alle, die das Modell in Produkten einsetzen oder weitergeben.
   - *Beleglage:* Bei LFM3, Mirage, DSpine und LongCat Herstellerangaben, bei Edge0, Unsloth und Inkling Behauptung ohne Beleg.
   - [LFM3-1.7B Model Card](../quellen/2026/11/2026-11-13-liquidai-lfm3-1-7b-model-card-auf-hugging-face.md), [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [Unsloth Qwen3.8-27B](../quellen/2026/11/2026-11-14-unsloth-qwen3-8-27b-quantizations-dynamic-v3-1-update.md), [DSpine for Qwen3.8-27B](../quellen/2026/11/2026-11-14-tencent-qwen3-8-27b-dspine-b16-dspine-for-qwen3-8-27b.md), [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md)
-- **Trainingsdaten, Datenherkunft und Evaluierung bleiben bei offenen Modellen unbelegt (4 Quellen).**
+- **Trainingsdaten, Datenherkunft und Evaluierung bleiben bei offenen Modellen unbelegt (5 Quellen).**
   - Edge0 veröffentlicht nach dem Material nur Gewichte, Framework und Tools, aber keine Trainingsdaten und keinen Trainingscode.
   - Die Mirage-Card enthält keine Angaben zu Trainingsdaten, Datenherkunft oder EU-Konformität.
   - Die Card von Inkling 2 Small nennt keine Datenmenge, keinen Wissensstichtag, keinen Rechenaufwand und keine Sicherheitsevaluierung. Datenquellen stehen nur grob da (öffentlich, zugekauft, intern, synthetisch), zur Aufbereitung heißt es nur: „may include deduplication and filtering to remove junk or other low-quality data“.
   - Die LongCat-2.5-Card enthält keine Angaben zu Trainingsdaten, Datenrechten, Safety-Evaluation oder EU-Regulierung. Datenschutz, Privatsphäre und Inhaltssicherheit liegen ausdrücklich beim Betreiber.
+  - Das CCORE-Modell Qwen3.5-4B-GLB-3D-Coder ist ein Feintuning auf Qwen/Qwen3.5-4B. Für die Herkunft zählen die Basisgewichte, zu deren Trainingsdaten die Karte nichts sagt. Zur Bezeichnung „independently developed“ siehe „Warnungen und Fehler“.
   - Für Sovereign-AI-Anforderungen und Dokumentationspflichten etwa nach AI Act ist ein solches Modell auf Basis der Card allein nicht bewertbar.
-  - *Bedingung:* Öffentliche Hand, regulierte Branchen, EU-Beschaffung, kommerzielle Umgebungen, Compliance-Dokumentation.
-  - *Beleglage:* Bei Edge0 und Mirage Behauptung ohne Beleg, bei Inkling und LongCat Herstellerangabe.
-  - [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md)
+  - *Bedingung:* Öffentliche Hand, regulierte Branchen, EU-Beschaffung, kommerzielle Umgebungen, Compliance-Dokumentation, Herkunfts- und Lizenzkettenprüfung.
+  - *Beleglage:* Bei Edge0 und Mirage Behauptung ohne Beleg, bei Inkling, LongCat und CCORE Herstellerangabe.
+  - [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md), [CCORE Qwen3.5-4B-GLB-3D-Coder](../quellen/2026/11/2026-11-15-ccore-qwen3-5-4b-glb-3d-coder.md)
 - **Mitgelieferten Modellcode vor dem Einsatz prüfen (3 Quellen).**
   - Kimi K3.1 Pro bringt eigenen Code mit (custom_code), der vor dem Einsatz geprüft werden muss.
   - LFM3-1.7B verlangt beim Laden mit Transformers „trust_remote_code=True,“. Dabei wird Modellcode aus dem Repo ausgeführt.
@@ -59,6 +60,13 @@ Stand: 2026-11-14 · 15 Quellen · 33 Learnings
   - *Bedingung:* Teams mit Anforderungen an Datenhoheit, Firmen mit Sitz oder Kunden in der EU, Unternehmen, die Code oder Daten nicht in einer Anbieter-Cloud verarbeiten dürfen.
   - *Beleglage:* Beim Kurs Einschätzung ohne Beleg, bei AgentRun aus dem README abgeleitet, bei Projects Herstellerangabe.
   - [AgentRun (Show HN)](../quellen/2026/11/2026-11-13-show-hn-agentrun-open-source-self-improving-managed-agents.md), [Building AI Agents (Kurs)](../quellen/2026/11/2026-11-13-building-ai-agents-that-actually-work-full-course.md), [Claude Code Projects](../quellen/2026/11/2026-11-14-anthropic-upgrades-claude-code-projects-to-run-parallel-ai-w.md)
+- **Lokaler Betrieb heißt nicht offline (2 Quellen).**
+  - Mirage: Das Paket cactus-compute lädt Engine und Gewichte beim ersten Aufruf automatisch aus dem Netz: „The package downloads and caches the engine and weights on first use.“ Für Air-Gap- oder souveräne Umgebungen müssen Engine und Gewichte vorab bezogen werden. Den Offline-Betrieb muss man selbst verifizieren, die Card beschreibt ihn nicht.
+  - CCORE Qwen3.5-4B-GLB-3D-Coder: Das Modell läuft lokal, die erzeugten Three.js-Seiten laden Bibliotheken aber unter Umständen per CDN: „The page may load Three.js and its add-ons from a CDN.“ Für Offline- oder Air-Gap-Betrieb müssen Three.js und Add-ons selbst lokal bereitgestellt werden.
+  - Netzabhängigkeiten können also in der Runtime und im erzeugten Output stecken. Beides vor dem Einsatz in abgeschotteten Umgebungen prüfen. Zur Prüfung von mitgeliefertem Code siehe oben.
+  - *Bedingung:* Abgeschottete, regulierte oder souveräne Infrastruktur, Vorgaben ohne externe Abhängigkeiten.
+  - *Beleglage:* Herstellerangabe bei beiden.
+  - [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [CCORE Qwen3.5-4B-GLB-3D-Coder](../quellen/2026/11/2026-11-15-ccore-qwen3-5-4b-glb-3d-coder.md)
 
 ## Taktiken und Abläufe
 
@@ -79,7 +87,7 @@ Stand: 2026-11-14 · 15 Quellen · 33 Learnings
 - **Lokale Inferenz spart API-Gebühren, ist aber nicht kostenlos.**
   - Lokaler Betrieb vermeidet Token- und API-Gebühren, hält Daten auf dem Rechner und erlaubt Offline-Betrieb.
   - Hardware und Strom kosten weiter Geld: „Hardware and electricity still cost money.“
-  - Eine Gesamtkostenrechnung liefert der Hersteller nicht. Zum Anteil der Energie an den Compute-Kosten siehe „Zahlen und Richtwerte“, zum Hardwarebedarf großer Modelle siehe „Was mehrfach belegt ist“.
+  - Eine Gesamtkostenrechnung liefert der Hersteller nicht. Zum Anteil der Energie an den Compute-Kosten siehe „Zahlen und Richtwerte“, zum Hardwarebedarf großer Modelle siehe „Was mehrfach belegt ist“, zum lokalen Server mit kompatiblen Endpunkten siehe „Werkzeuge“.
   - *Bedingung:* Ein Kostenvorteil entsteht nur, wenn passende Hardware bereits vorhanden ist.
   - *Beleglage:* Herstellerangabe.
   - [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md)
@@ -140,6 +148,13 @@ Stand: 2026-11-14 · 15 Quellen · 33 Learnings
 
 ## Werkzeuge
 
+- **edge0-infer serve: lokaler Server mit OpenAI- und Anthropic-kompatiblen Endpunkten.**
+  - Der Befehl startet einen Server auf 127.0.0.1:8000: „and then serves OpenAI- and Anthropic-compatible endpoints“.
+  - Bestehende Clients lassen sich per Basis-URL umstellen, ohne dass Daten die eigene Maschine verlassen.
+  - Zur fehlenden Lizenzangabe von Edge0 siehe „Was mehrfach belegt ist“, zu den laufenden Kosten lokaler Inferenz siehe „Taktiken und Abläufe“.
+  - *Bedingung:* NVIDIA mit CUDA 13 (Linux, Windows) oder Apple Silicon mit Metal, dort nur Q3_K.
+  - *Beleglage:* Herstellerangabe.
+  - [Edge0-145B-NVFP4 Model Card](../quellen/2026/11/2026-11-15-edge0-edge0-145b-nvfp4-model-card-auf-hugging-face.md)
 - **Arete-27B ist ein bewusster Perspektivwechsel, keine Neutralität.**
   - Nous Research positioniert das Modell ausdrücklich in Richtung westlicher Werte.
   - Die Begründung ist Wahlfreiheit für Nutzer offener Modelle: „The users of a model deserve optionality in which values they work with.“
@@ -181,17 +196,6 @@ Stand: 2026-11-14 · 15 Quellen · 33 Learnings
   - *Beleglage:* Behauptung ohne Beleg.
   - [Claude Code Projects](../quellen/2026/11/2026-11-14-anthropic-upgrades-claude-code-projects-to-run-parallel-ai-w.md)
 
-### Offline- und Air-Gap-Betrieb
-
-- **Mirage lädt Engine und Gewichte beim ersten Aufruf aus dem Netz.**
-  - Das Paket cactus-compute lädt beim ersten Aufruf automatisch nach: „The package downloads and caches the engine and weights on first use.“
-  - Für Air-Gap- oder souveräne Umgebungen müssen Engine und Gewichte vorab bezogen werden.
-  - Den Offline-Betrieb muss man selbst verifizieren, die Card beschreibt ihn nicht.
-  - Zur Prüfung von mitgeliefertem Code siehe „Was mehrfach belegt ist“.
-  - *Bedingung:* Abgeschottete, regulierte oder souveräne Infrastruktur.
-  - *Beleglage:* Herstellerangabe.
-  - [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md)
-
 ### Lücken in Model Cards
 
 - **Bei Kimi K3.1 Pro bleibt vieles offen, das man für den Betrieb selbst klären muss.**
@@ -210,6 +214,21 @@ Stand: 2026-11-14 · 15 Quellen · 33 Learnings
   - *Bedingung:* Vor Einsatz in souveränen oder kommerziellen Umgebungen die Lizenz prüfen.
   - *Beleglage:* Behauptung ohne Beleg.
   - [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md)
+- **„Independently developed“ heißt nicht eigene Basis.**
+  - Das CCORE-Modell wird als unabhängig entwickelt bezeichnet, ist technisch aber ein Feintuning von Qwen/Qwen3.5-4B: „This independently developed CCORE model was trained using Qwen/Qwen3.5-4B as its base.“
+  - Für Herkunfts-, Lizenzketten- und Souveränitätsprüfungen zählen die Basisgewichte. Zu deren Trainingsdaten sagt die Karte nichts, siehe „Was mehrfach belegt ist“.
+  - *Bedingung:* Bewertung von Herkunft und Compliance bei Open-Weight-Modellen.
+  - *Beleglage:* Herstellerangabe.
+  - [CCORE Qwen3.5-4B-GLB-3D-Coder](../quellen/2026/11/2026-11-15-ccore-qwen3-5-4b-glb-3d-coder.md)
+
+### Rechtsstatus von Trainingsdaten
+
+- **In den USA gemeinfreie Texte sind außerhalb der USA nicht automatisch frei.**
+  - Trainingstexte, die in den USA gemeinfrei sind, können anderswo einen anderen Rechtsstatus haben: „Public-domain status outside the US may differ.“
+  - Für eigene Nachtrainings in der EU ist das gesondert zu prüfen.
+  - *Bedingung:* Nutzung US-gemeinfreier Korpora außerhalb der USA. Im Projekt selbst nicht geprüft.
+  - *Beleglage:* Eigene Daten des Projekts.
+  - [DeepSeek V3 in Jax (Show HN)](../quellen/2026/11/2026-11-15-show-hn-deepseek-v3-in-200-lines-of-pure-jax.md)
 
 ## Offene Fragen
 
@@ -253,3 +272,6 @@ Stand: 2026-11-14 · 15 Quellen · 33 Learnings
 - **Läuft Mirage nach dem Vorab-Download vollständig offline?**
   - Die Card beschreibt keinen Offline-Betrieb, ein eigener Test steht aus.
   - [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md)
+- **Welchen Rechtsstatus haben US-gemeinfreie Trainingskorpora in der EU?**
+  - Die Quelle weist nur auf mögliche Unterschiede hin und hat sie selbst nicht geprüft.
+  - [DeepSeek V3 in Jax (Show HN)](../quellen/2026/11/2026-11-15-show-hn-deepseek-v3-in-200-lines-of-pure-jax.md)
