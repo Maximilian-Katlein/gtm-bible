@@ -2,7 +2,7 @@
 
 Diese Seite sammelt, was Unternehmen beachten müssen, wenn sie KI-Modelle unabhängig von einzelnen Anbietern, Regionen und Vertragsbedingungen betreiben wollen. Sie fasst Belege zu Verfügbarkeit, Hardware- und Compute-Kosten, lokalem und Offline-Betrieb, Lizenzen und Offenheit, Herkunft und Rechtsstatus von Trainingsdaten, Code-Prüfung, Cloud-Bindung von Agenten-Tools und politischer Verzerrung offener Modelle zusammen.
 
-Stand: 2026-11-15 · 18 Quellen · 37 Learnings
+Stand: 2026-11-15 · 20 Quellen · 44 Learnings
 
 ## Was mehrfach belegt ist
 
@@ -230,8 +230,21 @@ Stand: 2026-11-15 · 18 Quellen · 37 Learnings
   - *Beleglage:* Eigene Daten des Projekts.
   - [DeepSeek V3 in Jax (Show HN)](../quellen/2026/11/2026-11-15-show-hn-deepseek-v3-in-200-lines-of-pure-jax.md)
 
+## Analystensicht: Gartner-Trends 2026 und 2027
+
+Gartner-Prognosen nennen Zieljahr und Prozentwert, die Methodik ist nicht offengelegt. Gartner verkauft Beratung und Research-Abos.
+
+- **Geopatriation: zwei Lesarten derselben Prognose.** Das E-Book sagt, 75 % der Unternehmen verlagern Workloads bis 2030 aus globalen Clouds in souveräne oder lokale Umgebungen. Die Pressemitteilung zur selben Liste nennt über 75 % der Unternehmen in Europa und dem Nahen Osten, von unter 5 % im Jahr 2025. Für europäische Planung ist die zweite Lesart die passende; die Grundgesamtheit ist uneinheitlich angegeben. *Bedingung:* Europa und Naher Osten laut Pressemitteilung, global laut E-Book. Beleg: Prognose ohne Methodik. [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
+- **Workloads nach geopolitischem Risiko einstufen.** Gartners Ablauf zur Geopatriation: Workloads nach Sensibilität und geopolitischem Risiko bewerten, souveräne Angebote der Hyperscaler gegen lokale Anbieter vergleichen, souveräne Cloud mit On-Premises oder Colocation kombinieren, Attestierung und Souveränitätsrahmen einführen und die Platzierung laufend nachziehen. Die Optionen reichen von der souveränen Hyperscaler-Region über partnerbetriebene Regionen bis zum eigenen Rechenzentrum. *Bedingung:* Unternehmen mit Workloads bei globalen Hyperscalern. Beleg: Behauptung ohne Beleg. [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
+- **Confidential Computing für Daten in Verarbeitung.** Confidential Computing schützt Daten während der Verarbeitung in hardwarebasierten Trusted Execution Environments, auch gegenüber dem Cloud-Anbieter. Gartner erwartet, dass bis 2029 75 % der Verarbeitung auf nicht vertrauenswürdiger Infrastruktur so geschützt sind. Schritte: betroffene Workloads kartieren, TEEs mit eigenen und offenen Modellen testen, eigene Schlüsselverwaltung aufbauen. Mehr Kontrolle heißt mehr Kosten und Betriebsaufwand. *Bedingung:* Sensible Workloads in fremder Infrastruktur. Beleg: Prognose ohne Methodik. [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
+- **SovereignTech heißt Ausstieg ermöglichen.** Gartner definiert SovereignTech als Hardware, Software, Datenbanken und Modelle, die technisch und rechtlich realistische Exit-Strategien von kritischen Anbietern erlauben und dauerhaft verfügbar bleiben. Begründung: der US CLOUD Act, DORA mit vertraglich verlangten Cloud-Exit-Strategien und CADA, dazu der Wertabfluss durch Abo- und API-Gebühren an ausländische Anbieter. *Bedingung:* EU-Unternehmen, besonders Finanzsektor unter DORA. Beleg: Behauptung ohne Beleg. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **Souveränitätsstrategien außerhalb der USA.** Gartner erwartet, dass bis 2030 über 75 % der Organisationen außerhalb der USA Strategien für digitale Souveränität umsetzen und kritische Workloads verlagern, um geopolitische Risiken und Lock-in zu senken. *Bedingung:* Organisationen außerhalb der USA. Beleg: Prognose ohne Methodik. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **Anbieter nach Abschaltrisiko fragen.** Gartners Schritte zu SovereignTech: private, On-Premises- und Ökosystem-Alternativen zur Public Cloud bewerten; Technik der Vorgeneration kreativ nutzen und mit vertrauenswürdigen Partnern teilen; Trusted Tech Alliance und EU Tech Sovereignty Package beobachten; Anbieter nach souveränen Lieferoptionen und Zusagen ohne Abschaltmöglichkeit fragen. Der Einkauf bewertet nach Exit-Optionen, nicht nur nach Kosten und Funktion. *Bedingung:* Einkauf und Architektur kritischer Dienste. Beleg: Behauptung ohne Beleg. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **Von Datenstandort zu Ausstiegsfähigkeit.** Im Vergleich der beiden Gartner-Listen verschiebt sich die Frage: 2026 ging es bei Geopatriation darum, wo Workloads laufen; 2027 geht es bei SovereignTech darum, ob man aussteigen kann, wenn ein Anbieter Modelle einschränkt, ändert oder zurückzieht. Gartner warnt zusätzlich, dass eigene Daten dauerhaft in fremde Modellgewichte eingehen können. *Bedingung:* EU-Unternehmen mit KI auf fremden Modellen. Beleg: Behauptung ohne Beleg. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+
 ## Offene Fragen
 
+- Welche Grundgesamtheit gilt für Gartners Geopatriation-Prognose: alle Unternehmen (E-Book) oder Europa und Naher Osten mit Ausgangswert unter 5 % (Pressemitteilung)? [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
 - **Mit welcher Genauigkeit wurden die 2,84 TB gerechnet?**
   - Der Wert in den Metadaten (2.780.110.363.392) ist vermutlich die Zahl der Parameter.
   - Wie viel Speicher die Gewichte brauchen, hängt von den angenommenen Datentypen ab. Mit quantisierten Gewichten kann der Bedarf deutlich anders ausfallen.

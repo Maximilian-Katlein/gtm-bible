@@ -2,7 +2,7 @@
 
 Diese Seite sammelt, was Quellen über den Einsatz von KI im Vertrieb und im B2B-Verkauf sagen: Modellwahl für Sales-Research, KI-gestützter Outreach, Lead-Qualifizierung, Agenten im Vertriebsablauf, Gründervertrieb für KI-Produkte und den Verkauf von KI an Enterprise und öffentliche Hand. Dazu kommen Gesprächs-, Pitch-, Verhandlungs- und Organisationstaktiken, die solche Abläufe ergänzen, jeweils mit Bedingung, Art des Belegs und Quelle.
 
-Stand: 2026-11-15 · 15 Quellen · 52 Learnings
+Stand: 2026-11-15 · 16 Quellen · 56 Learnings
 
 ## Was mehrfach belegt ist
 
@@ -206,6 +206,15 @@ Stand: 2026-11-15 · 15 Quellen · 52 Learnings
   - Ja: Bei kleineren Zielkunden bucht laut Vercel E-Mail allein die meisten Meetings, erst bei Enterprise und Fortune 500 braucht es zusätzlich Anruf und Social Outreach. Bedingung: B2B, Kanalwahl nach Firmengröße. Beleg: eigene Daten. [Vercel COO](../quellen/2026/11/2026-11-15-how-to-get-ai-agents-to-recommend-your-business-vercel-coo.md)
   - Nein: Beim Outreach an lokale Makler brachten E-Mails laut dem Gast null Konversion, SMS dagegen etwas Traktion. Bedingung: lokale Makler, Kleinbetrieb in den USA. Beleg: eigene Daten. [Scale or Fail Ep. 1](../quellen/2026/11/2026-11-09-give-me-42-minutes-i-ll-show-you-how-to-sell-like-the-top-1.md)
   - Vermutete Erklärung: Zielgruppe und Absender. Einzelne Makler arbeiten mobil und lesen Geschäftsmails seltener als Mitarbeitende in Firmen, die Software einkaufen. Dazu schreibt Vercel als bekannte Marke, teils an Leute mit eigenem Konto, während der Kleinbetrieb kalt und unbekannt anschreibt.
+
+## Analystensicht: Gartner-Trends 2026 und 2027
+
+Gartner-Prognosen nennen Zieljahr und Prozentwert, die Methodik ist nicht offengelegt. Gartner verkauft Beratung und Research-Abos.
+
+- **Sprachinteraktionen werden autonom.** Gartner erwartet, dass bis 2030 über 70 % der Sprachinteraktionen von Unternehmen autonom von Sprachmodellen bearbeitet werden, 2026 sind es unter 10 %. Sprache bleibt laut Gartner der Kanal mit dem höchsten Volumen, ein Jahrzehnt Support-Automatisierung habe Genauigkeit und Lösungsquote nicht geliefert. *Bedingung:* Kundenservice und Telefonie großer Unternehmen. Beleg: Prognose ohne Methodik. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **Von IVR über Kaskade zu Reasoning auf Audio.** Gartner beschreibt drei Stufen: menügeführte IVR, Kaskade aus Speech-to-Text, Sprachmodell und Text-to-Speech, und Speech Reasoning Models, die direkt auf Audio schließen. Die letzte Stufe hält Ton, Emotion und Absicht und soll mehrstufige, urteilsintensive Gespräche mit Themenwechseln und Fehlerkorrektur automatisierbar machen. *Bedingung:* Sprachkanäle mit komplexen Anliegen. Beleg: Behauptung ohne Beleg. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **Sprachagenten: Regeln, Routing, Katalog.** Gartners Einstieg in drei Schritten: zuerst strenge Regeln zu Einwilligung, Datenschutz und Audit-Log je Rechtsraum mit klaren Owners; dann Gespräche nach Komplexität einteilen und zwischen schnellen Modellen und tiefem Reasoning routen; vor jeder Domänenanpassung die häufigsten aufgezeichneten Gespräche katalogisieren. *Bedingung:* Unternehmen vor dem Einsatz von Sprachagenten. Beleg: Behauptung ohne Beleg. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **Ein einzelnes Sprachmodell ohne Aufsicht ist riskant.** Laut Gartner schließen sprachnative Systeme flacher als textbasierte Modelle. Wer sich auf ein einzelnes, unbeaufsichtigtes Sprachmodell verlässt, geht ein Sicherheitsrisiko ein. Daraus folgt das Routing nach Komplexität. *Bedingung:* Alle Sprachagenten mit Kundenkontakt. Beleg: Behauptung ohne Beleg. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
 
 ## Offene Fragen
 

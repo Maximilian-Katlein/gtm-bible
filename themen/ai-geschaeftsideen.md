@@ -2,7 +2,7 @@
 
 Diese Seite sammelt, wie Gründer KI-Geschäftsideen finden und prüfen, wo vertikale KI-Anbieter Schutz vor Wettbewerb haben, wie sich Publikum und Wissen mit geringen Kosten monetarisieren lassen und welche Signale aus KI-Hardware und Websuche belastbar sind. Sie hält fest, was belegt ist, unter welchen Bedingungen es gilt und wo Quellen sich widersprechen.
 
-Stand: 2026-11-15 · 7 Quellen · 24 Learnings
+Stand: 2026-11-15 · 8 Quellen · 29 Learnings
 
 ## Taktiken und Abläufe
 
@@ -66,6 +66,16 @@ Stand: 2026-11-15 · 7 Quellen · 24 Learnings
   - Erklärung B: eine Flut von KI-Scrapern und Agenten. Ein Kommentar spitzt das zu: Dieselben Konzerne betrieben die Suche und die KI-Systeme, die sie belasten, und schadeten sich damit selbst. Meinung ohne Daten. [HN, Google-Login](../quellen/2026/11/2026-11-15-tell-hn-google-search-to-start-locking-down-search-behind-a.md)
   - Erklärung C: eine bewusste Login-Strategie nach dem Vorbild sozialer Netzwerke. [HN, Google-Login](../quellen/2026/11/2026-11-15-tell-hn-google-search-to-start-locking-down-search-behind-a.md)
   - Bedingung, die den Unterschied vermutlich erklärt: unklar, alle drei Erklärungen stammen aus Kommentaren desselben Threads und sind unbelegt. Wer Produkte auf Websuche baut, sollte keine davon als gesichert annehmen. Beleg: Behauptung ohne Beleg.
+
+## Analystensicht: Gartner-Trends 2026 und 2027
+
+Gartner-Prognosen nennen Zieljahr und Prozentwert, die Methodik ist nicht offengelegt. Gartner verkauft Beratung und Research-Abos.
+
+- **Wegwerf-Anwendungen als Markt.** Gartner erwartet, dass SaaS-Müdigkeit und KI-getriebener Software-Überfluss führende Organisationen bis 2030 dazu bringen, 80 % neuer Anwendungen wegwerfbar und leicht ersetzbar zu bauen. Lebenszyklus: Bedarf, Design mit Ablaufdatum und Stilllegungskriterien, Bau auf freigegebenen Plattformen, Betrieb, Bewertung, saubere Stilllegung. Für Anbieter heißt das: Geschäft mit schnell gebauten Anwendungen auf Zeit statt mit Dauerlizenzen. *Bedingung:* Unternehmenssoftware, führende Organisationen. Beleg: Prognose ohne Methodik. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **SaaS-Verlängerung als Anlass.** Gartner rät Käufern, SaaS-Verlängerungen als Hebel zu nutzen, um Lizenzzahlen zu senken und offene APIs zu sichern. Für Anbieter von Eigenbau-Lösungen ist die anstehende Verlängerung damit ein konkreter Gesprächsanlass. *Bedingung:* B2B-Software mit Jahresverträgen. Beleg: Behauptung ohne Beleg. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **Rechnen nicht dem Sprachmodell überlassen.** Gartner führt Large Quantitative Models als Trend: Sprachmodelle raten bei Mathematik probabilistisch, quantitative Modelle rechnen deterministisch mit Formeln, Statistik und numerischen Verfahren und brauchen weniger Speicher und Rechenleistung. Empfohlen wird die Kombination aus Gesprächsstärke des Sprachmodells und deterministischer Rechnung, etwa für Finanzrisiko, Lieferketten und Energieprognosen. Prognose: Ersatz von Sprachmodellen in 25 % der Prognose- und Modellierungsaufgaben bis 2030. *Bedingung:* Prognose, Planung und Rechenaufgaben. Beleg: Prognose ohne Methodik. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **World Models werden bezahlbar.** Laut Gartner fallen die Trainingskosten von World Models innerhalb von drei Jahren um das Zehnfache, was Simulationen für Unternehmen wirtschaftlich macht. 40 % der Robotikanwendungen nutzen sie bis 2030, 2025 unter 1 %. *Bedingung:* Robotik, autonome Systeme, Simulation. Beleg: Prognose ohne Methodik. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **Wetware as a Service ist Forschung.** Gartner listet biologisches Rechnen als Cloud-Dienst: im Labor gezüchtete Neuronen rechnen sehr energiearm, Startups hosten sie remote. Prognose: 25 % der Unternehmen mit Fokus auf energiearme KI setzen es bis 2030 ein. Die eigenen Schritte zeigen die Reife: Schutz gegen Zellsterben und Prozessorausfall, interdisziplinäre Teams mit Neurowissenschaft und Ethik. Für ein Geschäft heute ein Beobachtungsthema. *Bedingung:* Forschungsnahe Organisationen. Beleg: Prognose ohne Methodik. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
 
 ## Offene Fragen
 
