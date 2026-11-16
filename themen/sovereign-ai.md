@@ -1,8 +1,8 @@
 # Sovereign AI
 
-Diese Seite sammelt, was Unternehmen beachten müssen, wenn sie KI-Modelle unabhängig von einzelnen Anbietern, Regionen und Vertragsbedingungen betreiben wollen. Sie fasst Belege zu Verfügbarkeit, Hardware- und Compute-Kosten, lokalem und Offline-Betrieb, Lizenzen und Offenheit, Herkunft und Rechtsstatus von Trainingsdaten, Code-Prüfung, Cloud-Bindung von Agenten-Tools und politischer Verzerrung offener Modelle zusammen.
+Diese Seite sammelt, was Unternehmen beachten müssen, wenn sie KI-Modelle unabhängig von einzelnen Anbietern, Regionen und Vertragsbedingungen betreiben wollen. Sie fasst Belege zu Verfügbarkeit, Exit-Strategien, Hardware- und Compute-Kosten, lokalem, hybridem und Offline-Betrieb, Lizenzen und Offenheit, Herkunft und Rechtsstatus von Trainingsdaten, Code-Prüfung, Hintertüren in Modellen, Cloud-Bindung von Agenten-Tools und politischer Verzerrung offener Modelle zusammen.
 
-Stand: 2026-11-15 · 20 Quellen · 44 Learnings
+Stand: 2026-11-16 · 22 Quellen · 49 Learnings
 
 ## Was mehrfach belegt ist
 
@@ -67,10 +67,18 @@ Stand: 2026-11-15 · 20 Quellen · 44 Learnings
   - *Bedingung:* Abgeschottete, regulierte oder souveräne Infrastruktur, Vorgaben ohne externe Abhängigkeiten.
   - *Beleglage:* Herstellerangabe bei beiden.
   - [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [CCORE Qwen3.5-4B-GLB-3D-Coder](../quellen/2026/11/2026-11-15-ccore-qwen3-5-4b-glb-3d-coder.md)
+- **Lokale Inferenz lohnt sich bei sensiblen Daten, Offline-Bedarf und hohen API-Kosten, ist aber nicht kostenlos (2 Quellen).**
+  - Lokaler Betrieb vermeidet Token- und API-Gebühren, hält Daten auf dem Rechner und erlaubt Offline-Betrieb (Edge0).
+  - Als Einsatzfälle, in denen sich lokale KI vor allem lohnt, nennt ein zweiter Beitrag: sensible Kundendaten, Offline- und Feldarbeit, niedrige Latenz, Audio- oder Kamera-Eingaben, hohe API-Kosten und häufig wiederholte interne Abläufe (02:10).
+  - Hardware und Strom kosten weiter Geld: „Hardware and electricity still cost money.“ Eine Gesamtkostenrechnung liefert keine der beiden Quellen.
+  - Zum Hybrid-Muster aus lokalem und Cloud-Modell siehe „Taktiken und Abläufe“, zum Anteil der Energie an den Compute-Kosten siehe „Zahlen und Richtwerte“, zum Hardwarebedarf großer Modelle siehe oben, zum lokalen Server mit kompatiblen Endpunkten siehe „Werkzeuge“.
+  - *Bedingung:* Bei Edge0 entsteht ein Kostenvorteil nur, wenn passende Hardware bereits vorhanden ist. Der zweite Beitrag richtet sich an Produktentwicklung und Gründer.
+  - *Beleglage:* Bei Edge0 Herstellerangabe, beim Beitrag zu lokaler KI Behauptung ohne Beleg.
+  - [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [I'm Obsessed With Local AI](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md)
 
 ## Taktiken und Abläufe
 
-### Anbieterauswahl
+### Anbieterauswahl und Exit-Strategie
 
 - **Drei Bausteine als Prüfraster für souveräne KI.**
   - Laut Mistral braucht es drei Dinge:
@@ -81,16 +89,67 @@ Stand: 2026-11-15 · 20 Quellen · 44 Learnings
   - *Bedingung:* Enterprise und Public Sector mit KI in Kernprozessen.
   - *Beleglage:* Behauptung ohne Beleg. Das Raster stammt von einem Anbieter, der genau diese drei Bausteine verkauft.
   - [Mistral-CEO-Interview](../quellen/2026/11/2026-11-13-mistral-ceo-why-openai-anthropic-will-come-for-your-business.md)
+- **Workloads nach geopolitischem Risiko einstufen.**
+  - Gartners Ablauf zur Geopatriation:
+    - Workloads nach Sensibilität und geopolitischem Risiko bewerten,
+    - souveräne Angebote der Hyperscaler gegen lokale Anbieter vergleichen,
+    - souveräne Cloud mit On-Premises oder Colocation kombinieren,
+    - Attestierung und Souveränitätsrahmen einführen,
+    - die Platzierung laufend nachziehen.
+  - Die Optionen reichen von der souveränen Hyperscaler-Region über partnerbetriebene Regionen bis zum eigenen Rechenzentrum.
+  - Zur Prognose, wie viele Unternehmen Workloads verlagern, siehe „Strittig“.
+  - *Bedingung:* Unternehmen mit Workloads bei globalen Hyperscalern.
+  - *Beleglage:* Behauptung ohne Beleg. Gartner verkauft Beratung und Research-Abos.
+  - [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
+- **SovereignTech heißt Ausstieg ermöglichen.**
+  - Gartner definiert SovereignTech als Hardware, Software, Datenbanken und Modelle, die technisch und rechtlich realistische Exit-Strategien von kritischen Anbietern erlauben und dauerhaft verfügbar bleiben.
+  - Begründung: der US CLOUD Act, DORA mit vertraglich verlangten Cloud-Exit-Strategien und CADA, dazu der Wertabfluss durch Abo- und API-Gebühren an ausländische Anbieter.
+  - *Bedingung:* EU-Unternehmen, besonders Finanzsektor unter DORA.
+  - *Beleglage:* Behauptung ohne Beleg.
+  - [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **Anbieter nach Abschaltrisiko fragen.**
+  - Gartners Schritte zu SovereignTech:
+    - private, On-Premises- und Ökosystem-Alternativen zur Public Cloud bewerten,
+    - Technik der Vorgeneration kreativ nutzen und mit vertrauenswürdigen Partnern teilen,
+    - Trusted Tech Alliance und EU Tech Sovereignty Package beobachten,
+    - Anbieter nach souveränen Lieferoptionen und Zusagen ohne Abschaltmöglichkeit fragen.
+  - Der Einkauf bewertet nach Exit-Optionen, nicht nur nach Kosten und Funktion.
+  - *Bedingung:* Einkauf und Architektur kritischer Dienste.
+  - *Beleglage:* Behauptung ohne Beleg.
+  - [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **Von Datenstandort zu Ausstiegsfähigkeit.**
+  - Im Vergleich der beiden Gartner-Listen verschiebt sich die Frage. 2026 ging es bei Geopatriation darum, wo Workloads laufen. 2027 geht es bei SovereignTech darum, ob man aussteigen kann, wenn ein Anbieter Modelle einschränkt, ändert oder zurückzieht.
+  - Gartner warnt zusätzlich, dass eigene Daten dauerhaft in fremde Modellgewichte eingehen können.
+  - *Bedingung:* EU-Unternehmen mit KI auf fremden Modellen.
+  - *Beleglage:* Behauptung ohne Beleg.
+  - [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
 
-### Lokale Inferenz
+### Daten schützen, wenn Cloud-Modelle beteiligt sind
 
-- **Lokale Inferenz spart API-Gebühren, ist aber nicht kostenlos.**
-  - Lokaler Betrieb vermeidet Token- und API-Gebühren, hält Daten auf dem Rechner und erlaubt Offline-Betrieb.
-  - Hardware und Strom kosten weiter Geld: „Hardware and electricity still cost money.“
-  - Eine Gesamtkostenrechnung liefert der Hersteller nicht. Zum Anteil der Energie an den Compute-Kosten siehe „Zahlen und Richtwerte“, zum Hardwarebedarf großer Modelle siehe „Was mehrfach belegt ist“, zum lokalen Server mit kompatiblen Endpunkten siehe „Werkzeuge“.
-  - *Bedingung:* Ein Kostenvorteil entsteht nur, wenn passende Hardware bereits vorhanden ist.
-  - *Beleglage:* Herstellerangabe.
-  - [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md)
+- **Hybrid-Muster: lokal bereinigen, in der Cloud weiterdenken.**
+  - Ein lokales Modell liest sensible Dokumente und entfernt private Details. Erst die bereinigte Fassung geht für tieferes Reasoning an ein Cloud-Modell.
+  - Zitat: „strip or summarize all the private details“ (13:20).
+  - Wann sich lokale KI generell lohnt, steht unter „Was mehrfach belegt ist“.
+  - *Bedingung:* Unternehmen mit Datenschutzanforderungen.
+  - *Beleglage:* Behauptung ohne Beleg.
+  - [I'm Obsessed With Local AI](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md)
+- **Confidential Computing für Daten in Verarbeitung.**
+  - Confidential Computing schützt Daten während der Verarbeitung in hardwarebasierten Trusted Execution Environments, auch gegenüber dem Cloud-Anbieter.
+  - Schritte laut Gartner: betroffene Workloads kartieren, TEEs mit eigenen und offenen Modellen testen, eigene Schlüsselverwaltung aufbauen.
+  - Mehr Kontrolle heißt mehr Kosten und Betriebsaufwand. Zur Prognose für 2029 siehe „Zahlen und Richtwerte“.
+  - *Bedingung:* Sensible Workloads in fremder Infrastruktur.
+  - *Beleglage:* Prognose ohne Methodik.
+  - [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
+
+### Kontrolle von Modellausgaben
+
+- **Ausgaben von Modellen unabhängiger Anbieter gegenseitig prüfen lassen.**
+  - Mehrere LLMs von verschiedenen Anbietern kontrollieren die Ausgaben der jeweils anderen.
+  - Zwei Instanzen desselben Anbieters gelten laut Sprecher nicht als unabhängige Kontrolle: „Two different versions of chat GPT can't police each other and the same goes for two instances of Claude.“ (08:58).
+  - Kosten und Latenz des Ansatzes nennt die Quelle nicht. Zur Frage, für wen Hintertüren ein ernstes Risiko sind, siehe „Warnungen und Fehler“.
+  - *Bedingung:* Kritische Agenten-Workflows mit Budget für mehrere Modellanbieter.
+  - *Beleglage:* Behauptung ohne Beleg.
+  - [Undetectable LLM Backdoors](../quellen/2026/11/2026-11-16-the-new-ai-security-nightmare-undetectable-llm-backdoors.md)
 
 ### Prüfung auf politische Verzerrung
 
@@ -146,12 +205,26 @@ Stand: 2026-11-15 · 20 Quellen · 44 Learnings
   - *Beleglage:* Herstellerangabe.
   - [Arete-27B Model Card](../quellen/2026/11/2026-11-13-arete-27b-model-card-nousresearch-arete-27b.md)
 
+### Analystenprognosen
+
+*Gartner-Prognosen nennen Zieljahr und Prozentwert, die Methodik ist nicht offengelegt. Gartner verkauft Beratung und Research-Abos.*
+
+- **Über 75 % der Organisationen außerhalb der USA setzen bis 2030 Strategien für digitale Souveränität um.**
+  - Sie verlagern laut Gartner kritische Workloads, um geopolitische Risiken und Lock-in zu senken.
+  - *Bedingung:* Organisationen außerhalb der USA.
+  - *Beleglage:* Prognose ohne Methodik.
+  - [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **Bis 2029 sollen 75 % der Verarbeitung auf nicht vertrauenswürdiger Infrastruktur per Confidential Computing geschützt sein.**
+  - Zu Ablauf und Aufwand siehe „Taktiken und Abläufe“.
+  - *Beleglage:* Prognose ohne Methodik.
+  - [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
+
 ## Werkzeuge
 
 - **edge0-infer serve: lokaler Server mit OpenAI- und Anthropic-kompatiblen Endpunkten.**
   - Der Befehl startet einen Server auf 127.0.0.1:8000: „and then serves OpenAI- and Anthropic-compatible endpoints“.
   - Bestehende Clients lassen sich per Basis-URL umstellen, ohne dass Daten die eigene Maschine verlassen.
-  - Zur fehlenden Lizenzangabe von Edge0 siehe „Was mehrfach belegt ist“, zu den laufenden Kosten lokaler Inferenz siehe „Taktiken und Abläufe“.
+  - Zur fehlenden Lizenzangabe von Edge0 und zu den laufenden Kosten lokaler Inferenz siehe „Was mehrfach belegt ist“.
   - *Bedingung:* NVIDIA mit CUDA 13 (Linux, Windows) oder Apple Silicon mit Metal, dort nur Q3_K.
   - *Beleglage:* Herstellerangabe.
   - [Edge0-145B-NVFP4 Model Card](../quellen/2026/11/2026-11-15-edge0-edge0-145b-nvfp4-model-card-auf-hugging-face.md)
@@ -188,13 +261,34 @@ Stand: 2026-11-15 · 20 Quellen · 44 Learnings
   - *Beleglage:* Herstellerangabe.
   - [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md)
 
+### Herkunft chinesischer Modelle im Einkauf
+
+- **Bei Qwen und DeepSeek mit Einkaufs-, Sicherheits- und geopolitischen Bedenken rechnen.**
+  - Im Enterprise-Vertrieb haben manche Käufer Vorbehalte: „some buyers will have procurement, security, or geopolitical concerns.“ (15:25).
+  - In regulierten Branchen die lokale Ausführung offener Gewichte klar vom gehosteten Dienst des Herstellers trennen.
+  - Zur gemessenen politischen Verzerrung chinesischer Modelle siehe „Zahlen und Richtwerte“.
+  - *Bedingung:* Enterprise-Vertrieb, regulierte B2B-Märkte.
+  - *Beleglage:* Behauptung ohne Beleg.
+  - [I'm Obsessed With Local AI](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md)
+
 ### Lock-in bei Anbieter-Clouds
 
 - **Je mehr Dev-Setup und Memory in der Anbieter-Cloud liegt, desto schwerer der Ausstieg.**
   - Kommentatoren sehen in der Verlagerung in Claude Code Projects einen wachsenden Lock-in: „The more of your development setup is running in the cloud, I think it will be really hard to justify leaving.“
+  - Zur Exit-Fähigkeit als Einkaufskriterium siehe „Taktiken und Abläufe“.
   - *Bedingung:* Teams, die Entwicklungsprozess und Projektwissen komplett in Projects ablegen.
   - *Beleglage:* Behauptung ohne Beleg.
   - [Claude Code Projects](../quellen/2026/11/2026-11-14-anthropic-upgrades-claude-code-projects-to-run-parallel-ai-w.md)
+
+### Hintertüren in Modellen
+
+- **LLM-Hintertüren sind vor allem für Organisationen mit wertvollen Systemen ein ernstes Problem.**
+  - Für alle anderen bedeuten sie in erster Linie, bekannte Sicherheitsgrundlagen konsequent umzusetzen.
+  - Zitat: „people who have lots of really expensive things to protect are going to find it to be a nightmare.“ (09:40).
+  - Zur gegenseitigen Prüfung durch Modelle unabhängiger Anbieter siehe „Taktiken und Abläufe“.
+  - *Bedingung:* Enterprise mit wertvollen digitalen Assets und komplexer Agenten-Infrastruktur.
+  - *Beleglage:* Behauptung ohne Beleg.
+  - [Undetectable LLM Backdoors](../quellen/2026/11/2026-11-16-the-new-ai-security-nightmare-undetectable-llm-backdoors.md)
 
 ### Lücken in Model Cards
 
@@ -230,21 +324,20 @@ Stand: 2026-11-15 · 20 Quellen · 44 Learnings
   - *Beleglage:* Eigene Daten des Projekts.
   - [DeepSeek V3 in Jax (Show HN)](../quellen/2026/11/2026-11-15-show-hn-deepseek-v3-in-200-lines-of-pure-jax.md)
 
-## Analystensicht: Gartner-Trends 2026 und 2027
+## Strittig
 
-Gartner-Prognosen nennen Zieljahr und Prozentwert, die Methodik ist nicht offengelegt. Gartner verkauft Beratung und Research-Abos.
-
-- **Geopatriation: zwei Lesarten derselben Prognose.** Das E-Book sagt, 75 % der Unternehmen verlagern Workloads bis 2030 aus globalen Clouds in souveräne oder lokale Umgebungen. Die Pressemitteilung zur selben Liste nennt über 75 % der Unternehmen in Europa und dem Nahen Osten, von unter 5 % im Jahr 2025. Für europäische Planung ist die zweite Lesart die passende; die Grundgesamtheit ist uneinheitlich angegeben. *Bedingung:* Europa und Naher Osten laut Pressemitteilung, global laut E-Book. Beleg: Prognose ohne Methodik. [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
-- **Workloads nach geopolitischem Risiko einstufen.** Gartners Ablauf zur Geopatriation: Workloads nach Sensibilität und geopolitischem Risiko bewerten, souveräne Angebote der Hyperscaler gegen lokale Anbieter vergleichen, souveräne Cloud mit On-Premises oder Colocation kombinieren, Attestierung und Souveränitätsrahmen einführen und die Platzierung laufend nachziehen. Die Optionen reichen von der souveränen Hyperscaler-Region über partnerbetriebene Regionen bis zum eigenen Rechenzentrum. *Bedingung:* Unternehmen mit Workloads bei globalen Hyperscalern. Beleg: Behauptung ohne Beleg. [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
-- **Confidential Computing für Daten in Verarbeitung.** Confidential Computing schützt Daten während der Verarbeitung in hardwarebasierten Trusted Execution Environments, auch gegenüber dem Cloud-Anbieter. Gartner erwartet, dass bis 2029 75 % der Verarbeitung auf nicht vertrauenswürdiger Infrastruktur so geschützt sind. Schritte: betroffene Workloads kartieren, TEEs mit eigenen und offenen Modellen testen, eigene Schlüsselverwaltung aufbauen. Mehr Kontrolle heißt mehr Kosten und Betriebsaufwand. *Bedingung:* Sensible Workloads in fremder Infrastruktur. Beleg: Prognose ohne Methodik. [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
-- **SovereignTech heißt Ausstieg ermöglichen.** Gartner definiert SovereignTech als Hardware, Software, Datenbanken und Modelle, die technisch und rechtlich realistische Exit-Strategien von kritischen Anbietern erlauben und dauerhaft verfügbar bleiben. Begründung: der US CLOUD Act, DORA mit vertraglich verlangten Cloud-Exit-Strategien und CADA, dazu der Wertabfluss durch Abo- und API-Gebühren an ausländische Anbieter. *Bedingung:* EU-Unternehmen, besonders Finanzsektor unter DORA. Beleg: Behauptung ohne Beleg. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
-- **Souveränitätsstrategien außerhalb der USA.** Gartner erwartet, dass bis 2030 über 75 % der Organisationen außerhalb der USA Strategien für digitale Souveränität umsetzen und kritische Workloads verlagern, um geopolitische Risiken und Lock-in zu senken. *Bedingung:* Organisationen außerhalb der USA. Beleg: Prognose ohne Methodik. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
-- **Anbieter nach Abschaltrisiko fragen.** Gartners Schritte zu SovereignTech: private, On-Premises- und Ökosystem-Alternativen zur Public Cloud bewerten; Technik der Vorgeneration kreativ nutzen und mit vertrauenswürdigen Partnern teilen; Trusted Tech Alliance und EU Tech Sovereignty Package beobachten; Anbieter nach souveränen Lieferoptionen und Zusagen ohne Abschaltmöglichkeit fragen. Der Einkauf bewertet nach Exit-Optionen, nicht nur nach Kosten und Funktion. *Bedingung:* Einkauf und Architektur kritischer Dienste. Beleg: Behauptung ohne Beleg. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
-- **Von Datenstandort zu Ausstiegsfähigkeit.** Im Vergleich der beiden Gartner-Listen verschiebt sich die Frage: 2026 ging es bei Geopatriation darum, wo Workloads laufen; 2027 geht es bei SovereignTech darum, ob man aussteigen kann, wenn ein Anbieter Modelle einschränkt, ändert oder zurückzieht. Gartner warnt zusätzlich, dass eigene Daten dauerhaft in fremde Modellgewichte eingehen können. *Bedingung:* EU-Unternehmen mit KI auf fremden Modellen. Beleg: Behauptung ohne Beleg. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **Geopatriation: Gilt Gartners 75-%-Prognose global oder nur für Europa und den Nahen Osten?**
+  - E-Book: 75 % der Unternehmen verlagern Workloads bis 2030 aus globalen Clouds in souveräne oder lokale Umgebungen.
+  - Pressemitteilung zur selben Liste: über 75 % der Unternehmen in Europa und dem Nahen Osten, von unter 5 % im Jahr 2025.
+  - *Vermutete Ursache:* unterschiedliche Grundgesamtheit (Markt). Für europäische Planung ist die Lesart der Pressemitteilung die passende.
+  - *Beleglage:* Prognose ohne Methodik.
+  - [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
 
 ## Offene Fragen
 
-- Welche Grundgesamtheit gilt für Gartners Geopatriation-Prognose: alle Unternehmen (E-Book) oder Europa und Naher Osten mit Ausgangswert unter 5 % (Pressemitteilung)? [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
+- **Welche Grundgesamtheit gilt für Gartners Geopatriation-Prognose?**
+  - Alle Unternehmen (E-Book) oder Europa und Naher Osten mit Ausgangswert unter 5 % (Pressemitteilung), siehe „Strittig“.
+  - [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
 - **Mit welcher Genauigkeit wurden die 2,84 TB gerechnet?**
   - Der Wert in den Metadaten (2.780.110.363.392) ist vermutlich die Zahl der Parameter.
   - Wie viel Speicher die Gewichte brauchen, hängt von den angenommenen Datentypen ab. Mit quantisierten Gewichten kann der Bedarf deutlich anders ausfallen.
@@ -280,8 +373,11 @@ Gartner-Prognosen nennen Zieljahr und Prozentwert, die Methodik ist nicht offeng
   - Angekündigt ist „coming very soon“, ein Datum fehlt.
   - [Claude Code Projects](../quellen/2026/11/2026-11-14-anthropic-upgrades-claude-code-projects-to-run-parallel-ai-w.md)
 - **Ab wann rechnet sich lokale Inferenz gegenüber API-Gebühren?**
-  - Edge0 liefert keine Gesamtkostenrechnung für Hardware und Strom.
-  - [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md)
+  - Edge0 liefert keine Gesamtkostenrechnung für Hardware und Strom. Auch der Beitrag zu lokaler KI nennt hohe API-Kosten als Grund, aber keine Schwelle.
+  - [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [I'm Obsessed With Local AI](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md)
+- **Was kostet die gegenseitige Prüfung durch Modelle mehrerer Anbieter an Geld und Latenz?**
+  - Die Quelle empfiehlt den Ansatz, lässt Kosten und Latenz aber offen.
+  - [Undetectable LLM Backdoors](../quellen/2026/11/2026-11-16-the-new-ai-security-nightmare-undetectable-llm-backdoors.md)
 - **Läuft Mirage nach dem Vorab-Download vollständig offline?**
   - Die Card beschreibt keinen Offline-Betrieb, ein eigener Test steht aus.
   - [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md)

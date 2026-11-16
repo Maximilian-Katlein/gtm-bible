@@ -1,8 +1,8 @@
 # AI im Vertrieb und B2B Sales
 
-Diese Seite sammelt, was Quellen über den Einsatz von KI im Vertrieb und im B2B-Verkauf sagen: Modellwahl für Sales-Research, KI-gestützter Outreach, Lead-Qualifizierung, Agenten im Vertriebsablauf, Gründervertrieb für KI-Produkte und den Verkauf von KI an Enterprise und öffentliche Hand. Dazu kommen Gesprächs-, Pitch-, Verhandlungs- und Organisationstaktiken, die solche Abläufe ergänzen, jeweils mit Bedingung, Art des Belegs und Quelle.
+Diese Seite sammelt, was Quellen über den Einsatz von KI im Vertrieb und im B2B-Verkauf sagen: Modellwahl für Sales-Research, KI-gestützter Outreach, Lead-Qualifizierung, Agenten im Vertriebsablauf, Sprachagenten im Kundenkontakt, Gründervertrieb für KI-Produkte und den Verkauf von KI an Enterprise und öffentliche Hand. Dazu kommen Gesprächs-, Pitch-, Verhandlungs-, Partnergewinnungs- und Organisationstaktiken, die solche Abläufe ergänzen, jeweils mit Bedingung, Art des Belegs und Quelle.
 
-Stand: 2026-11-15 · 16 Quellen · 56 Learnings
+Stand: 2026-11-16 · 17 Quellen · 58 Learnings
 
 ## Was mehrfach belegt ist
 
@@ -35,10 +35,25 @@ Stand: 2026-11-15 · 16 Quellen · 56 Learnings
 - **Best Practices, Prozesse und Inhaltsstandards schriftlich festlegen, bevor Agenten sie ausführen.** Agenten sind nur so gut wie ihr Input: „agents are garbage in, garbage out“. Beispiel bei Vercel: genau zehn definierte Discovery-Fragen für BDRs im ersten Gespräch. Bedingung: keine genannt. Beleg: eigene Daten. [Vercel COO](../quellen/2026/11/2026-11-15-how-to-get-ai-agents-to-recommend-your-business-vercel-coo.md)
 - **KI-Wirkung über den Dollarwert eines menschlichen Touchpoints messen.** Vercel misst den durchschnittlichen Dollarwert eines menschlichen Touchpoints bei gewonnenen Deals. Er soll steigen, während die Zahl der Touches sinkt. Ergänzend werden produktive Kundengespräche pro Rep und Woche gezählt. Bedingung: Vertriebsteams, die Agenten für Recherche und Vorarbeit einsetzen. Beleg: eigene Daten. [Vercel COO](../quellen/2026/11/2026-11-15-how-to-get-ai-agents-to-recommend-your-business-vercel-coo.md)
 
+### Sprachagenten im Kundenkontakt
+
+- **Von IVR über Kaskade zu Reasoning auf Audio.** Gartner beschreibt drei Stufen: menügeführte IVR, eine Kaskade aus Speech-to-Text, Sprachmodell und Text-to-Speech, und Speech Reasoning Models, die direkt auf Audio schließen. Die letzte Stufe hält Ton, Emotion und Absicht und soll mehrstufige, urteilsintensive Gespräche mit Themenwechseln und Fehlerkorrektur automatisierbar machen. Bedingung: Sprachkanäle mit komplexen Anliegen. Beleg: Behauptung ohne Beleg, Analystenhaus mit eigenem Beratungsgeschäft. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **Sprachagenten in drei Schritten einführen: Regeln, Routing, Katalog.**
+  1. Strenge Regeln zu Einwilligung, Datenschutz und Audit-Log je Rechtsraum festlegen, mit klaren Owners.
+  2. Gespräche nach Komplexität einteilen und zwischen schnellen Modellen und tiefem Reasoning routen.
+  3. Vor jeder Domänenanpassung die häufigsten aufgezeichneten Gespräche katalogisieren.
+
+  Bedingung: Unternehmen vor dem Einsatz von Sprachagenten. Beleg: Behauptung ohne Beleg. Zum Grund für das Routing siehe „Warnungen und Fehler“. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+
 ### Gründervertrieb für KI-Produkte
 
 - **Founder-led Sales als Befragung führen, nicht als Pitch.** Die Gespräche drehen sich um Arbeitsabläufe und Zeitfresser des Kunden. Nach Festlegung des ICP wiederholen sich etwa 60 Kundenfragen, die Demo wird dadurch standardisierbar. Bedingung: B2B Founder-led Sales mit klarem ICP. Beleg: eigene Daten. [Solve Intelligence](../quellen/2026/11/2026-11-14-solve-intelligence-millions-in-revenue-with-zero-salespeople.md)
 - **Ein unfertiges KI-Produkt zuerst an Fachkräfte verkaufen.** Fachkräfte tolerieren Mängel eher als Laien, weil sie einzelne nützliche Funktionen erkennen. Patentanwälte blieben trotz Mängeln und lieferten Feedback. Bedingung: B2B-Spezialsoftware für Fachberufe. Beleg: Kundenfall. [Solve Intelligence](../quellen/2026/11/2026-11-14-solve-intelligence-millions-in-revenue-with-zero-salespeople.md)
+
+### Partner gewinnen in der Frühphase
+
+- **Ohne eigenen Leverage eine Referenzkette aufbauen.** Mit einem bekannten Namen als Referenz den nächsten Partner gewinnen. Yeung nutzte Starbucks als Referenz gegenüber Peet's Coffee: „Starbucks just worked with me, right?“ Die Starbucks-Referenz entstand allerdings durch einen untersagten Weiterverkauf von Gutscheinen, siehe „Warnungen und Fehler“. Bedingung: Frühphase, kleine Firma, das rechtliche Risiko muss tragbar sein. Beleg: Kundenfall. [$0 auf $100M in 11 Monaten](../quellen/2026/11/2026-11-16-he-went-from-0-to-100m-in-11-months-and-you-re-still-plannin.md)
+- **Blockt die zuständige Person, den Eigentümer recherchieren und direkt anrufen.** Nach einem aufgelegten Telefonat rief Yeung den Eigentümer einer Restaurantgruppe an und bekam 20 Restaurants zugesagt. Bedingung: junge Gründer in der Frühphase, Eigentümer mit eigener Gründergeschichte. Beleg: Kundenfall. [$0 auf $100M in 11 Monaten](../quellen/2026/11/2026-11-16-he-went-from-0-to-100m-in-11-months-and-you-re-still-plannin.md)
 
 ### KI an Enterprise und öffentliche Hand verkaufen
 
@@ -115,6 +130,7 @@ Stand: 2026-11-15 · 16 Quellen · 56 Learnings
   Für Sales-Research ist dieser Wert wichtig. Der Test ist aber ein interner Benchmark des Herstellers Moonshot. Bedingung: vor dem Einsatz mit eigenen Kundenfragen gegenprüfen. Beleg: Herstellerangabe. [Kimi K3.1 Pro Model Card](../quellen/2026/11/2026-11-09-moonshotai-kimi-k3-1-pro-model-card-auf-hugging-face.md)
 - **Account-Planung per Agent:** Bei Vercel entstehen Account-Pläne zu etwa 90 % durch den internen Agenten Index. Bedingung: B2B-Vertrieb mit Pipeline-Phasen. Beleg: eigene Daten. [Vercel COO](../quellen/2026/11/2026-11-15-how-to-get-ai-agents-to-recommend-your-business-vercel-coo.md)
 - **Vom Pilot zum Rollout:** Enterprise-KI-Projekte starten laut Mistral oft mit 8 GPUs im Pilot und brauchen nach der Validierung Tausende GPUs für einen einzigen Anwendungsfall. Bedingung: Enterprise-Rollout nach erfolgreichem Pilot. Beleg: Kundenfall. [Mistral CEO](../quellen/2026/11/2026-11-13-mistral-ceo-why-openai-anthropic-will-come-for-your-business.md)
+- **Autonome Sprachinteraktionen:** Gartner erwartet, dass bis 2030 über 70 % der Sprachinteraktionen von Unternehmen autonom von Sprachmodellen bearbeitet werden, 2026 sind es unter 10 %. Sprache bleibt laut Gartner der Kanal mit dem höchsten Volumen, ein Jahrzehnt Support-Automatisierung habe Genauigkeit und Lösungsquote nicht geliefert. Die Prognose nennt Zieljahr und Prozentwert, die Methodik ist nicht offengelegt. Gartner verkauft Beratung und Research-Abos. Bedingung: Kundenservice und Telefonie großer Unternehmen. Beleg: Prognose ohne Methodik. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
 
 ## Werkzeuge
 
@@ -149,6 +165,11 @@ Stand: 2026-11-15 · 16 Quellen · 56 Learnings
 - Warum Fachkräfte ein unfertiges Produkt nutzen: „even though our product sucked, there was certain specific things where if you were an actual lawyer“. Bedingung: Spezialsoftware für Fachberufe. [Solve Intelligence](../quellen/2026/11/2026-11-14-solve-intelligence-millions-in-revenue-with-zero-salespeople.md)
 - Ansage an große Kunden: „custom deployments, dump all your stuff in as much as possible.“ Bedingung: Enterprise- und Mid-Market-Kanzleien, siehe „Strittig“. [Solve Intelligence](../quellen/2026/11/2026-11-14-solve-intelligence-millions-in-revenue-with-zero-salespeople.md)
 
+### Partnergewinnung in der Frühphase
+
+- Referenzkette im Wortlaut: „We have Starbucks. Then I can go to Peet's Coffee. It's like, 'Starbucks just worked with me, right?'“ Bedingung: Frühphase, die Referenz selbst muss rechtlich sauber sein, siehe „Warnungen und Fehler“. [$0 auf $100M in 11 Monaten](../quellen/2026/11/2026-11-16-he-went-from-0-to-100m-in-11-months-and-you-re-still-plannin.md)
+- Zusage des Eigentümers nach dem Direktanruf: „I'm going to work with you and give you 20 of my restaurants.“ Bedingung: Eigentümer mit eigener Gründergeschichte. [$0 auf $100M in 11 Monaten](../quellen/2026/11/2026-11-16-he-went-from-0-to-100m-in-11-months-and-you-re-still-plannin.md)
+
 ### Pitch und Einwände
 
 - Ausgangspunkt jedes Pitches: „whenever I'm selling anything, I always have to start with what is you reverse engineer from the prospect.“ [Scale or Fail Finale](../quellen/2026/11/2026-11-14-8-entrepreneurs-compete-for-100-000-scale-or-fail-finale.md)
@@ -180,13 +201,15 @@ Stand: 2026-11-15 · 16 Quellen · 56 Learnings
 
 - **Den Agenten nicht über die Value Proposition entscheiden lassen.** Vercel gab dem Prospecting-Agenten zuerst volle Schreibrechte einschließlich Value Proposition und nahm das wieder zurück. Heute recherchiert der Agent, die Positionierung kommt aus von Menschen gestalteten Vorlagen je Käufertyp: „I don't really want Claude deciding my value prop“. Bedingung: B2B-Outbound mit KI-Agenten. Beleg: eigene Daten. [Vercel COO](../quellen/2026/11/2026-11-15-how-to-get-ai-agents-to-recommend-your-business-vercel-coo.md)
 
-### Gründervertrieb
+### Gründervertrieb und Partnergewinnung
 
 - **„Ohne Vertriebsmitarbeiter“ heißt nicht ohne Vertriebsaufwand.** Bei Solve Intelligence bedeutet es Gründervertrieb mit hohem Reiseaufwand. Mitgründer Chris verbrachte in 30 bis 40 Tagen nur zwei Nächte zu Hause, weil Kunden persönlich besucht wurden: „in the last 30 or 40 days I've probably spent two nights in my own bed.“ Bedingung: globaler Enterprise-Vertrieb mit Hauptumsatz in den USA. Beleg: eigene Daten. [Solve Intelligence](../quellen/2026/11/2026-11-14-solve-intelligence-millions-in-revenue-with-zero-salespeople.md)
+- **Eine Referenz aus einem untersagten Geschäft trägt rechtliches Risiko in die ganze Kette.** Yeungs Starbucks-Referenz, mit der er Peet's Coffee gewann, entstand durch einen untersagten Weiterverkauf von Gutscheinen. Wer die Referenzkette nachbaut, sollte prüfen, ob der erste Name rechtlich sauber gewonnen wurde. Bedingung: Frühphase, kleine Firma. Beleg: Kundenfall. [$0 auf $100M in 11 Monaten](../quellen/2026/11/2026-11-16-he-went-from-0-to-100m-in-11-months-and-you-re-still-plannin.md)
 
 ### KI im Kundenkontakt und Herstellerangaben
 
 - **Kunden-Agenten sperren und selbst LLMs im Service einsetzen wirkt wie Doppelmoral.** In der Diskussion zur Sperre von KI-Buchungsagenten klagt ein Nutzer, er sei 1000 Meilen vom Ziel gestrandet und habe wegen eines LLM keinen Menschen erreicht: „yet when they strand me 1000miles from my destination I cant get through to a human due to an LLM.“ Bedingung: Unternehmen, die KI im Service einsetzen und Kunden-KI einschränken. Beleg: Anekdote, Einzelerfahrung. [United, KI-Agenten-Verbot](../quellen/2026/11/2026-11-13-united-airlines-bans-ai-agents-from-booking-flights-on-behal.md)
+- **Ein einzelnes Sprachmodell ohne Aufsicht ist riskant.** Laut Gartner schließen sprachnative Systeme flacher als textbasierte Modelle. Wer sich auf ein einzelnes, unbeaufsichtigtes Sprachmodell verlässt, geht ein Sicherheitsrisiko ein. Daraus folgt das Routing nach Komplexität unter „Sprachagenten im Kundenkontakt“. Bedingung: alle Sprachagenten mit Kundenkontakt. Beleg: Behauptung ohne Beleg. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
 - Herstellerangaben zur Genauigkeit von Modellen und Lead-Scoring nicht ungeprüft übernehmen, siehe „Was mehrfach belegt ist“. [Kimi K3.1 Pro Model Card](../quellen/2026/11/2026-11-09-moonshotai-kimi-k3-1-pro-model-card-auf-hugging-face.md), [AgentRun](../quellen/2026/11/2026-11-13-show-hn-agentrun-open-source-self-improving-managed-agents.md)
 
 ### Gesprächs- und Drucktaktiken
@@ -206,15 +229,6 @@ Stand: 2026-11-15 · 16 Quellen · 56 Learnings
   - Ja: Bei kleineren Zielkunden bucht laut Vercel E-Mail allein die meisten Meetings, erst bei Enterprise und Fortune 500 braucht es zusätzlich Anruf und Social Outreach. Bedingung: B2B, Kanalwahl nach Firmengröße. Beleg: eigene Daten. [Vercel COO](../quellen/2026/11/2026-11-15-how-to-get-ai-agents-to-recommend-your-business-vercel-coo.md)
   - Nein: Beim Outreach an lokale Makler brachten E-Mails laut dem Gast null Konversion, SMS dagegen etwas Traktion. Bedingung: lokale Makler, Kleinbetrieb in den USA. Beleg: eigene Daten. [Scale or Fail Ep. 1](../quellen/2026/11/2026-11-09-give-me-42-minutes-i-ll-show-you-how-to-sell-like-the-top-1.md)
   - Vermutete Erklärung: Zielgruppe und Absender. Einzelne Makler arbeiten mobil und lesen Geschäftsmails seltener als Mitarbeitende in Firmen, die Software einkaufen. Dazu schreibt Vercel als bekannte Marke, teils an Leute mit eigenem Konto, während der Kleinbetrieb kalt und unbekannt anschreibt.
-
-## Analystensicht: Gartner-Trends 2026 und 2027
-
-Gartner-Prognosen nennen Zieljahr und Prozentwert, die Methodik ist nicht offengelegt. Gartner verkauft Beratung und Research-Abos.
-
-- **Sprachinteraktionen werden autonom.** Gartner erwartet, dass bis 2030 über 70 % der Sprachinteraktionen von Unternehmen autonom von Sprachmodellen bearbeitet werden, 2026 sind es unter 10 %. Sprache bleibt laut Gartner der Kanal mit dem höchsten Volumen, ein Jahrzehnt Support-Automatisierung habe Genauigkeit und Lösungsquote nicht geliefert. *Bedingung:* Kundenservice und Telefonie großer Unternehmen. Beleg: Prognose ohne Methodik. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
-- **Von IVR über Kaskade zu Reasoning auf Audio.** Gartner beschreibt drei Stufen: menügeführte IVR, Kaskade aus Speech-to-Text, Sprachmodell und Text-to-Speech, und Speech Reasoning Models, die direkt auf Audio schließen. Die letzte Stufe hält Ton, Emotion und Absicht und soll mehrstufige, urteilsintensive Gespräche mit Themenwechseln und Fehlerkorrektur automatisierbar machen. *Bedingung:* Sprachkanäle mit komplexen Anliegen. Beleg: Behauptung ohne Beleg. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
-- **Sprachagenten: Regeln, Routing, Katalog.** Gartners Einstieg in drei Schritten: zuerst strenge Regeln zu Einwilligung, Datenschutz und Audit-Log je Rechtsraum mit klaren Owners; dann Gespräche nach Komplexität einteilen und zwischen schnellen Modellen und tiefem Reasoning routen; vor jeder Domänenanpassung die häufigsten aufgezeichneten Gespräche katalogisieren. *Bedingung:* Unternehmen vor dem Einsatz von Sprachagenten. Beleg: Behauptung ohne Beleg. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
-- **Ein einzelnes Sprachmodell ohne Aufsicht ist riskant.** Laut Gartner schließen sprachnative Systeme flacher als textbasierte Modelle. Wer sich auf ein einzelnes, unbeaufsichtigtes Sprachmodell verlässt, geht ein Sicherheitsrisiko ein. Daraus folgt das Routing nach Komplexität. *Bedingung:* Alle Sprachagenten mit Kundenkontakt. Beleg: Behauptung ohne Beleg. [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
 
 ## Offene Fragen
 
@@ -241,6 +255,7 @@ Gartner-Prognosen nennen Zieljahr und Prozentwert, die Methodik ist nicht offeng
 - Lassen sich die B2C-Taktiken aus „Scale or Fail, Verkaufen“ (Pitch für Kalte, kurze Rückgabegarantie bei fehlendem Mitentscheider, Folgeangebote mitten in der Intensivphase) auf B2B mit Buying Committees übertragen? [Scale or Fail, Verkaufen](../quellen/2026/11/2026-11-13-if-you-hate-selling-please-watch-this-scale-or-fail.md)
 - Was sind die vier Schritte des Menu Close, und welcher Anteil der genannten Run-Rate-Steigerung geht auf das Skript zurück? [Scale or Fail Finale](../quellen/2026/11/2026-11-14-8-entrepreneurs-compete-for-100-000-scale-or-fail-finale.md)
 - Welcher Hebel trug beim B2B-Eventplaner den Anstieg des Vertragswerts: Preismodul, Mehrjahresverträge oder die begleitenden Maßnahmen? [Scale or Fail Finale](../quellen/2026/11/2026-11-14-8-entrepreneurs-compete-for-100-000-scale-or-fail-finale.md)
+- Funktionieren Referenzkette und Direktanruf beim Eigentümer auch im B2B mit Einkaufsabteilungen und für Gründer ohne persönliche Geschichte, die beim Eigentümer anknüpft? Die Quelle zeigt nur Einzelfälle aus Gastronomie und Kaffeeketten. [$0 auf $100M in 11 Monaten](../quellen/2026/11/2026-11-16-he-went-from-0-to-100m-in-11-months-and-you-re-still-plannin.md)
 
 ### Verhandlung und Reziprozität
 
