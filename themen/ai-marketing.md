@@ -1,8 +1,8 @@
 # AI im Marketing
 
-Diese Seite sammelt, was Quellen über den Einsatz von KI in Marketing und Content-Produktion berichten: welche Abläufe funktionieren, welche Werkzeuge genannt werden, wie Firmen in KI-Assistenten sichtbar werden und wo Vorsicht geboten ist. Jede Aussage verweist auf ihre Quelle; Widersprüche zwischen Quellen werden offen ausgewiesen.
+Diese Seite sammelt, was Quellen über den Einsatz von KI in Marketing, Content-Produktion und der Aktivierung von KI-Produkten berichten: welche Abläufe funktionieren, welche Werkzeuge genannt werden, wie Firmen in KI-Assistenten sichtbar werden und wo Vorsicht geboten ist. Jede Aussage verweist auf ihre Quelle; Widersprüche zwischen Quellen werden offen ausgewiesen.
 
-Stand: 2026-11-16 · 13 Quellen · 42 Learnings
+Stand: 2026-11-17 · 15 Quellen · 46 Learnings
 
 ## Was mehrfach belegt ist
 
@@ -55,6 +55,12 @@ Stand: 2026-11-16 · 13 Quellen · 42 Learnings
 
 - **Für Agenten-Empfehlungen in Dokumentation, Vorlagen und Community investieren.** Vercel setzt auf umfangreiche Dokumentation, Vorlagen und Guides sowie Community-Signale von Open-Source-Entwicklern. Das Marketing hat dafür eine deutlich größere Content-Engineering-Funktion als ein typisches B2B-Team vor 24 Monaten. Bedingung: Firmen mit Entwickler-Zielgruppe und Open-Source-Community; eigene Daten. [How to Get AI Agents to Recommend Your Business](../quellen/2026/11/2026-11-15-how-to-get-ai-agents-to-recommend-your-business-vercel-coo.md)
 - **Empfehlungshäufigkeit messen und Seiten umschreiben, bis der Agent den Wert erfasst.** Vercel misst mit AEO-Evals je Anwendungsfall, wie oft es in Claude, Cursor, OpenAI und anderen Systemen empfohlen wird. Wird bei gleicher Leistung ein Mitbewerber gewählt, werden Landing- und Preisseiten umgeschrieben. Bedingung: Anbieter in Kategorien, die Nutzer per KI-Assistent recherchieren; Aufbau der Evals nicht gezeigt. Zitat (09:55): „what's the frequency with which Vercel gets recommended across, you know, Claude, Cursor“ [How to Get AI Agents to Recommend Your Business](../quellen/2026/11/2026-11-15-how-to-get-ai-agents-to-recommend-your-business-vercel-coo.md)
+
+### Onboarding und Aktivierung von KI-Produkten
+
+- **Starter-Pakete gegen die Hürde des leeren Prompts.** Muse bietet einen Ideas Tab mit vorgefertigten Starter-Paketen, etwa für Cron-Jobs oder Dashboards, die Nutzer mit „Let's do it“ starten. Ohne diese Hilfe fragen laut Quelle viele Erstnutzer nur nach dem Wetter. Bedingung: Agenten-Produkte mit offener Eingabe, B2C; eigene Daten. Zitat (49:00): „people freeze on the first prompt“ [Meta's Muse](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
+- **Onboarding nach Nutzerkohorte staffeln.** Meta setzt bei Muse auf gestaffeltes Onboarding, weil frühe Nutzerkohorten andere Erklärungen brauchen als spätere Massennutzer. Bedingung: Produkte, die vom Early Adopter in den Massenmarkt wachsen; eigene Daten. Zitat (50:40): „we have to have tiered onboarding.“ [Meta's Muse](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
+- **Mundpropaganda als stärkster Aktivierungshebel.** Laut Muse-Produktteam wirken Geschichten anderer Nutzer über konkrete Anwendungsfälle am besten, um neue Nutzer zu aktivieren. Zahlen dazu werden nicht genannt. Bedingung: B2C-KI-Produkte; Behauptung ohne Beleg. Zitat (47:30): „The most effective lever out there is word of mouth.“ [Meta's Muse](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
 
 ### E-Mail und Newsletter
 
@@ -132,12 +138,24 @@ Stand: 2026-11-16 · 13 Quellen · 42 Learnings
 
 ## Warnungen und Fehler
 
+### Agenten und Daten
+
 - **Werbe-APIs nicht zum Lesen durch Agenten nutzen.** Agenten, die Werbedaten direkt über Plattform-APIs abfragen, können Tausende Anfragen pro Sekunde erzeugen; im genannten Kundenfall wurde das Werbekonto wegen Verstoßes gegen die API-Nutzungsbedingungen gesperrt. Werbe-APIs deshalb nur zum Schreiben nutzen, Daten aus Warehouse oder Cache lesen. Bedingung: Agenten mit Zugriff auf Meta- oder Google-Ads-APIs ohne Warehouse oder Cache. Zitat (14:00): „I'm never actually reading the data from Facebook Ads. This is only one directional“ [AI Agents are too good at marketing now](../quellen/2026/11/2026-11-14-ai-agents-are-too-good-at-marketing-now.md)
+
+### Video und Creatives
+
 - **Nur ein Skript an Seedance zu schicken verschwendet Render-Budget.** Das Modell erfindet Bild- und Tondetails. Zitat (32:00): „If I just send the script straight to Seedance, it's going to give me just like whatever it invents at that moment.“ [AI Agents are too good at marketing now](../quellen/2026/11/2026-11-14-ai-agents-are-too-good-at-marketing-now.md)
 - **Behauptung „KI-Avatare performen teils besser als echte Menschen“ ist unbelegt.** Das Video zeigt keine A/B-Daten; der Sprecher vertreibt zugleich eine Plattform für genau diese Workflows. [AI Agents are too good at marketing now](../quellen/2026/11/2026-11-14-ai-agents-are-too-good-at-marketing-now.md)
+
+### Belege und Quellenkritik
+
 - **Kampagne erstellt heißt nicht Kampagne wirksam.** Das Video zeigt nur die Erstellung, keine Anmeldungen, Klicks oder Umsätze. Das Beispiel ist ein Creator-Lead-Magnet; für B2B mit langen Zyklen und Freigabeprozessen ist der Ablauf nicht erprobt. Bedingung: Übertragung auf B2B-Mittelstand und Enterprise. [Full Marketing Campaign With Claude](../quellen/2026/11/2026-11-14-i-built-a-full-marketing-campaign-with-claude-in-one-afterno.md)
 - **KI-Kaufberatung ersetzt keinen Abgleich mit aktuellen Daten.** Die Sprecher empfehlen, sich Kameramodelle von ChatGPT vorschlagen zu lassen, prüfen die Empfehlungen aber nicht nach. Vorschläge eines Sprachmodells sollten vor dem Kauf mit aktuellen Spezifikationen und Preisen abgeglichen werden. Die Empfehlung ist eine Behauptung ohne Beleg. Zitat (03:00): „Describe exactly what you need to ChatGPT, and it'll actually give you some pretty solid recommendations.“ [Beginner's Guide to Creating High Quality Videos](../quellen/2026/11/2026-11-09-beginner-s-guide-to-creating-high-quality-videos.md)
 - **KI-Auswertungen des eigenen Archivs liefern Korrelationen, keine Tests.** Die Betreffzeilen- und Werbephrasen-Befunde beruhen auf der Open Rate eines einzelnen Newsletters ohne kontrollierten Vergleich; die Open Rate selbst gilt in der Quelle als verzerrt. Vor Übernahme als feste Regel mit einem A/B-Test prüfen. [Morning Brew To $75M](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
+- **Angaben zu boringmarketing.com sind Eigenwerbung ohne Ergebnisdaten.** Beworben werden ein 30-Tage-Sprint und eine 100 % Geld-zurück-Garantie; laut Quelle handelt es sich um eine Beteiligung von Greg Isenberg. Kundendaten oder Ergebnisse werden nicht gezeigt. Bedingung: SEO-Dienstleistung, Eigenwerbung des Sprechers; Behauptung ohne Beleg. Zitat (25:20): „They offer a 30-day sprint with a 100% money back guarantee.“ [Cursor AI tutorial for beginners](../quellen/2026/11/2026-11-17-cursor-ai-tutorial-for-beginners.md)
+
+### Recht und Kennzeichnung
+
 - **KI-generierte Inhalte kennzeichnen.** Gartner nennt Kennzeichnungspflichten wie den EU AI Act als Treiber für Digital Provenance: KI-generierte Medien maschinenlesbar markieren, Herkunft von Software und Modellen über SBOM und MLBOM belegen. Marketing soll Reputationsrisiken durch Deepfakes und synthetische Inhalte mitsteuern. IM8 kennzeichnete seine KI-Ad mit einer prominenten Partnerin im Video als KI (siehe „Taktiken und Abläufe“). Bedingung: EU-Markt, Unternehmen mit KI-generierten Inhalten; Analystenprognose ohne offengelegte Methodik, Gartner verkauft Beratung und Research-Abos; Behauptung ohne Beleg. [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
 
 ## Strittig
@@ -164,6 +182,10 @@ Stand: 2026-11-16 · 13 Quellen · 42 Learnings
 
 - **Trägt der Claude-Kampagnenablauf auch in B2B mit langen Zyklen und Freigabeprozessen?** Gezeigt wurde nur ein Creator-Lead-Magnet ohne Ergebniszahlen. [Full Marketing Campaign With Claude](../quellen/2026/11/2026-11-14-i-built-a-full-marketing-campaign-with-claude-in-one-afterno.md)
 - **Welches rechtliche Risiko entsteht, wenn bei einer Klage ohne anwaltliche Abstimmung kommuniziert wird, und gilt der Ansatz auch für Firmen ohne erfahrene Gründer?** Die Quelle schildert nur die Sicht einer Prozesspartei. [$725 Million Company in 255 Days](../quellen/2026/11/2026-11-16-he-built-a-725-million-company-in-255-days-here-s-what-you-r.md)
+
+### Onboarding und Aktivierung
+
+- **Wie groß ist der Effekt von Mundpropaganda und Starter-Paketen auf die Aktivierung messbar?** Die Quelle nennt keine Zahlen zur Wirkung der einzelnen Hebel. [Meta's Muse](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
 
 ### Agenten, Sichtbarkeit und Teams
 

@@ -1,8 +1,12 @@
 # Disruptive AI-Geschäftsideen
 
-Diese Seite sammelt, wie Gründer KI-Geschäftsideen finden und prüfen, wo vertikale und lokale KI-Anbieter Schutz vor Wettbewerb haben, wie sich Publikum und Wissen mit geringen Kosten monetarisieren lassen und welche Signale aus KI-Hardware, Websuche und Analystenprognosen belastbar sind. Sie hält fest, was belegt ist, unter welchen Bedingungen es gilt und wo Quellen sich widersprechen.
+Diese Seite sammelt, wie Gründer KI-Geschäftsideen finden und prüfen, wo vertikale und lokale KI-Anbieter Schutz vor Wettbewerb haben, wie sich Publikum und Wissen mit geringen Kosten monetarisieren lassen und welche Anwendungsfälle Consumer-Agenten tatsächlich tragen. Sie hält fest, welche Signale aus KI-Hardware, Websuche und Analystenprognosen belastbar sind, unter welchen Bedingungen etwas gilt und wo Quellen sich widersprechen.
 
-Stand: 2026-11-16 · 10 Quellen · 33 Learnings
+Stand: 2026-11-17 · 12 Quellen · 37 Learnings
+
+## Was mehrfach belegt ist
+
+- **Suchfeld teure, wiederkehrende Routinearbeit in Betrieben (3 Quellen).** Drei Quellen empfehlen unabhängig voneinander, KI dort anzusetzen, wo ein Betrieb wiederholt teure Verarbeitungsarbeit leistet: ein Klassifikator vor einer teuren Eingangs-Queue, lokale KI für wiederkehrende Prüfarbeit mit sensiblen Daten, Automatisierung von Agentur- und Beratungsleistungen, die schmerzhafte Routineaufgaben übernehmen. Die Schwerpunkte unterscheiden sich (Durchsatz, Datenschutz und Gerätenähe, Ersatz menschlicher Dienstleistung). Keine der drei Quellen zeigt einen umgesetzten Kundenfall oder Zahlen, die Übereinstimmung ist also ein Richtungssignal, kein Nachweis. *Bedingung:* B2B, Startups und SMB. Beleg: Behauptung ohne Beleg. [Jev-Video](../quellen/2026/11/2026-11-15-jev-is-here-how-to-use-it.md), [Local-AI-Video](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md), [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
 
 ## Taktiken und Abläufe
 
@@ -18,6 +22,8 @@ Stand: 2026-11-16 · 10 Quellen · 33 Learnings
 
 - **Beispiel vertikale KI mit multimodaler Hürde.** Patentarbeit gilt als Legal Tech, verlangt aber die Verarbeitung von chemischen Strukturen, technischen Zeichnungen, Sequenzen, Gleichungen und Tabellen. Diese Hürde hielten 2023 viele Kunden für unüberwindbar, sie schützt Spezialanbieter. Gilt für vertikale KI in technischen Fachbranchen. Beleg: eigene Daten. [Solve Intelligence](../quellen/2026/11/2026-11-14-solve-intelligence-millions-in-revenue-with-zero-salespeople.md)
 - **Klassifikator vor eine teure Eingangs-Queue setzen.** Einen Betrieb suchen, bei dem eingehende Informationen teuer oder langsam abgearbeitet werden, und ein schnelles Modell davorschalten. Beispiel aus der Quelle: ein Vermittler lokaler Dienstleistungen, der Anfragen sofort dem passenden Anbieter zuordnet. Gilt für Startups und SMB; ein umgesetzter Fall wird nicht gezeigt. Beleg: Behauptung ohne Beleg. [Jev-Video](../quellen/2026/11/2026-11-15-jev-is-here-how-to-use-it.md)
+- **Agenturen und Beratungen mit Routinearbeit automatisieren.** Isenberg sieht Agenturen und Beratungen, die schmerzhafte Routineaufgaben für Unternehmen erledigen, als Felder für KI-Automatisierung mit 1 bis 20 Mio. USD Jahresumsatz. Für Umsatzspanne und Machbarkeit gibt es keinen Beleg. *Bedingung:* B2B Services, Gründerperspektive. Beleg: Behauptung ohne Beleg. [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
+- **Beispiel Flächenauslastung per Bilderkennung.** Bounding Boxes auf Fotos oder Echtzeit-Videofeeds sollen die Auslastung von Lagern oder Parkhäusern messen. Google nennt Arbeit mit Inventory-Management-Firmen, ohne Namen oder Ergebnisse. *Bedingung:* B2B Operations; anonym, keine Zahlen. Beleg: Anekdote. [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
 
 ### Ideen mit lokaler KI
 
@@ -25,12 +31,17 @@ Stand: 2026-11-16 · 10 Quellen · 33 Learnings
 - **Beispiel lokaler Pre-Send-Prüfer.** Ein lokales Modell prüft ausgehende Mails von Beratern vor dem Versand auf riskante Formulierungen, etwa Aussagen, die nach garantierter Rendite klingen. Start mit einer Branche und einem Dokumenttyp, zum Beispiel Mails unabhängiger Vermögensberater. Gilt für Professional Services; Konzept ohne Preis- oder Kundendaten. Beleg: Behauptung ohne Beleg. [Local-AI-Video](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md)
 - **Beispiel Offline-Bericht für Sanierungstechniker.** Beim Rundgang macht der Techniker Fotos und Sprachnotizen, die App entwirft daraus ohne Internetverbindung den Versicherungsbericht. Gilt für Handwerk und Außendienst; nicht vorgeführt. Beleg: Anekdote. [Local-AI-Video](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md)
 
-*Einordnung: Der Local-AI-Filter berührt das Klassifikator-Muster, weil beide auf teure, wiederkehrende Verarbeitungsarbeit in einem Betrieb zielen. Als gegenseitige Bestätigung taugt das nicht, beide Quellen bleiben unbelegt und setzen unterschiedliche Schwerpunkte (Datenschutz und Gerätenähe gegenüber Durchsatz).* [Local-AI-Video](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md), [Jev-Video](../quellen/2026/11/2026-11-15-jev-is-here-how-to-use-it.md)
+*Einordnung: Local-AI-Filter, Klassifikator-Muster und Isenbergs Agentur-Automatisierung zielen alle auf teure, wiederkehrende Verarbeitungsarbeit in einem Betrieb und sind deshalb oben unter „Was mehrfach belegt ist“ zusammengefasst. Die Einzelaussagen bleiben hier stehen, weil sie unterschiedliche Schwerpunkte setzen (Datenschutz und Gerätenähe, Durchsatz, Ersatz menschlicher Dienstleistung) und alle unbelegt sind.* [Local-AI-Video](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md), [Jev-Video](../quellen/2026/11/2026-11-15-jev-is-here-how-to-use-it.md), [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
+
+### Consumer-Agenten
+
+- **Einkaufen statt Heimautomatisierung.** Bei Metas Muse wurde Einkaufen überraschend einer der Top-Anwendungsfälle, Heimautomatisierung blieb trotz hoher Erwartung schwach. Der Agent verteilt Käufe auf mehrere spezialisierte Shops statt auf einen Händler. Für Gründer heißt das: erwartete Anwendungsfälle von Consumer-Agenten nicht ungeprüft übernehmen. *Bedingung:* B2C, E-Commerce. Beleg: eigene Daten. [Muse, Sarantakos](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
 
 ### Geschäftsmodelle mit geringen Kosten
 
 - **Mit KI klein starten, dann gezielt aufstocken.** Der Gastgeber startete sein Medienunternehmen mit KI fast ohne Betriebskosten, neun Monate bis ein Jahr zu zweit. Erst danach stellte er Editor, Social-Poster und Grafiker ein, um die Content-Geschwindigkeit zu erhöhen. Gilt für digitale Medien- und Content-Unternehmen. Beleg: eigene Daten. [GaryVee-Interview](../quellen/2026/11/2026-11-15-garyvee-reveals-how-he-runs-his-400m-year-agency.md)
 - **Newsletter-Nische rückwärts aus der Monetarisierung wählen.** Bei Werbemodell zuerst fragen, wer das Publikum erreichen muss. Laut Denk sind kleine, kaufkräftige Zielgruppen für B2B-Werbetreibende wertvoller als Massenreichweite. Gilt bei Werbung als Einkommensmodell und Zielgruppe mit hoher Kaufkraft. Beleg: Behauptung ohne Beleg. [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
+- **Bestehende Produkte mit KI in der Mitte verbinden.** These aus der Folge: Mehrere bestehende Produkte per Function Calling mit KI in der Mitte zu verbinden, ergibt neue Geschäfte bei weniger Aufwand als klassisches SaaS. Gezeigt wurde nur eine Demo mit Google Maps. *Bedingung:* kein Kundenfall, keine Marktdaten. Beleg: Behauptung ohne Beleg. [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
 
 ### Analystensicht: Gartner-Trends 2026 und 2027
 
@@ -46,6 +57,7 @@ Stand: 2026-11-16 · 10 Quellen · 33 Learnings
 
 - **10.000 bis 100.000 Mitglieder** als Suchfenster für wachsende Subreddits. Beleg: Anekdote. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
 - **Seven-Figure-Business aus der Reddit-Methode.** Isenberg nennt designscientist.com ein siebenstelliges Geschäft aus dieser Methode und sagt, Reddit-Ideen hätten ihm mehrere Multi-Millionen-Unternehmen gebracht. Umsatz, Zeitraum und Anteil der Reddit-Recherche am Erfolg belegt er nicht. Beleg: Behauptung ohne Beleg. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
+- **1 bis 20 Mio. USD Jahresumsatz** nennt Isenberg als Größenordnung für KI-automatisierte Agenturen und Beratungen, die Routineaufgaben für Unternehmen übernehmen. Keine Herleitung, kein Fallbeispiel. Beleg: Behauptung ohne Beleg. [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
 - **250 Milliarden US-Dollar NVIDIA/OpenAI.** Einziger konkreter Betrag im Bericht: ein Deal zwischen NVIDIA und OpenAI, den CFO Colette Kress laut WSJ zurückfahren wollte. Laufzeit, Struktur und Anteil an Zirkelfinanzierung sind unbekannt, die Bezugsbasis ebenfalls. Beleg: Behauptung ohne Beleg. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
 - **5.000 CMOs oder 50.000 technische KI-Leser** nennt Denk als Publikumsgrößen, die für B2B-Werbetreibende wertvoller sind als Massenreichweite. Beleg: Behauptung ohne Beleg. [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
 - **Rund 1.000 Verkäufe zu 10 $, rund 10.000 $ Umsatz aus vorhandenem Material.** Denk verkaufte ein bestehendes Vortragsdeck plus 30-Minuten-Video nach drei Bewerbungen im Newsletter, die Umwandlung zum Produkt dauerte 10 Minuten. Dazu Beratungsstunden zu 1.000 $ mit vier Buchungen. Bedingung: Publikum von 130.000 Lesern, Inhalte bereits fertig. Beleg: eigene Daten. [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
@@ -55,16 +67,31 @@ Stand: 2026-11-16 · 10 Quellen · 33 Learnings
 
 - **Gummy Search.** Gruppiert Reddit-Beiträge einer Audience in Pain and Anger, Hot Discussions, Top Content, Advice Requests, Solution Requests und Money Talk und fasst sie per KI zu Mustern zusammen. Anmeldung kostenlos, Bezahlplan ohne genannten Preis. Verfügbarkeit vor Nutzung prüfen. Eine mögliche Partnerschaft des Sprechers mit dem Tool ist nicht offengelegt. Beleg: Herstellerangabe. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
 - **Framer** für schnelle Wireframes und Landingpages, im Beispiel in wenigen Stunden aufgesetzt. Beleg: Anekdote. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
+- **Google AI Studio** als Umgebung für die in der Folge gezeigten Prototypen: Function Calling mit Google Maps und Bounding Boxes auf Fotos und Videofeeds. Gezeigt wurden nur Demos, keine Produktivfälle. Beleg: Anekdote. [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
 
 ## Wortlaute und Vorlagen
 
-- „I think the fact that everything is scarce is fantastic for us“: Ein TechPowerUp-Kommentar zitiert diesen Satz und deutet ihn im Licht des NVIDIA-Berichts. Urheber, Datum und Kontext nennt das Material nicht. Beleg: Behauptung ohne Beleg. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
+### Nachfrage und Anwendungsfälle
+
 - „these are people screaming they want these products to exist“: Isenbergs Beschreibung der Advice Requests als stärkstes Nachfragesignal. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
+- „Home automation, which we thought was going to be huge, just wasn't as big.“: Erwarteter und tatsächlicher Anwendungsfall bei Muse (32:05). [Muse, Sarantakos](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
+
+### Muster für KI-Geschäfte
+
 - „find a business with an expensive queue of incoming information and then just put Jev at the front of that queue.“: Kurzform des Klassifikator-Musters. [Jev-Video](../quellen/2026/11/2026-11-15-jev-is-here-how-to-use-it.md)
 - „I look for a customer with sensitive data, repeated review work, bad software usually, expensive mistakes“: Kurzform des Local-AI-Filters (26:30). [Local-AI-Video](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md)
+- „what happens if you take five random different products and you bring them all together and you put AI in the middle“: Kurzform der Function-Calling-These (19:09). [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
+- „you don't have to have humans do that anymore“: Isenberg über Routineaufgaben von Agenturen und Beratungen (16:52). [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
+
+### Aufbau und Monetarisierung
+
 - „If you wrote a newsletter to 5,000 CMOs, that audience is so valuable“: Denks Argument für kleine, kaufkräftige Nischen. [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
 - „the ability to build a company with low OPEX if you can utilize AI“: Begründung des Gastgebers für den kostenarmen Start. [GaryVee-Interview](../quellen/2026/11/2026-11-15-garyvee-reveals-how-he-runs-his-400m-year-agency.md)
 - „you can do that and you may even have success, but I don't believe you'll have long-term success.“: Yeung über schnelle Produktstarts ohne Substanz (17:47). [Yeung, Supplements](../quellen/2026/11/2026-11-16-he-went-from-0-to-100m-in-11-months-and-you-re-still-plannin.md)
+
+### Markt und Hardware
+
+- „I think the fact that everything is scarce is fantastic for us“: Ein TechPowerUp-Kommentar zitiert diesen Satz und deutet ihn im Licht des NVIDIA-Berichts. Urheber, Datum und Kontext nennt das Material nicht. Beleg: Behauptung ohne Beleg. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
 
 ## Warnungen und Fehler
 
@@ -75,6 +102,7 @@ Stand: 2026-11-16 · 10 Quellen · 33 Learnings
 - **Neuigkeitswert prüfen.** Ein Kommentar verweist auf einen Guardian-Artikel vom 2025-12-28 zur Zirkelfinanzierung bei NVIDIA. Neu wären am Bericht nur die behauptete Absicht und der interne Streit. Der verlinkte Artikel wurde nicht gelesen. Beleg: Behauptung ohne Beleg. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
 - **Bot-Hinweise vertreiben Nutzer.** Ein Kommentator nutzt Google wegen ständiger Hinweise auf verdächtige Aktivität seiner IP seit Monaten nicht mehr, ein anderer seit Jahren nicht. Genannt werden DuckDuckGo, Brave Search und Kagi, jeweils ohne Begründung oder Vergleich. Gilt für Nutzer auf betroffenen Adressen im Consumer-Kontext. Beleg: Anekdote. [HN, Google-Login](../quellen/2026/11/2026-11-15-tell-hn-google-search-to-start-locking-down-search-behind-a.md)
 - **Login-Pflicht schließt Menschen ohne Smartphone aus.** Eine YouTube-Kontoerstellung scheiterte laut Bericht daran, dass ein Smartphone erwartet wurde. Das trifft auch Nutzer an geteilten oder öffentlichen Rechnern. Beleg: Anekdote. [HN, Google-Login](../quellen/2026/11/2026-11-15-tell-hn-google-search-to-start-locking-down-search-behind-a.md)
+- **Erwartete Anwendungsfälle können danebenliegen.** Bei Muse galt Heimautomatisierung intern als großer Anwendungsfall und blieb schwach, Einkaufen wurde unerwartet groß. Annahmen über Consumer-Agenten deshalb an Nutzungsdaten prüfen, nicht an Erwartungen. *Bedingung:* B2C, E-Commerce. Beleg: eigene Daten. [Muse, Sarantakos](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
 
 ## Strittig
 
@@ -96,3 +124,5 @@ Stand: 2026-11-16 · 10 Quellen · 33 Learnings
 - Funktioniert das Klassifikator-vor-Queue-Muster in der Praxis, und welche Branchen haben die teuersten Eingangs-Queues? Die Quelle zeigt keinen umgesetzten Fall. [Jev-Video](../quellen/2026/11/2026-11-15-jev-is-here-how-to-use-it.md)
 - Zahlen Kunden für lokale KI-Werkzeuge wie den Pre-Send-Prüfer oder die Offline-Berichts-App, und zu welchem Preis? Die Quelle nennt weder Preise noch Kunden und führt keine der Ideen vor. [Local-AI-Video](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md)
 - Lassen sich Denks Produktzahlen ohne ein bestehendes Publikum von 130.000 Lesern annähernd erreichen? [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
+- Gibt es für die Function-Calling-These und die Agentur-Automatisierung mit 1 bis 20 Mio. USD Jahresumsatz einen belegten Kundenfall, und welche Ergebnisse brachte die Flächenmessung per Bounding Boxes bei Inventory-Management-Firmen? Die Folge zeigt nur Demos. [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
+- Warum blieb Heimautomatisierung bei Muse schwach, und lässt sich der Einkaufserfolg auf kleinere Consumer-Agenten ohne Metas Reichweite übertragen? [Muse, Sarantakos](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
