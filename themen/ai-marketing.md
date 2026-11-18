@@ -1,8 +1,8 @@
 # AI im Marketing
 
-Diese Seite sammelt, was Quellen über den Einsatz von KI in Marketing, Content-Produktion und der Aktivierung von KI-Produkten berichten: welche Abläufe funktionieren, welche Werkzeuge genannt werden, wie Firmen in KI-Assistenten sichtbar werden und wo Vorsicht geboten ist. Jede Aussage verweist auf ihre Quelle; Widersprüche zwischen Quellen werden offen ausgewiesen.
+Diese Seite sammelt, was Quellen über den Einsatz von KI in Marketing, Content-Produktion und der Aktivierung von KI-Produkten berichten: welche Abläufe funktionieren, welche Werkzeuge genannt werden, wie Firmen in Suche und KI-Assistenten sichtbar werden und wo Vorsicht geboten ist. Jede Aussage verweist auf ihre Quelle; Widersprüche zwischen Quellen werden offen ausgewiesen.
 
-Stand: 2026-11-17 · 15 Quellen · 46 Learnings
+Stand: 2026-11-18 · 17 Quellen · 50 Learnings
 
 ## Was mehrfach belegt ist
 
@@ -51,16 +51,23 @@ Stand: 2026-11-17 · 15 Quellen · 46 Learnings
 - **KI-Ad mit prominenter Partnerin, gekennzeichnet und am Sportkalender getimt.** IM8 ließ von einer Agentur eine KI-Ad mit Sabalenka für 25.000 US-Dollar in 3 bis 4 Wochen produzieren, kennzeichnete sie im Video als KI und startete kurz vor den US Open. Laut Sprecher kamen rund 20 Millionen Views am ersten Tag zusammen. Bedingung: Einwilligung der prominenten Partnerin, die das Video selbst teilte; Timing an einem Sportereignis; Kundenfall. Zitat (27:21): „the AI video cost us 25 grand and then we put it out basically in like 3 to 4 weeks.“ [$0 to $100M in 11 Months](../quellen/2026/11/2026-11-16-he-went-from-0-to-100m-in-11-months-and-you-re-still-plannin.md)
 - **Bei Content-Deals mit Athleten Whitelisting sichern statt weniger Posts.** Marken sollten Content verhandeln, gegen den sie dauerhaft Anzeigen schalten dürfen. Athleten versuchen laut Gary, den Lieferumfang zu drücken. Bedingung: Marken, die mit prominenten Athleten oder Creatorn Content einkaufen; Behauptung ohne Beleg. Zitat (62:27): „the best way to get ripped off is to do a deal with your favorite athlete because you're really doing the deal just to like meet them“ [GaryVee: $400M/Year Agency](../quellen/2026/11/2026-11-15-garyvee-reveals-how-he-runs-his-400m-year-agency.md)
 
-### Sichtbarkeit in KI-Assistenten
+### Sichtbarkeit in Suche und KI-Assistenten
 
 - **Für Agenten-Empfehlungen in Dokumentation, Vorlagen und Community investieren.** Vercel setzt auf umfangreiche Dokumentation, Vorlagen und Guides sowie Community-Signale von Open-Source-Entwicklern. Das Marketing hat dafür eine deutlich größere Content-Engineering-Funktion als ein typisches B2B-Team vor 24 Monaten. Bedingung: Firmen mit Entwickler-Zielgruppe und Open-Source-Community; eigene Daten. [How to Get AI Agents to Recommend Your Business](../quellen/2026/11/2026-11-15-how-to-get-ai-agents-to-recommend-your-business-vercel-coo.md)
 - **Empfehlungshäufigkeit messen und Seiten umschreiben, bis der Agent den Wert erfasst.** Vercel misst mit AEO-Evals je Anwendungsfall, wie oft es in Claude, Cursor, OpenAI und anderen Systemen empfohlen wird. Wird bei gleicher Leistung ein Mitbewerber gewählt, werden Landing- und Preisseiten umgeschrieben. Bedingung: Anbieter in Kategorien, die Nutzer per KI-Assistent recherchieren; Aufbau der Evals nicht gezeigt. Zitat (09:55): „what's the frequency with which Vercel gets recommended across, you know, Claude, Cursor“ [How to Get AI Agents to Recommend Your Business](../quellen/2026/11/2026-11-15-how-to-get-ai-agents-to-recommend-your-business-vercel-coo.md)
+- **Programmatisches SEO nach Ort oder Vergleichspaar als Weg in KI-Antworten.** Seiten in Serie nach Mustern wie „How to pass an inspection in [Stadt]“ oder „[Tool A] versus [Tool B] in 2025“ aufbauen. Der Sprecher hält SEO für nicht tot und sieht es als Weg zu Nennungen in ChatGPT und Perplexity. Muster siehe „Wortlaute und Vorlagen“. Bedingung: Nischen mit vielen wiederkehrenden, ortsbezogenen oder vergleichenden Suchanfragen; Behauptung ohne Beleg. Zitat (25:15): „No, SEO is not dead.“ [Making $$$ with MicroSaaS](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
+- **Lange, wörtlich beschreibende .com-Domain für Problemsuchen.** Eine Domain wie „bank statement converter“ fängt laut Sprecher Suchende über Google, ChatGPT und Perplexity direkt ab; viele solcher Domains seien noch frei. Bedingung: Self-Serve-Produkte, die über die Suche nach einem konkreten Problem gefunden werden; Behauptung ohne Beleg. Zitat (08:35): „You would be surprised how many of them are not taken.“ [Making $$$ with MicroSaaS](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
 
-### Onboarding und Aktivierung von KI-Produkten
+### Eigene Seiten und Differenzierung
+
+- **Eigene Seiten mit AI-Coding-Werkzeugen statt aus dem Standard-Baukasten.** Wer Seiten nur schnell im Standard-Marketing-Tool baut, sieht laut Sprecher aus wie alle anderen; mit AI-Coding-Werkzeugen lasse sich eine eigene kreative Vision umsetzen, die differenziert. Das Argument ähnelt IM8s Sorge, dass billig verfügbare Formate ihre Unterscheidungskraft verlieren (siehe „Strittig“). Bedingung: Personal Brand und Creator; Behauptung ohne Beleg. Zitat (13:38): „then you're just going to look everyone else. And that's just not good enough today.“ [5 AI Startup Ideas](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+
+### Onboarding, Aktivierung und Verbreitung von KI-Produkten
 
 - **Starter-Pakete gegen die Hürde des leeren Prompts.** Muse bietet einen Ideas Tab mit vorgefertigten Starter-Paketen, etwa für Cron-Jobs oder Dashboards, die Nutzer mit „Let's do it“ starten. Ohne diese Hilfe fragen laut Quelle viele Erstnutzer nur nach dem Wetter. Bedingung: Agenten-Produkte mit offener Eingabe, B2C; eigene Daten. Zitat (49:00): „people freeze on the first prompt“ [Meta's Muse](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
 - **Onboarding nach Nutzerkohorte staffeln.** Meta setzt bei Muse auf gestaffeltes Onboarding, weil frühe Nutzerkohorten andere Erklärungen brauchen als spätere Massennutzer. Bedingung: Produkte, die vom Early Adopter in den Massenmarkt wachsen; eigene Daten. Zitat (50:40): „we have to have tiered onboarding.“ [Meta's Muse](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
 - **Mundpropaganda als stärkster Aktivierungshebel.** Laut Muse-Produktteam wirken Geschichten anderer Nutzer über konkrete Anwendungsfälle am besten, um neue Nutzer zu aktivieren. Zahlen dazu werden nicht genannt. Bedingung: B2C-KI-Produkte; Behauptung ohne Beleg. Zitat (47:30): „The most effective lever out there is word of mouth.“ [Meta's Muse](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
+- **Den Output des Produkts zum Werbemittel machen.** Beispiele: Wasserzeichen auf generierten Clips, ein wöchentliches Leaderboard erfolgreicher Nutzer oder ein Button, der einen Vergleich als Folie mit Logo-Footer für Board-Decks erzeugt. Verwandt mit der Beobachtung des Muse-Teams, dass Geschichten anderer Nutzer am stärksten aktivieren. Bedingung: Produkte, deren Ergebnis öffentlich oder in Gremien gezeigt wird; Wirkung unbelegt, Behauptung ohne Beleg. Zitat (27:38): „the OMG, here's my free clip tweet is your growth engine“ [Making $$$ with MicroSaaS](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
 
 ### E-Mail und Newsletter
 
@@ -135,6 +142,7 @@ Stand: 2026-11-17 · 15 Quellen · 46 Learnings
 - **Planungs-Prompt mit Pflicht zur Rückfrage.** Vorher Rolle, Angebot, Zielgruppe und Ziel nennen. Claude fragte im Beispiel nach Landingpage-Variante, Auslieferungsweg, Plattformen und E-Mail-Tool. Wortlaut (05:16): „Plan a full campaign: content calendar, posts, landing page and email. Before you write anything, ask me what you need to know.“ [Full Marketing Campaign With Claude](../quellen/2026/11/2026-11-14-i-built-a-full-marketing-campaign-with-claude-in-one-afterno.md)
 - **Edits als Lernmaterial zurückgeben.** Wortlaut (11:38): „Here are my edits. Learn from what I changed and save it to memory.“ [Full Marketing Campaign With Claude](../quellen/2026/11/2026-11-14-i-built-a-full-marketing-campaign-with-claude-in-one-afterno.md)
 - **Landingpage als HubSpot-Entwurf ablegen.** Wortlaut (09:28): „Add this landing page to my HubSpot account as a draft.“ [Full Marketing Campaign With Claude](../quellen/2026/11/2026-11-14-i-built-a-full-marketing-campaign-with-claude-in-one-afterno.md)
+- **Seitenmuster für programmatisches SEO.** Ortsbezogen: „How to pass an inspection in [Stadt]“; Vergleichspaar: „[Tool A] versus [Tool B] in 2025“. Die Jahreszahl stammt aus der Quelle. Behauptung ohne Beleg. [Making $$$ with MicroSaaS](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
 
 ## Warnungen und Fehler
 
@@ -182,15 +190,18 @@ Stand: 2026-11-17 · 15 Quellen · 46 Learnings
 
 - **Trägt der Claude-Kampagnenablauf auch in B2B mit langen Zyklen und Freigabeprozessen?** Gezeigt wurde nur ein Creator-Lead-Magnet ohne Ergebniszahlen. [Full Marketing Campaign With Claude](../quellen/2026/11/2026-11-14-i-built-a-full-marketing-campaign-with-claude-in-one-afterno.md)
 - **Welches rechtliche Risiko entsteht, wenn bei einer Klage ohne anwaltliche Abstimmung kommuniziert wird, und gilt der Ansatz auch für Firmen ohne erfahrene Gründer?** Die Quelle schildert nur die Sicht einer Prozesspartei. [$725 Million Company in 255 Days](../quellen/2026/11/2026-11-16-he-built-a-725-million-company-in-255-days-here-s-what-you-r.md)
+- **Differenzieren mit AI-Coding-Werkzeugen gebaute Seiten messbar gegenüber Seiten aus dem Standard-Baukasten?** Die Quelle begründet das nur mit dem Eindruck, sonst wie alle anderen auszusehen. [5 AI Startup Ideas](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
 
-### Onboarding und Aktivierung
+### Onboarding, Aktivierung und Verbreitung
 
 - **Wie groß ist der Effekt von Mundpropaganda und Starter-Paketen auf die Aktivierung messbar?** Die Quelle nennt keine Zahlen zur Wirkung der einzelnen Hebel. [Meta's Muse](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
+- **Wie viel Wachstum bringt es, den Produkt-Output als Werbemittel zu nutzen?** Die Quelle nennt Beispiele wie Wasserzeichen, Leaderboards und Folien-Export, aber keine Wirkung. [Making $$$ with MicroSaaS](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
 
 ### Agenten, Sichtbarkeit und Teams
 
 - **Wie sind Vercels AEO-Evals aufgebaut, und lassen sie sich ohne Entwickler-Zielgruppe übertragen?** Die Quelle zeigt weder Prompts noch Auswertung. [How to Get AI Agents to Recommend Your Business](../quellen/2026/11/2026-11-15-how-to-get-ai-agents-to-recommend-your-business-vercel-coo.md)
 - **Welcher Kennwert stieg über ChatGPT von 1 auf 10 Prozent, und stimmt die Angabe von 70 Prozent Geschäft über Agenten-Empfehlungen?** Das Transkript ist an dieser Stelle fehlerhaft und die Zuordnung unklar. [How to Get AI Agents to Recommend Your Business](../quellen/2026/11/2026-11-15-how-to-get-ai-agents-to-recommend-your-business-vercel-coo.md)
+- **Führen beschreibende Domains und programmatisches SEO tatsächlich zu Nennungen in ChatGPT und Perplexity?** Die Quelle behauptet es ohne Daten. [Making $$$ with MicroSaaS](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
 - **Welche Aufgaben hat KI in Garys Content-Team ersetzt?** Die Quelle nennt nur die Teamgröße vorher und nachher. [GaryVee: $400M/Year Agency](../quellen/2026/11/2026-11-15-garyvee-reveals-how-he-runs-his-400m-year-agency.md)
 
 ### E-Mail und Newsletter

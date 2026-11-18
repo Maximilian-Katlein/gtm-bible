@@ -1,26 +1,27 @@
 # Sovereign AI
 
-Diese Seite sammelt, was Unternehmen beachten müssen, wenn sie KI-Modelle unabhängig von einzelnen Anbietern, Regionen und Vertragsbedingungen betreiben wollen. Sie fasst Belege zu Verfügbarkeit, Exit-Strategien, Hardware- und Compute-Kosten, lokalem, hybridem und Offline-Betrieb, Lizenzen und Offenheit, Herkunft und Rechtsstatus von Trainingsdaten, Code-Prüfung, Hintertüren in Modellen, Cloud-Bindung und Datenabfluss von Agenten-Tools, Telemetrie zu Coding-Agenten unter Windows und politischer Verzerrung offener Modelle zusammen.
+Diese Seite sammelt, was Unternehmen beachten müssen, wenn sie KI-Modelle unabhängig von einzelnen Anbietern, Regionen und Vertragsbedingungen betreiben wollen. Sie fasst Belege zu Verfügbarkeit, Exit-Strategien, Hardware- und Compute-Kosten, Bindung an Cloud-Hardware, lokalem, hybridem und Offline-Betrieb, Lizenzen und Offenheit, Herkunft und Rechtsstatus von Trainingsdaten, Code-Prüfung, Hintertüren in Modellen, Cloud-Bindung und Datenabfluss von Agenten-Tools, Telemetrie zu Coding-Agenten unter Windows und politischer Verzerrung offener Modelle zusammen.
 
-Stand: 2026-11-17 · 26 Quellen · 59 Learnings
+Stand: 2026-11-18 · 27 Quellen · 60 Learnings
 
 ## Was mehrfach belegt ist
 
 ### Lizenz, Herkunft und Dokumentation
 
-- **Lizenz offener Modelle vor kommerziellem Einsatz selbst prüfen (7 Quellen).**
+- **Lizenz offener Modelle vor kommerziellem Einsatz selbst prüfen (8 Quellen).**
   - LFM3-1.7B steht unter der LFM Open License v1.0. Das ist keine Standardlizenz wie Apache 2.0 oder MIT, und die Card nennt keine Bedingungen zu kommerzieller Nutzung oder EU.
   - Edge0-145B nennt nach dem Material überhaupt keine Lizenz, die kommerzielle Nutzung ist damit offen.
   - Bei Mirage steht im Lizenzfeld „license: apache-2.0“, was kommerzielle Nutzung grundsätzlich erlaubt. Die Runtime liegt aber in einem separaten Repo (Cactus-Compute/cactus). Deren Lizenz und den Lizenztext im Modell-Repo getrennt prüfen.
   - Die Unsloth-Seite zu Qwen3.8-27B nennt weder Lizenz noch Bedingungen für kommerzielle Nutzung. Das muss man an anderer Stelle prüfen.
   - Das DSpine-Draft-Modell für Qwen3.8-27B steht unter Apache 2.0 („license: apache-2.0“), ohne zusätzliche Einschränkungen zu kommerzieller Nutzung oder EU. Für den Betrieb zählt aber auch die Lizenz von Qwen3.8-27B, die diese Karte nicht nennt.
+  - Bei TrnRT steht die Inferenz-Engine unter Apache 2.0. Die Lizenz des eingesetzten Modells GLM-5.3-Flash nennt das Material nicht. Wie bei DSpine zählt für den Betrieb auch die Lizenz des Modells.
   - Inkling 2 Small steht unter Apache 2.0. Die Karte verlinkt daneben eine separate Acceptable Use Policy, ohne Inhalt oder Verhältnis zur Lizenz zu erklären.
   - LongCat-2.5 steht unter MIT-Lizenz ohne Einschränkung nach Branche oder Region, also ohne EU-Ausschluss. Marken und Patente sind ausgenommen: „This license does not grant any rights to use Meituan trademarks or patents.“ Eine Patentlizenz wie bei Apache 2.0 fehlt, das sollte rechtlich geprüft werden. Diese Bewertung ist eine Einordnung, kein Teil der Karte.
-  - In allen Fällen gilt: Vor dem Einsatz den LICENSE-Text im Repo lesen. Zusätzlich bei Mirage die Lizenz der Runtime, bei DSpine die des Basismodells, bei Inkling die Acceptable Use Policy.
+  - In allen Fällen gilt: Vor dem Einsatz den LICENSE-Text im Repo lesen. Zusätzlich bei Mirage die Lizenz der Runtime, bei DSpine und TrnRT die des Modells, bei Inkling die Acceptable Use Policy.
   - Zu Qwen4-Max, bei dem schon offen ist, ob es überhaupt offene Gewichte gibt, siehe „Warnungen und Fehler“.
   - *Bedingung:* Kommerzielle, souveräne und Sovereign-AI-Setups, insbesondere in der EU. Bei Inkling alle, die das Modell in Produkten einsetzen oder weitergeben.
-  - *Beleglage:* Bei LFM3, Mirage, DSpine und LongCat Herstellerangaben, bei Edge0, Unsloth und Inkling Behauptung ohne Beleg.
-  - [LFM3-1.7B Model Card](../quellen/2026/11/2026-11-13-liquidai-lfm3-1-7b-model-card-auf-hugging-face.md), [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [Unsloth Qwen3.8-27B](../quellen/2026/11/2026-11-14-unsloth-qwen3-8-27b-quantizations-dynamic-v3-1-update.md), [DSpine for Qwen3.8-27B](../quellen/2026/11/2026-11-14-tencent-qwen3-8-27b-dspine-b16-dspine-for-qwen3-8-27b.md), [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md)
+  - *Beleglage:* Bei LFM3, Mirage, DSpine, TrnRT und LongCat Herstellerangaben, bei Edge0, Unsloth und Inkling Behauptung ohne Beleg.
+  - [LFM3-1.7B Model Card](../quellen/2026/11/2026-11-13-liquidai-lfm3-1-7b-model-card-auf-hugging-face.md), [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [Unsloth Qwen3.8-27B](../quellen/2026/11/2026-11-14-unsloth-qwen3-8-27b-quantizations-dynamic-v3-1-update.md), [DSpine for Qwen3.8-27B](../quellen/2026/11/2026-11-14-tencent-qwen3-8-27b-dspine-b16-dspine-for-qwen3-8-27b.md), [TrnRT (Show HN)](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md), [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md)
 - **Trainingsdaten, Datenherkunft und Evaluierung bleiben bei offenen Modellen unbelegt (5 Quellen).**
   - Edge0 veröffentlicht nach dem Material nur Gewichte, Framework und Tools, aber keine Trainingsdaten und keinen Trainingscode.
   - Die Mirage-Card enthält keine Angaben zu Trainingsdaten, Datenherkunft oder EU-Konformität.
@@ -50,14 +51,15 @@ Stand: 2026-11-17 · 26 Quellen · 59 Learnings
   - *Bedingung:* Selbst-Hosting in abgeschotteten, On-Premise- oder regulierten Umgebungen. Bei LFM3 gilt das nur für die Transformers-Variante.
   - *Beleglage:* Bei DSpine Herstellerangabe.
   - [Kimi K3.1 Pro Model Card](../quellen/2026/11/2026-11-09-moonshotai-kimi-k3-1-pro-model-card-auf-hugging-face.md), [LFM3-1.7B Model Card](../quellen/2026/11/2026-11-13-liquidai-lfm3-1-7b-model-card-auf-hugging-face.md), [DSpine for Qwen3.8-27B](../quellen/2026/11/2026-11-14-tencent-qwen3-8-27b-dspine-b16-dspine-for-qwen3-8-27b.md)
-- **Eigener Betrieb hängt an großer oder spezieller Hardware (3 Quellen).**
+- **Eigener Betrieb hängt an großer oder spezieller Hardware (4 Quellen).**
   - Kimi K3.1 Pro: Rechnerisch belegen allein die Gewichte rund 2,84 TB, der KV-Cache kommt noch dazu. Ein Server mit 8 GPUs zu je 141 GB hat zusammen etwa 1,1 TB und reicht deshalb nicht. Ohne API muss das Modell über mehrere Knoten verteilt laufen. In den Safetensors-Metadaten steht: „"total": 2780110363392“.
   - DeepSeek Ultrafast: Der Selbstbetrieb der Engine setzt 4 bis 8 Blackwell-Rechenzentrums-GPUs voraus. Die HN-Diskussion spottet: „I'll just go get my 8 x B300 (TP8) from the shed and start this up real quick“. Für kleine Teams bleibt praktisch nur die gehostete Variante.
   - LongCat-2.5 dokumentiert Deployment nur für NPU-Plattformen über einen Branch von SGLang-FluentLLM: „LongCat-2.5 can be deployed on NPU platforms.“ Eine Anleitung für NVIDIA-GPUs, vLLM, llama.cpp oder GGUF fehlt. Die beworbenen Effizienzvorteile hängen an inländischen Beschleunigern des Herstellers, deren Chiphersteller nicht genannt wird.
-  - Offene Gewichte heißen deshalb nicht souveräner Betrieb. Eigene Kontrolle über die Inferenz ist an große Hardware-Budgets oder an Portierungsaufwand gebunden.
-  - *Bedingung:* Kimi: souveräner Betrieb ohne API, die Zahl ist eine eigene Ableitung aus den Metadaten des Original-Checkpoints. DeepSeek: Einzelpersonen und kleine Teams ohne eigenen GPU-Cluster. LongCat: Betreiber in der EU mit GPU-Infrastruktur, die die Portierung selbst leisten müssten.
-  - *Beleglage:* Bei Kimi eigene Ableitung, bei DeepSeek Anekdote, bei LongCat Herstellerangabe.
-  - [Kimi K3.1 Pro Model Card](../quellen/2026/11/2026-11-09-moonshotai-kimi-k3-1-pro-model-card-auf-hugging-face.md), [DeepSeek Ultrafast](../quellen/2026/11/2026-11-14-deepseek-ultrafast.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md)
+  - TrnRT: Die Inferenz-Engine ist offen (Apache 2.0) und läuft mit einem offenen Modell, die Hardware bleibt aber an AWS Trainium gebunden. Preise nennt das Material nur für us-east-2. Ob trn2.48xlarge in der EU verfügbar ist, steht nicht drin.
+  - Offene Gewichte und offene Engines heißen deshalb nicht souveräner Betrieb. Eigene Kontrolle über die Inferenz ist an große Hardware-Budgets, an Portierungsaufwand oder an einen einzelnen Cloud-Anbieter gebunden.
+  - *Bedingung:* Kimi: souveräner Betrieb ohne API, die Zahl ist eine eigene Ableitung aus den Metadaten des Original-Checkpoints. DeepSeek: Einzelpersonen und kleine Teams ohne eigenen GPU-Cluster. LongCat: Betreiber in der EU mit GPU-Infrastruktur, die die Portierung selbst leisten müssten. TrnRT: Einsatz mit Datenhoheitsanforderungen, Region und Bedingungen vorher bei AWS und beim Modellanbieter prüfen.
+  - *Beleglage:* Bei Kimi eigene Ableitung, bei DeepSeek Anekdote, bei LongCat und TrnRT Herstellerangabe.
+  - [Kimi K3.1 Pro Model Card](../quellen/2026/11/2026-11-09-moonshotai-kimi-k3-1-pro-model-card-auf-hugging-face.md), [DeepSeek Ultrafast](../quellen/2026/11/2026-11-14-deepseek-ultrafast.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md), [TrnRT (Show HN)](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md)
 - **Lokaler Betrieb heißt nicht offline (2 Quellen).**
   - Mirage: Das Paket cactus-compute lädt Engine und Gewichte beim ersten Aufruf automatisch aus dem Netz: „The package downloads and caches the engine and weights on first use.“ Für Air-Gap- oder souveräne Umgebungen müssen Engine und Gewichte vorab bezogen werden. Den Offline-Betrieb muss man selbst verifizieren, die Card beschreibt ihn nicht.
   - CCORE Qwen3.5-4B-GLB-3D-Coder: Das Modell läuft lokal, die erzeugten Three.js-Seiten laden Bibliotheken aber unter Umständen per CDN: „The page may load Three.js and its add-ons from a CDN.“ Für Offline- oder Air-Gap-Betrieb müssen Three.js und Add-ons selbst lokal bereitgestellt werden.
@@ -218,7 +220,7 @@ Stand: 2026-11-17 · 26 Quellen · 59 Learnings
 ### Hardwarebedarf beim Selbst-Hosting
 
 - **Kimi K3.1 Pro braucht rund 2,84 TB allein für die Gewichte, DeepSeek Ultrafast 4 bis 8 Blackwell-GPUs.**
-  - Die Herleitung und die Einordnung zusammen mit LongCat-2.5 stehen unter „Was mehrfach belegt ist“.
+  - Die Herleitung und die Einordnung zusammen mit LongCat-2.5 und TrnRT stehen unter „Was mehrfach belegt ist“.
   - [Kimi K3.1 Pro Model Card](../quellen/2026/11/2026-11-09-moonshotai-kimi-k3-1-pro-model-card-auf-hugging-face.md), [DeepSeek Ultrafast](../quellen/2026/11/2026-11-14-deepseek-ultrafast.md)
 
 ### Kosten von Compute
@@ -292,9 +294,10 @@ Stand: 2026-11-17 · 26 Quellen · 59 Learnings
 - **Viele Hosting-Anbieter heißt nicht geklärte Region.**
   - Inkling 2 Small ist gehostet bei NVIDIA, Fireworks, Together, Baseten, Nebius, Modal und Cloudflare Workers AI verfügbar: „API access is also available through third party inference providers“.
   - Die Karte nennt weder Preise noch Hosting-Regionen. Für EU-konforme oder souveräne Nutzung muss die Region bei jedem Anbieter einzeln geklärt werden.
+  - Ähnlich offen ist die Region bei TrnRT auf AWS Trainium, siehe „Was mehrfach belegt ist“.
   - *Bedingung:* Unternehmen mit EU-Datenresidenz- oder Souveränitätsanforderungen.
   - *Beleglage:* Herstellerangabe.
-  - [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md)
+  - [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [TrnRT (Show HN)](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md)
 
 ### Herkunft chinesischer Modelle im Einkauf
 
@@ -310,7 +313,7 @@ Stand: 2026-11-17 · 26 Quellen · 59 Learnings
 
 - **Je mehr Dev-Setup und Memory in der Anbieter-Cloud liegt, desto schwerer der Ausstieg.**
   - Kommentatoren sehen in der Verlagerung in Claude Code Projects einen wachsenden Lock-in: „The more of your development setup is running in the cloud, I think it will be really hard to justify leaving.“
-  - Zur Exit-Fähigkeit als Einkaufskriterium siehe „Taktiken und Abläufe“.
+  - Zur Exit-Fähigkeit als Einkaufskriterium siehe „Taktiken und Abläufe“, zur Bindung offener Inferenz an AWS-Hardware siehe „Was mehrfach belegt ist“.
   - *Bedingung:* Teams, die Entwicklungsprozess und Projektwissen komplett in Projects ablegen.
   - *Beleglage:* Behauptung ohne Beleg.
   - [Claude Code Projects](../quellen/2026/11/2026-11-14-anthropic-upgrades-claude-code-projects-to-run-parallel-ai-w.md)
@@ -436,6 +439,9 @@ Stand: 2026-11-17 · 26 Quellen · 59 Learnings
 - **Unter welcher Lizenz steht Qwen3.8-27B selbst?**
   - Die Unsloth-Seite nennt keine Lizenz, die DSpine-Karte nur die Apache-2.0-Lizenz des Draft-Modells.
   - [Unsloth Qwen3.8-27B](../quellen/2026/11/2026-11-14-unsloth-qwen3-8-27b-quantizations-dynamic-v3-1-update.md), [DSpine for Qwen3.8-27B](../quellen/2026/11/2026-11-14-tencent-qwen3-8-27b-dspine-b16-dspine-for-qwen3-8-27b.md)
+- **Unter welcher Lizenz steht GLM-5.3-Flash, und ist trn2.48xlarge in EU-Regionen verfügbar?**
+  - Das Material zu TrnRT nennt Preise nur für us-east-2 und schweigt zu Modelllizenz und EU-Verfügbarkeit.
+  - [TrnRT (Show HN)](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md)
 - **Hat Qwen4-Max offene Gewichte, und über welche Anbieter und Regionen ist es nutzbar?**
   - Kommentare vermuten, dass es keine offenen Gewichte gibt und der Zugang nur über Qwen oder Partner läuft. Eine Lizenz ist nicht bestätigt.
   - [Qwen4-Max](../quellen/2026/11/2026-11-17-qwen4-max.md)

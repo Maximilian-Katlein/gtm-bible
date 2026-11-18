@@ -1,12 +1,14 @@
 # Disruptive AI-Geschäftsideen
 
-Diese Seite sammelt, wie Gründer KI-Geschäftsideen finden und prüfen, wo vertikale und lokale KI-Anbieter Schutz vor Wettbewerb haben, wie sich Publikum und Wissen mit geringen Kosten monetarisieren lassen und welche Anwendungsfälle Consumer-Agenten tatsächlich tragen. Sie hält fest, welche Signale aus KI-Hardware, Websuche und Analystenprognosen belastbar sind, unter welchen Bedingungen etwas gilt und wo Quellen sich widersprechen.
+Diese Seite sammelt, wie Gründer KI-Geschäftsideen finden und prüfen, wo vertikale und lokale KI-Anbieter Schutz vor Wettbewerb haben, wie sich Publikum, Wissen und KI-Automatisierung als Dienstleistung mit geringen Kosten monetarisieren lassen und welche Anwendungsfälle Consumer-Agenten, Micro-SaaS und Custom GPTs tatsächlich tragen. Sie hält fest, welche Signale aus KI-Hardware, Websuche und Analystenprognosen belastbar sind, unter welchen Bedingungen etwas gilt und wo Quellen sich widersprechen.
 
-Stand: 2026-11-17 · 12 Quellen · 37 Learnings
+Stand: 2026-11-18 · 16 Quellen · 51 Learnings
 
 ## Was mehrfach belegt ist
 
 - **Suchfeld teure, wiederkehrende Routinearbeit in Betrieben (3 Quellen).** Drei Quellen empfehlen unabhängig voneinander, KI dort anzusetzen, wo ein Betrieb wiederholt teure Verarbeitungsarbeit leistet: ein Klassifikator vor einer teuren Eingangs-Queue, lokale KI für wiederkehrende Prüfarbeit mit sensiblen Daten, Automatisierung von Agentur- und Beratungsleistungen, die schmerzhafte Routineaufgaben übernehmen. Die Schwerpunkte unterscheiden sich (Durchsatz, Datenschutz und Gerätenähe, Ersatz menschlicher Dienstleistung). Keine der drei Quellen zeigt einen umgesetzten Kundenfall oder Zahlen, die Übereinstimmung ist also ein Richtungssignal, kein Nachweis. *Bedingung:* B2B, Startups und SMB. Beleg: Behauptung ohne Beleg. [Jev-Video](../quellen/2026/11/2026-11-15-jev-is-here-how-to-use-it.md), [Local-AI-Video](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md), [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
+- **KI-Baukästen senken die Baukosten so weit, dass schmale oder individuelle Software wirtschaftlich wird (4 Quellen).** Laut MicroSaaS-Video machen KI-Coding-Werkzeuge wie Cursor extrem nischige Produkte für Einzelgründer erst baubar. Die 5-KI-Ideen-Folge begründet die Lücke für Seiten-Builder damit, dass individuelle Darstellungen je Kategorie mit Cursor oder Bolt heute billig sind. Martell beschreibt eine Agentur, die individuelle Web-Apps von Lovable bauen lässt. Gartner nennt KI-getriebenen Software-Überfluss als Grund, warum führende Organisationen neue Anwendungen wegwerfbar bauen werden. Gemeinsamer Kern: Bauen ist kein Engpass mehr, Nische, Vertrieb und Daten werden entscheidend. Die Kontexte reichen von Solo-SaaS bis Unternehmenssoftware, und keine Quelle legt Baukosten oder Zeitaufwand mit Zahlen offen. Beleg: Behauptung ohne Beleg und Prognose ohne Methodik. [MicroSaaS-Video](../quellen/2026/11/2026-11-18-making-with-microsaas.md), [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md), [Martell, KI-Cheat-Codes](../quellen/2026/11/2026-11-18-dan-martell-the-ai-cheat-codes-every-founder-needs-in-2026.md), [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
+- **KI-Automatisierung als Dienstleistung verkaufen statt als Software (2 Quellen).** Isenberg sieht Agenturen und Beratungen, die Routineaufgaben per KI statt mit Menschen erledigen, als Felder mit 1 bis 20 Mio. USD Jahresumsatz. Martell nennt den Verkauf von KI-Automatisierung als Dienstleistung die erste Stufe, mit KI Geld zu verdienen, und schildert eine Agentur, die Web-Apps per Lovable liefert. Beide Zahlen sind ohne Herleitung, das Beispiel bei Martell ist anonym und aus dem Gedächtnis zitiert. *Bedingung:* B2B Services, kleine Kunden ohne eigenes KI-Wissen. Beleg: Behauptung ohne Beleg und Anekdote. [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md), [Martell, KI-Cheat-Codes](../quellen/2026/11/2026-11-18-dan-martell-the-ai-cheat-codes-every-founder-needs-in-2026.md)
 
 ## Taktiken und Abläufe
 
@@ -22,8 +24,13 @@ Stand: 2026-11-17 · 12 Quellen · 37 Learnings
 
 - **Beispiel vertikale KI mit multimodaler Hürde.** Patentarbeit gilt als Legal Tech, verlangt aber die Verarbeitung von chemischen Strukturen, technischen Zeichnungen, Sequenzen, Gleichungen und Tabellen. Diese Hürde hielten 2023 viele Kunden für unüberwindbar, sie schützt Spezialanbieter. Gilt für vertikale KI in technischen Fachbranchen. Beleg: eigene Daten. [Solve Intelligence](../quellen/2026/11/2026-11-14-solve-intelligence-millions-in-revenue-with-zero-salespeople.md)
 - **Klassifikator vor eine teure Eingangs-Queue setzen.** Einen Betrieb suchen, bei dem eingehende Informationen teuer oder langsam abgearbeitet werden, und ein schnelles Modell davorschalten. Beispiel aus der Quelle: ein Vermittler lokaler Dienstleistungen, der Anfragen sofort dem passenden Anbieter zuordnet. Gilt für Startups und SMB; ein umgesetzter Fall wird nicht gezeigt. Beleg: Behauptung ohne Beleg. [Jev-Video](../quellen/2026/11/2026-11-15-jev-is-here-how-to-use-it.md)
-- **Agenturen und Beratungen mit Routinearbeit automatisieren.** Isenberg sieht Agenturen und Beratungen, die schmerzhafte Routineaufgaben für Unternehmen erledigen, als Felder für KI-Automatisierung mit 1 bis 20 Mio. USD Jahresumsatz. Für Umsatzspanne und Machbarkeit gibt es keinen Beleg. *Bedingung:* B2B Services, Gründerperspektive. Beleg: Behauptung ohne Beleg. [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
 - **Beispiel Flächenauslastung per Bilderkennung.** Bounding Boxes auf Fotos oder Echtzeit-Videofeeds sollen die Auslastung von Lagern oder Parkhäusern messen. Google nennt Arbeit mit Inventory-Management-Firmen, ohne Namen oder Ergebnisse. *Bedingung:* B2B Operations; anonym, keine Zahlen. Beleg: Anekdote. [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
+
+### KI-Automatisierung als Dienstleistung
+
+- **Agenturen und Beratungen mit Routinearbeit automatisieren.** Isenberg sieht Agenturen und Beratungen, die schmerzhafte Routineaufgaben für Unternehmen erledigen, als Felder für KI-Automatisierung mit 1 bis 20 Mio. USD Jahresumsatz. Für Umsatzspanne und Machbarkeit gibt es keinen Beleg. *Bedingung:* B2B Services, Gründerperspektive. Beleg: Behauptung ohne Beleg. [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
+- **Drei Stufen, mit KI Geld zu verdienen.** Laut Martell: bis 100.000 KI-Automatisierung als Dienstleistung an Kunden verkaufen, die sie nicht selbst lernen wollen (2.000 bis 5.000 pro Monat), bis 1 Million das eigene Geschäft mit KI verbessern, ab 1 Million Marke und Vertrauen aufbauen. Auf jeder Stufe wird das gelöste Problem verkauft, nicht KI. *Bedingung:* Einsteiger und kleine Kunden; Preise ohne Herleitung. Beleg: Behauptung ohne Beleg. [Martell, KI-Cheat-Codes](../quellen/2026/11/2026-11-18-dan-martell-the-ai-cheat-codes-every-founder-needs-in-2026.md)
+- **Beispiel software-gestützte Agentur.** Eine ungenannte Firma verkauft Web-Apps für etwa 7.000 Dollar: Anforderungen per Fragebogen, Bau durch Lovable, Link und Feedback-Link per Mail an den Kunden. Martell nennt aus dem Gedächtnis 60 Millionen Dollar Jahresumsatz. *Bedingung:* Firma anonym, Zahl nicht überprüfbar. Beleg: Anekdote. [Martell, KI-Cheat-Codes](../quellen/2026/11/2026-11-18-dan-martell-the-ai-cheat-codes-every-founder-needs-in-2026.md)
 
 ### Ideen mit lokaler KI
 
@@ -31,7 +38,26 @@ Stand: 2026-11-17 · 12 Quellen · 37 Learnings
 - **Beispiel lokaler Pre-Send-Prüfer.** Ein lokales Modell prüft ausgehende Mails von Beratern vor dem Versand auf riskante Formulierungen, etwa Aussagen, die nach garantierter Rendite klingen. Start mit einer Branche und einem Dokumenttyp, zum Beispiel Mails unabhängiger Vermögensberater. Gilt für Professional Services; Konzept ohne Preis- oder Kundendaten. Beleg: Behauptung ohne Beleg. [Local-AI-Video](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md)
 - **Beispiel Offline-Bericht für Sanierungstechniker.** Beim Rundgang macht der Techniker Fotos und Sprachnotizen, die App entwirft daraus ohne Internetverbindung den Versicherungsbericht. Gilt für Handwerk und Außendienst; nicht vorgeführt. Beleg: Anekdote. [Local-AI-Video](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md)
 
-*Einordnung: Local-AI-Filter, Klassifikator-Muster und Isenbergs Agentur-Automatisierung zielen alle auf teure, wiederkehrende Verarbeitungsarbeit in einem Betrieb und sind deshalb oben unter „Was mehrfach belegt ist“ zusammengefasst. Die Einzelaussagen bleiben hier stehen, weil sie unterschiedliche Schwerpunkte setzen (Datenschutz und Gerätenähe, Durchsatz, Ersatz menschlicher Dienstleistung) und alle unbelegt sind.* [Local-AI-Video](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md), [Jev-Video](../quellen/2026/11/2026-11-15-jev-is-here-how-to-use-it.md), [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
+*Einordnung: Local-AI-Filter, Klassifikator-Muster und Isenbergs Agentur-Automatisierung zielen alle auf teure, wiederkehrende Verarbeitungsarbeit in einem Betrieb und sind deshalb oben unter „Was mehrfach belegt ist“ zusammengefasst. Die Einzelaussagen bleiben in ihren Abschnitten stehen, weil sie unterschiedliche Schwerpunkte setzen (Datenschutz und Gerätenähe, Durchsatz, Ersatz menschlicher Dienstleistung) und alle unbelegt sind.* [Local-AI-Video](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md), [Jev-Video](../quellen/2026/11/2026-11-15-jev-is-here-how-to-use-it.md), [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
+
+### Micro-SaaS
+
+- **Ein Feature eines Features, auf Profit gebaut.** Micro-SaaS ist laut Sprecher ein extrem nischiges Produkt, oft nur ein Feature eines Features, das eine Person oder ein Kleinstteam auf Profitabilität baut. KI-Coding-Werkzeuge wie Cursor machen solche schmalen Produkte erst wirtschaftlich baubar. *Bedingung:* Solo-Gründer oder Kleinstteam, Nischenmarkt, Self-Serve. Beleg: Behauptung ohne Beleg. [MicroSaaS-Video](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
+- **Beispiel Bank Statement Converter.** Das Werkzeug wandelt PDF-Kontoauszüge in Excel und soll als Ein-Personen-Firma rund 40.000 $ MRR erzielen. Gründe laut Sprecher: beschreibende Domain, klarer Pain, eine Sache sehr gut gemacht. *Bedingung:* B2C und SMB; Zahl ohne Quelle. Beleg: Behauptung ohne Beleg. [MicroSaaS-Video](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
+- **Idee Cart Saver.** Für jeden Shopify-Warenkorb über 100 $ entsteht automatisch ein 30-Sekunden-Video mit Vorname, Produktbild und per ElevenLabs geklonter Gründerstimme. Preis: 1 % des zurückgewonnenen Umsatzes. *Bedingung:* B2C-E-Commerce; erfolgsbasiertes Pricing setzt saubere Attribution voraus; ungebaut. Beleg: Behauptung ohne Beleg. [MicroSaaS-Video](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
+
+### Consumer-Ideen aus verbundenen Daten
+
+- **Open-Page-Builder für beliebige Lebensbereiche.** Seiten für Training, Supplements, Glukose oder Hobbys gelten als Lücke, weil individuelle Darstellungen je Kategorie mit Cursor oder Bolt heute billig zu bauen sind. Der Nutzer steuert, welche Daten öffentlich sind. *Bedingung:* B2C und Creator; unvalidierte Idee. Beleg: Behauptung ohne Beleg. [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+- **Zwei Produktvarianten.** Software für Selbstbauer, die Einzigartigkeit wollen, und ein modularer Baukasten für Nicht-Entwickler, die keine Wochen in Cursor investieren wollen. *Bedingung:* Zielgruppe Nicht-Entwickler. Beleg: Behauptung ohne Beleg. [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+- **Freemium mit Aufpreis je Modul.** Einfache Seite kostenlos, Aufpreis für Module, etwa eine Sponsor- und Affiliate-Sektion für Fitness-Creator oder ein besseres Strava-Widget mit Fortschritt zu Bestzeiten. Preise und Conversion-Raten werden nicht genannt. *Bedingung:* B2C und Creator mit Affiliate- oder Sponsoreinnahmen. Beleg: Behauptung ohne Beleg. [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+- **Gesundheitsdaten bündeln und per Chat befragbar machen.** Eine Plattform führt CGM-, Strava-, Bluttest- und Medikationsdaten zusammen und positioniert sich als Auskunftsschicht ohne Verschreibung. Dexcom, Abbott und Strava bieten APIs, die Konditionen wurden nicht geprüft. *Bedingung:* B2C, datenaffine Selbst-Tracker. Beleg: Behauptung ohne Beleg. [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+- **Dating ohne Swipen.** Matching über angebundene Dienste wie Goodreads, Netflix oder Strava, danach weist die KI ein Treffen mit Zeit, Ort und Gesprächseinstieg zu. *Bedingung:* B2C; Sicherheit und Datenschutz unbesprochen. Beleg: Anekdote. [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+
+### Custom GPTs statt Verzeichnisse
+
+- **Prüffrage: Welches Verzeichnis wird zum Custom GPT?** Gründer sollen Verzeichnis-Websites suchen, die sich als Custom GPT neu bauen lassen: Nutzer schildern ihre Situation, statt Filter zu setzen, etwa Budget, Wetter und Visum bei Nomad List. *Bedingung:* nur mit Daten, die allgemeine Modelle nicht haben. Beleg: Behauptung ohne Beleg. [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+- **Ohne eigene Daten kein Geschäft.** Ein Custom GPT trägt nur, wenn es auf spezialisierten Daten beruht, die ChatGPT oder Claude nicht haben. Monetarisiert wird wie bei Creators über Anzeigen, Affiliates, eigene Produkte oder Leads. *Bedingung:* alle Custom-GPT-Geschäftsmodelle. Beleg: Behauptung ohne Beleg. [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
 
 ### Consumer-Agenten
 
@@ -42,6 +68,10 @@ Stand: 2026-11-17 · 12 Quellen · 37 Learnings
 - **Mit KI klein starten, dann gezielt aufstocken.** Der Gastgeber startete sein Medienunternehmen mit KI fast ohne Betriebskosten, neun Monate bis ein Jahr zu zweit. Erst danach stellte er Editor, Social-Poster und Grafiker ein, um die Content-Geschwindigkeit zu erhöhen. Gilt für digitale Medien- und Content-Unternehmen. Beleg: eigene Daten. [GaryVee-Interview](../quellen/2026/11/2026-11-15-garyvee-reveals-how-he-runs-his-400m-year-agency.md)
 - **Newsletter-Nische rückwärts aus der Monetarisierung wählen.** Bei Werbemodell zuerst fragen, wer das Publikum erreichen muss. Laut Denk sind kleine, kaufkräftige Zielgruppen für B2B-Werbetreibende wertvoller als Massenreichweite. Gilt bei Werbung als Einkommensmodell und Zielgruppe mit hoher Kaufkraft. Beleg: Behauptung ohne Beleg. [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
 - **Bestehende Produkte mit KI in der Mitte verbinden.** These aus der Folge: Mehrere bestehende Produkte per Function Calling mit KI in der Mitte zu verbinden, ergibt neue Geschäfte bei weniger Aufwand als klassisches SaaS. Gezeigt wurde nur eine Demo mit Google Maps. *Bedingung:* kein Kundenfall, keine Marktdaten. Beleg: Behauptung ohne Beleg. [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
+
+### Infrastruktur jenseits von Nvidia
+
+- **Lücke bei Werkzeugen für Trainium.** Ein Kommentator auf Hacker News sieht ein dünnes Trainium-Ökosystem und hält es für einen klaren strategischen Hebel, Trainium als nahtlosen Nvidia-Ersatz nutzbar zu machen. Das deutet auf Bedarf an Werkzeugen für Nicht-Nvidia-Inferenz hin, ist aber Meinung eines Einzelnen. Beleg: Behauptung ohne Beleg. [TrnRT, HN](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md)
 
 ### Analystensicht: Gartner-Trends 2026 und 2027
 
@@ -55,19 +85,42 @@ Stand: 2026-11-17 · 12 Quellen · 37 Learnings
 
 ## Zahlen und Richtwerte
 
+### Ideensuche
+
 - **10.000 bis 100.000 Mitglieder** als Suchfenster für wachsende Subreddits. Beleg: Anekdote. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
 - **Seven-Figure-Business aus der Reddit-Methode.** Isenberg nennt designscientist.com ein siebenstelliges Geschäft aus dieser Methode und sagt, Reddit-Ideen hätten ihm mehrere Multi-Millionen-Unternehmen gebracht. Umsatz, Zeitraum und Anteil der Reddit-Recherche am Erfolg belegt er nicht. Beleg: Behauptung ohne Beleg. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
+
+### KI-Dienstleistungen und Agenturen
+
 - **1 bis 20 Mio. USD Jahresumsatz** nennt Isenberg als Größenordnung für KI-automatisierte Agenturen und Beratungen, die Routineaufgaben für Unternehmen übernehmen. Keine Herleitung, kein Fallbeispiel. Beleg: Behauptung ohne Beleg. [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
-- **250 Milliarden US-Dollar NVIDIA/OpenAI.** Einziger konkreter Betrag im Bericht: ein Deal zwischen NVIDIA und OpenAI, den CFO Colette Kress laut WSJ zurückfahren wollte. Laufzeit, Struktur und Anteil an Zirkelfinanzierung sind unbekannt, die Bezugsbasis ebenfalls. Beleg: Behauptung ohne Beleg. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
+- **2.000 bis 5.000 pro Monat** für KI-Automatisierung als Dienstleistung, Stufengrenzen bei 100.000 und 1 Million. Währung und Bezug (Umsatz je Kunde oder gesamt) bleiben offen. Beleg: Behauptung ohne Beleg. [Martell, KI-Cheat-Codes](../quellen/2026/11/2026-11-18-dan-martell-the-ai-cheat-codes-every-founder-needs-in-2026.md)
+- **Etwa 7.000 Dollar je Web-App, 60 Millionen Dollar Jahresumsatz** bei der ungenannten Lovable-Agentur, laut Martell aus dem Gedächtnis. Beleg: Anekdote. [Martell, KI-Cheat-Codes](../quellen/2026/11/2026-11-18-dan-martell-the-ai-cheat-codes-every-founder-needs-in-2026.md)
+
+### Micro-SaaS und Consumer-Produkte
+
+- **Rund 40.000 $ MRR solo** für Bank Statement Converter. Zahl ohne Quelle. Beleg: Behauptung ohne Beleg. [MicroSaaS-Video](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
+- **1 % des zurückgewonnenen Umsatzes, Warenkörbe ab 100 $** als Preis und Schwelle für die Cart-Saver-Idee. Ungebaut. Beleg: Behauptung ohne Beleg. [MicroSaaS-Video](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
+- **Mindestens 30 $ pro Monat statt der üblichen 10 $** würde Steph Smith für eine Gesundheitsplattform zahlen, die ein konkretes Problem löst. Einzelaussage einer nach eigener Einschätzung überdurchschnittlich zahlungsbereiten Person. *Bedingung:* n=1, Wearable-Heavy-User. Beleg: Anekdote. [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+
+### Publikum und Monetarisierung
+
 - **5.000 CMOs oder 50.000 technische KI-Leser** nennt Denk als Publikumsgrößen, die für B2B-Werbetreibende wertvoller sind als Massenreichweite. Beleg: Behauptung ohne Beleg. [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
 - **Rund 1.000 Verkäufe zu 10 $, rund 10.000 $ Umsatz aus vorhandenem Material.** Denk verkaufte ein bestehendes Vortragsdeck plus 30-Minuten-Video nach drei Bewerbungen im Newsletter, die Umwandlung zum Produkt dauerte 10 Minuten. Dazu Beratungsstunden zu 1.000 $ mit vier Buchungen. Bedingung: Publikum von 130.000 Lesern, Inhalte bereits fertig. Beleg: eigene Daten. [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
 - **8 Teilnehmer zu je 10.000 $ für fünf Tage.** Auf die Ankündigung eines Founder Masterminds im Newsletter kamen etwa 40 Bewerbungen. Laut Denk sein margenstärkstes Produkt. Bedingung: genaue Kenntnis der Zielgruppe, laut Umfrage 60 % Gründer. Beleg: eigene Daten. [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
+
+### Compute-Markt
+
+- **250 Milliarden US-Dollar NVIDIA/OpenAI.** Einziger konkreter Betrag im Bericht: ein Deal zwischen NVIDIA und OpenAI, den CFO Colette Kress laut WSJ zurückfahren wollte. Laufzeit, Struktur und Anteil an Zirkelfinanzierung sind unbekannt, die Bezugsbasis ebenfalls. Beleg: Behauptung ohne Beleg. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
 
 ## Werkzeuge
 
 - **Gummy Search.** Gruppiert Reddit-Beiträge einer Audience in Pain and Anger, Hot Discussions, Top Content, Advice Requests, Solution Requests und Money Talk und fasst sie per KI zu Mustern zusammen. Anmeldung kostenlos, Bezahlplan ohne genannten Preis. Verfügbarkeit vor Nutzung prüfen. Eine mögliche Partnerschaft des Sprechers mit dem Tool ist nicht offengelegt. Beleg: Herstellerangabe. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
 - **Framer** für schnelle Wireframes und Landingpages, im Beispiel in wenigen Stunden aufgesetzt. Beleg: Anekdote. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
 - **Google AI Studio** als Umgebung für die in der Folge gezeigten Prototypen: Function Calling mit Google Maps und Bounding Boxes auf Fotos und Videofeeds. Gezeigt wurden nur Demos, keine Produktivfälle. Beleg: Anekdote. [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
+- **Cursor und Bolt** als KI-Coding-Werkzeuge, mit denen schmale Micro-SaaS-Produkte und individuelle Seiten je Kategorie billig gebaut werden können. Keine Angaben zu Aufwand oder Kosten. Beleg: Behauptung ohne Beleg. [MicroSaaS-Video](../quellen/2026/11/2026-11-18-making-with-microsaas.md), [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+- **Lovable** baut im Agenturbeispiel die Web-Apps aus Fragebogen-Anforderungen. Beleg: Anekdote. [Martell, KI-Cheat-Codes](../quellen/2026/11/2026-11-18-dan-martell-the-ai-cheat-codes-every-founder-needs-in-2026.md)
+- **ElevenLabs** für den Stimmklon in der Cart-Saver-Idee. Rechtliche Fragen ungeklärt. Beleg: Behauptung ohne Beleg. [MicroSaaS-Video](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
+- **APIs von Dexcom, Abbott und Strava** als Datenquellen für die Gesundheitsplattform. Konditionen nicht geprüft. Beleg: Behauptung ohne Beleg. [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
 
 ## Wortlaute und Vorlagen
 
@@ -75,6 +128,7 @@ Stand: 2026-11-17 · 12 Quellen · 37 Learnings
 
 - „these are people screaming they want these products to exist“: Isenbergs Beschreibung der Advice Requests als stärkstes Nachfragesignal. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
 - „Home automation, which we thought was going to be huge, just wasn't as big.“: Erwarteter und tatsächlicher Anwendungsfall bei Muse (32:05). [Muse, Sarantakos](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
+- „I would for sure pay at least $30 per month,“: Steph Smith zur Zahlungsbereitschaft für eine Gesundheitsplattform (17:44). [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
 
 ### Muster für KI-Geschäfte
 
@@ -82,6 +136,21 @@ Stand: 2026-11-17 · 12 Quellen · 37 Learnings
 - „I look for a customer with sensitive data, repeated review work, bad software usually, expensive mistakes“: Kurzform des Local-AI-Filters (26:30). [Local-AI-Video](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md)
 - „what happens if you take five random different products and you bring them all together and you put AI in the middle“: Kurzform der Function-Calling-These (19:09). [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
 - „you don't have to have humans do that anymore“: Isenberg über Routineaufgaben von Agenturen und Beratungen (16:52). [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
+- „Level one is selling AI automation or even process completion, using AI to people that are too lazy to learn it.“: Martells erste Stufe (71:58). [Martell, KI-Cheat-Codes](../quellen/2026/11/2026-11-18-dan-martell-the-ai-cheat-codes-every-founder-needs-in-2026.md)
+- „They gave it to, I think it was Lovable. Lovable built it all, sent them the link back to the client over email.“: Ablauf der software-gestützten Agentur (74:47). [Martell, KI-Cheat-Codes](../quellen/2026/11/2026-11-18-dan-martell-the-ai-cheat-codes-every-founder-needs-in-2026.md)
+- „it's just kind of a feature of a feature“: Definition von Micro-SaaS (01:13). [MicroSaaS-Video](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
+- „this is a business that's doing $40,000 a month of MR solo founder“: Behauptung zu Bank Statement Converter (02:31). [MicroSaaS-Video](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
+- „Because if that same thing can be done through ChatGPT or Claude, you don't have a business.“: Prinzip für Custom GPTs (24:18). [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+- „what directory companies or websites can become custom gpts“: Prüffrage für Verzeichnis-Ideen (22:10). [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+
+### Consumer-Ideen
+
+- „there's an opening for someone to create the open page creator for just about anything.“: Lücke für Seiten-Builder (03:46). [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+- „who can go and create this software for someone who's not willing to learn cursor and spend a few weeks in there“: Zielgruppe Nicht-Entwickler (07:21). [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+- „And then you just upcharge based on, again, the modules that you want to add.“: Preismodell je Modul (08:45). [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+- „has kind of your digital doctor layer where it's not prescribing anything, but where you can interrogate it“: Positionierung der Gesundheitsplattform (16:46). [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+- „it just assigns you to a person to meet basically a blind date 7 p.m.“: Dating-Idee ohne Swipen (26:39). [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+- „Hey, Jane, noticed you love these sneakers. Here's 10% off. Link below.“: Beispielskript für ein Cart-Saver-Video (32:40). [MicroSaaS-Video](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
 
 ### Aufbau und Monetarisierung
 
@@ -92,17 +161,33 @@ Stand: 2026-11-17 · 12 Quellen · 37 Learnings
 ### Markt und Hardware
 
 - „I think the fact that everything is scarce is fantastic for us“: Ein TechPowerUp-Kommentar zitiert diesen Satz und deutet ihn im Licht des NVIDIA-Berichts. Urheber, Datum und Kontext nennt das Material nicht. Beleg: Behauptung ohne Beleg. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
+- „Making Trainium work as seamlessly as possible as an Nvidia substitute is a clear flywheel play.“: HN-Kommentar zum Trainium-Ökosystem. [TrnRT, HN](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md)
 
 ## Warnungen und Fehler
 
+### Validierung und Annahmen
+
 - **„Validiert“ heißt hier nur: Bedarf wird geäußert.** Zahlungsbereitschaft, Marktgröße und Wettbewerb muss man bei der Reddit-Methode separat prüfen, das Video zeigt dafür kein Vorgehen. Beleg: Behauptung ohne Beleg. [Isenberg, Reddit-Ideen](../quellen/2026/11/2026-11-14-how-i-use-reddit-and-ai-to-find-winning-startup-ideas.md)
 - **Schneller Markteintritt ohne Substanz trägt nicht lange.** In der Supplement-Branche kann laut Yeung jeder in etwa 2 Wochen über einen Lohnhersteller ein Produkt starten. Kurzfristiger Erfolg sei möglich, langfristig ohne Wissenschaft, Tests und Zertifizierung aber nicht tragfähig. Gilt laut Sprecher für die unregulierte Supplement-Branche. Beleg: Behauptung ohne Beleg. [Yeung, Supplements](../quellen/2026/11/2026-11-16-he-went-from-0-to-100m-in-11-months-and-you-re-still-plannin.md)
+- **Erwartete Anwendungsfälle können danebenliegen.** Bei Muse galt Heimautomatisierung intern als großer Anwendungsfall und blieb schwach, Einkaufen wurde unerwartet groß. Annahmen über Consumer-Agenten deshalb an Nutzungsdaten prüfen, nicht an Erwartungen. *Bedingung:* B2C, E-Commerce. Beleg: eigene Daten. [Muse, Sarantakos](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
+- **Eine Zahlungsbereitschaft ist kein Preisbeleg.** Die 30 $ pro Monat für die Gesundheitsplattform nennt eine einzelne, nach eigener Einschätzung überdurchschnittlich zahlungsbereite Person. *Bedingung:* n=1. Beleg: Anekdote. [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+- **Dating-Vorläufer ist gescheitert.** Ein früherer Versuch mit Meme-Swipes ist gescheitert, die Ursachen sind unbekannt. Sicherheit und Datenschutz der Dating-Idee wurden nicht besprochen. Beleg: Anekdote. [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+
+### Recht und Daten
+
+- **Stimmklon und Kundendaten bei Cart Saver rechtlich ungeklärt.** Die Idee nutzt Vornamen aus Shopify-Warenkörben und eine geklonte Gründerstimme. Eine KI-Kennzeichnung regt der Sprecher nur an. Erfolgsbasiertes Pricing setzt zudem eine saubere Attribution voraus. Beleg: Behauptung ohne Beleg. [MicroSaaS-Video](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
+- **Gesundheitsdaten: APIs vorhanden, Konditionen ungeprüft.** Die Plattformidee setzt auf APIs von Dexcom, Abbott und Strava und grenzt sich als Auskunftsschicht ohne Verschreibung ab. Ob die Konditionen ein Geschäft erlauben, wurde nicht geprüft. Beleg: Behauptung ohne Beleg. [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+
+### Compute-Markt
+
 - **Vom Hersteller finanzierte Nachfrage.** Laut WSJ-Bericht investierte NVIDIA in KI-Startups, die das Kapital für NVIDIA-GPUs und Rechenzentren ausgaben. Ein Teil der sichtbaren GPU-Nachfrage wäre damit vom Hersteller selbst finanziert. Nur zitiert nach WSJ über Wccftech, keine Dokumente. Beleg: Behauptung ohne Beleg. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
 - **Überangebot beim Hersteller ist nicht Knappheit beim Käufer.** Der Bericht beschreibt eine „Lawine“ von TSMC-GPUs ohne unmittelbare Käufer, die Überschrift spricht trotzdem von Knappheit. Bei Marktberichten zu Compute-Knappheit beide Signale getrennt lesen. Beleg: Behauptung ohne Beleg. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
 - **Neuigkeitswert prüfen.** Ein Kommentar verweist auf einen Guardian-Artikel vom 2025-12-28 zur Zirkelfinanzierung bei NVIDIA. Neu wären am Bericht nur die behauptete Absicht und der interne Streit. Der verlinkte Artikel wurde nicht gelesen. Beleg: Behauptung ohne Beleg. [Nvidia-Bericht](../quellen/2026/11/2026-11-14-nvidia-allegedly-engineered-scarcity-by-funding-ai-startups.md)
+
+### Websuche und Zugang
+
 - **Bot-Hinweise vertreiben Nutzer.** Ein Kommentator nutzt Google wegen ständiger Hinweise auf verdächtige Aktivität seiner IP seit Monaten nicht mehr, ein anderer seit Jahren nicht. Genannt werden DuckDuckGo, Brave Search und Kagi, jeweils ohne Begründung oder Vergleich. Gilt für Nutzer auf betroffenen Adressen im Consumer-Kontext. Beleg: Anekdote. [HN, Google-Login](../quellen/2026/11/2026-11-15-tell-hn-google-search-to-start-locking-down-search-behind-a.md)
 - **Login-Pflicht schließt Menschen ohne Smartphone aus.** Eine YouTube-Kontoerstellung scheiterte laut Bericht daran, dass ein Smartphone erwartet wurde. Das trifft auch Nutzer an geteilten oder öffentlichen Rechnern. Beleg: Anekdote. [HN, Google-Login](../quellen/2026/11/2026-11-15-tell-hn-google-search-to-start-locking-down-search-behind-a.md)
-- **Erwartete Anwendungsfälle können danebenliegen.** Bei Muse galt Heimautomatisierung intern als großer Anwendungsfall und blieb schwach, Einkaufen wurde unerwartet groß. Annahmen über Consumer-Agenten deshalb an Nutzungsdaten prüfen, nicht an Erwartungen. *Bedingung:* B2C, E-Commerce. Beleg: eigene Daten. [Muse, Sarantakos](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
 
 ## Strittig
 
@@ -115,6 +200,10 @@ Stand: 2026-11-17 · 12 Quellen · 37 Learnings
   - Erklärung B: eine Flut von KI-Scrapern und Agenten. Ein Kommentar spitzt das zu: Dieselben Konzerne betrieben die Suche und die KI-Systeme, die sie belasten, und schadeten sich damit selbst. Meinung ohne Daten. [HN, Google-Login](../quellen/2026/11/2026-11-15-tell-hn-google-search-to-start-locking-down-search-behind-a.md)
   - Erklärung C: eine bewusste Login-Strategie nach dem Vorbild sozialer Netzwerke. [HN, Google-Login](../quellen/2026/11/2026-11-15-tell-hn-google-search-to-start-locking-down-search-behind-a.md)
   - Bedingung, die den Unterschied vermutlich erklärt: unklar, alle drei Erklärungen stammen aus Kommentaren desselben Threads und sind unbelegt. Wer Produkte auf Websuche baut, sollte keine davon als gesichert annehmen. Beleg: Behauptung ohne Beleg.
+- **Trägt ein schmales Produkt, das ein allgemeines Modell nachbauen könnte?**
+  - Seite A: Micro-SaaS darf ein Feature eines Features sein. Bank Statement Converter wandelt nur PDF-Kontoauszüge in Excel und soll solo rund 40.000 $ MRR erzielen. [MicroSaaS-Video](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
+  - Seite B: Ein Custom GPT ist kein Geschäft, wenn ChatGPT oder Claude dasselbe leisten. Es braucht spezialisierte Daten, die allgemeine Modelle nicht haben. [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+  - Bedingung, die den Unterschied vermutlich erklärt: der Vertriebskanal. Bank Statement Converter wird laut Sprecher über eine beschreibende Domain gefunden und löst einen klaren Pain in einem Schritt, Nutzer suchen dort ein Werkzeug, kein Modell. Ein Custom GPT läuft in ChatGPT selbst, wo das Basismodell die direkte Alternative ist. Die Gegenüberstellung stammt von dieser Seite, keine Quelle bezieht sich auf die andere. Beide Seiten ohne Beleg. [MicroSaaS-Video](../quellen/2026/11/2026-11-18-making-with-microsaas.md), [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
 
 ## Offene Fragen
 
@@ -126,3 +215,7 @@ Stand: 2026-11-17 · 12 Quellen · 37 Learnings
 - Lassen sich Denks Produktzahlen ohne ein bestehendes Publikum von 130.000 Lesern annähernd erreichen? [Denk, Morning Brew](../quellen/2026/11/2026-11-15-he-scaled-morning-brew-to-75m-then-built-a-500m-company.md)
 - Gibt es für die Function-Calling-These und die Agentur-Automatisierung mit 1 bis 20 Mio. USD Jahresumsatz einen belegten Kundenfall, und welche Ergebnisse brachte die Flächenmessung per Bounding Boxes bei Inventory-Management-Firmen? Die Folge zeigt nur Demos. [Google AI Studio](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
 - Warum blieb Heimautomatisierung bei Muse schwach, und lässt sich der Einkaufserfolg auf kleinere Consumer-Agenten ohne Metas Reichweite übertragen? [Muse, Sarantakos](../quellen/2026/11/2026-11-17-meta-s-muse-inside-the-launch-of-the-most-successful-consume.md)
+- Stimmt die Angabe von 40.000 $ MRR für Bank Statement Converter, und welchen Anteil hat Suchtraffic über die beschreibende Domain? Ist Cart Saver mit geklonter Stimme und Kundendaten rechtlich zulässig, und lässt sich zurückgewonnener Umsatz sauber genug zuordnen? [MicroSaaS-Video](../quellen/2026/11/2026-11-18-making-with-microsaas.md)
+- Zahlen Creator für Module eines Seiten-Builders, und zu welchen Preisen? Trägt die Zahlungsbereitschaft von 30 $ pro Monat für eine Gesundheitsplattform über eine Einzelperson hinaus? [5 KI-Startup-Ideen](../quellen/2026/11/2026-11-18-5-ai-startup-ideas-so-good-you-ll-quit-your-job-in-24hrs.md)
+- Welche Firma steht hinter Martells Lovable-Agentur, und halten 7.000 Dollar je App und 60 Millionen Dollar Jahresumsatz einer Prüfung stand? [Martell, KI-Cheat-Codes](../quellen/2026/11/2026-11-18-dan-martell-the-ai-cheat-codes-every-founder-needs-in-2026.md)
+- Gibt es zahlende Nachfrage nach Werkzeugen für Inferenz auf Trainium oder anderer Nicht-Nvidia-Hardware, über die Meinung eines Kommentators hinaus? [TrnRT, HN](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md)
