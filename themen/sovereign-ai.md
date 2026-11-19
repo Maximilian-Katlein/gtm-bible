@@ -1,8 +1,8 @@
 # Sovereign AI
 
-Diese Seite sammelt, was Unternehmen beachten müssen, wenn sie KI-Modelle unabhängig von einzelnen Anbietern, Regionen und Vertragsbedingungen betreiben wollen. Sie fasst Belege zu Verfügbarkeit, Exit-Strategien, Hardware- und Compute-Kosten, Bindung an Cloud-Hardware, lokalem, hybridem und Offline-Betrieb, Lizenzen und Offenheit, Herkunft und Rechtsstatus von Trainingsdaten, Code-Prüfung, Hintertüren in Modellen, Cloud-Bindung und Datenabfluss von Agenten-Tools, Telemetrie zu Coding-Agenten unter Windows und politischer Verzerrung offener Modelle zusammen.
+Diese Seite sammelt, was Unternehmen beachten müssen, wenn sie KI-Modelle unabhängig von einzelnen Anbietern, Regionen und Vertragsbedingungen betreiben wollen. Sie fasst Belege zu Verfügbarkeit, Exit-Strategien, Hardware- und Compute-Kosten, Bindung an Cloud-Hardware, lokalem, hybridem und Offline-Betrieb, Lizenzen und Offenheit, Herkunft und Rechtsstatus von Trainingsdaten, Code-Prüfung, Hintertüren in Modellen, Cloud-Bindung und Datenabfluss von Agenten-Tools, Telemetrie zu Coding-Agenten unter Windows, politischer Verzerrung offener Modelle und Regulierung von KI in der Abschlussprüfung zusammen.
 
-Stand: 2026-11-18 · 27 Quellen · 60 Learnings
+Stand: 2026-11-19 · 31 Quellen · 65 Learnings
 
 ## Was mehrfach belegt ist
 
@@ -18,20 +18,21 @@ Stand: 2026-11-18 · 27 Quellen · 60 Learnings
   - Inkling 2 Small steht unter Apache 2.0. Die Karte verlinkt daneben eine separate Acceptable Use Policy, ohne Inhalt oder Verhältnis zur Lizenz zu erklären.
   - LongCat-2.5 steht unter MIT-Lizenz ohne Einschränkung nach Branche oder Region, also ohne EU-Ausschluss. Marken und Patente sind ausgenommen: „This license does not grant any rights to use Meituan trademarks or patents.“ Eine Patentlizenz wie bei Apache 2.0 fehlt, das sollte rechtlich geprüft werden. Diese Bewertung ist eine Einordnung, kein Teil der Karte.
   - In allen Fällen gilt: Vor dem Einsatz den LICENSE-Text im Repo lesen. Zusätzlich bei Mirage die Lizenz der Runtime, bei DSpine und TrnRT die des Modells, bei Inkling die Acceptable Use Policy.
-  - Zu Qwen4-Max, bei dem schon offen ist, ob es überhaupt offene Gewichte gibt, siehe „Warnungen und Fehler“.
+  - Zu Qwen4-Max, bei dem schon offen ist, ob es überhaupt offene Gewichte gibt, siehe „Warnungen und Fehler“. Zur ebenfalls ungenannten Lizenz von Mastra Factory siehe „Werkzeuge“.
   - *Bedingung:* Kommerzielle, souveräne und Sovereign-AI-Setups, insbesondere in der EU. Bei Inkling alle, die das Modell in Produkten einsetzen oder weitergeben.
   - *Beleglage:* Bei LFM3, Mirage, DSpine, TrnRT und LongCat Herstellerangaben, bei Edge0, Unsloth und Inkling Behauptung ohne Beleg.
   - [LFM3-1.7B Model Card](../quellen/2026/11/2026-11-13-liquidai-lfm3-1-7b-model-card-auf-hugging-face.md), [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [Unsloth Qwen3.8-27B](../quellen/2026/11/2026-11-14-unsloth-qwen3-8-27b-quantizations-dynamic-v3-1-update.md), [DSpine for Qwen3.8-27B](../quellen/2026/11/2026-11-14-tencent-qwen3-8-27b-dspine-b16-dspine-for-qwen3-8-27b.md), [TrnRT (Show HN)](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md), [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md)
-- **Trainingsdaten, Datenherkunft und Evaluierung bleiben bei offenen Modellen unbelegt (5 Quellen).**
+- **Trainingsdaten, Datenherkunft und Evaluierung bleiben bei offenen Modellen unbelegt (6 Quellen).**
   - Edge0 veröffentlicht nach dem Material nur Gewichte, Framework und Tools, aber keine Trainingsdaten und keinen Trainingscode.
   - Die Mirage-Card enthält keine Angaben zu Trainingsdaten, Datenherkunft oder EU-Konformität.
   - Die Card von Inkling 2 Small nennt keine Datenmenge, keinen Wissensstichtag, keinen Rechenaufwand und keine Sicherheitsevaluierung. Datenquellen stehen nur grob da (öffentlich, zugekauft, intern, synthetisch), zur Aufbereitung heißt es nur: „may include deduplication and filtering to remove junk or other low-quality data“.
   - Die LongCat-2.5-Card enthält keine Angaben zu Trainingsdaten, Datenrechten, Safety-Evaluation oder EU-Regulierung. Datenschutz, Privatsphäre und Inhaltssicherheit liegen ausdrücklich beim Betreiber.
   - Das CCORE-Modell Qwen3.5-4B-GLB-3D-Coder ist ein Feintuning auf Qwen/Qwen3.5-4B. Für die Herkunft zählen die Basisgewichte, zu deren Trainingsdaten die Karte nichts sagt. Zur Bezeichnung „independently developed“ siehe „Warnungen und Fehler“.
+  - Für SenseNova-Loop-9B fehlen Angaben zu Trainingsdaten und Sicherheitsbewertung. Auch Laufzeiten jenseits von transformers (vLLM, llama.cpp, GGUF) sind nicht genannt. Für einen EU-Einsatz bleiben damit neben der Datenherkunft auch der Betriebsweg ungeklärt. Zum mitgelieferten Code siehe unten.
   - Für Sovereign-AI-Anforderungen und Dokumentationspflichten etwa nach AI Act ist ein solches Modell auf Basis der Card allein nicht bewertbar.
-  - *Bedingung:* Öffentliche Hand, regulierte Branchen, EU-Beschaffung, kommerzielle Umgebungen, Compliance-Dokumentation, Herkunfts- und Lizenzkettenprüfung.
-  - *Beleglage:* Bei Edge0 und Mirage Behauptung ohne Beleg, bei Inkling, LongCat und CCORE Herstellerangabe.
-  - [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md), [CCORE Qwen3.5-4B-GLB-3D-Coder](../quellen/2026/11/2026-11-15-ccore-qwen3-5-4b-glb-3d-coder.md)
+  - *Bedingung:* Öffentliche Hand, regulierte Branchen, EU-Beschaffung, kommerzielle Umgebungen, Compliance-Dokumentation, Herkunfts- und Lizenzkettenprüfung. Bei SenseNova Einsatz in der EU oder in abgeschotteten Umgebungen.
+  - *Beleglage:* Bei Edge0 und Mirage Behauptung ohne Beleg, bei Inkling, LongCat, CCORE und SenseNova Herstellerangabe.
+  - [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md), [CCORE Qwen3.5-4B-GLB-3D-Coder](../quellen/2026/11/2026-11-15-ccore-qwen3-5-4b-glb-3d-coder.md), [SenseNova-Loop-9B](../quellen/2026/11/2026-11-19-sensenova-sensenova-loop-9b.md)
 - **Für deutschsprachigen Einsatz fehlen bei offenen Modellen oft die Belege (3 Quellen).**
   - Die Card von Kimi K3.1 Pro nennt keine unterstützten Sprachen und sagt nichts zur Qualität auf Deutsch.
   - Die Unsloth-Seite zu Qwen3.8-27B nennt ebenfalls keine unterstützten Sprachen.
@@ -43,14 +44,15 @@ Stand: 2026-11-18 · 27 Quellen · 60 Learnings
 
 ### Betrieb, Hardware und Code
 
-- **Mitgelieferten Modellcode vor dem Einsatz prüfen (3 Quellen).**
+- **Mitgelieferten Modellcode vor dem Einsatz prüfen (4 Quellen).**
   - Kimi K3.1 Pro bringt eigenen Code mit (custom_code), der vor dem Einsatz geprüft werden muss.
   - LFM3-1.7B verlangt beim Laden mit Transformers „trust_remote_code=True,“. Dabei wird Modellcode aus dem Repo ausgeführt.
   - Der dokumentierte Startbefehl von DSpine für Qwen3.8-27B setzt ebenfalls „--trust-remote-code“ und führt damit Code aus dem Repository aus.
-  - In abgesicherten oder souveränen Umgebungen den Code vorher prüfen und eine feste Version pinnen. Bei LFM3 kann man auf GGUF, ONNX oder OpenVINO ausweichen.
-  - *Bedingung:* Selbst-Hosting in abgeschotteten, On-Premise- oder regulierten Umgebungen. Bei LFM3 gilt das nur für die Transformers-Variante.
-  - *Beleglage:* Bei DSpine Herstellerangabe.
-  - [Kimi K3.1 Pro Model Card](../quellen/2026/11/2026-11-09-moonshotai-kimi-k3-1-pro-model-card-auf-hugging-face.md), [LFM3-1.7B Model Card](../quellen/2026/11/2026-11-13-liquidai-lfm3-1-7b-model-card-auf-hugging-face.md), [DSpine for Qwen3.8-27B](../quellen/2026/11/2026-11-14-tencent-qwen3-8-27b-dspine-b16-dspine-for-qwen3-8-27b.md)
+  - SenseNova-Loop-9B trägt die Metadaten „"library_name": "transformers", tags: custom_code“. Modelle mit diesem Tag bringen eigenen Python-Code mit und brauchen meist trust_remote_code=True.
+  - In abgesicherten oder souveränen Umgebungen den Code vorher prüfen und das Modell auf einen festen Commit pinnen. Bei LFM3 kann man auf GGUF, ONNX oder OpenVINO ausweichen.
+  - *Bedingung:* Selbst-Hosting in abgeschotteten, On-Premise- oder regulierten Umgebungen. Bei LFM3 gilt das nur für die Transformers-Variante. Bei SenseNova ist das trust_remote_code-Erfordernis aus dem Tag geschlossen, nicht aus einer Anleitung belegt.
+  - *Beleglage:* Bei DSpine und SenseNova Herstellerangabe.
+  - [Kimi K3.1 Pro Model Card](../quellen/2026/11/2026-11-09-moonshotai-kimi-k3-1-pro-model-card-auf-hugging-face.md), [LFM3-1.7B Model Card](../quellen/2026/11/2026-11-13-liquidai-lfm3-1-7b-model-card-auf-hugging-face.md), [DSpine for Qwen3.8-27B](../quellen/2026/11/2026-11-14-tencent-qwen3-8-27b-dspine-b16-dspine-for-qwen3-8-27b.md), [SenseNova-Loop-9B](../quellen/2026/11/2026-11-19-sensenova-sensenova-loop-9b.md)
 - **Eigener Betrieb hängt an großer oder spezieller Hardware (4 Quellen).**
   - Kimi K3.1 Pro: Rechnerisch belegen allein die Gewichte rund 2,84 TB, der KV-Cache kommt noch dazu. Ein Server mit 8 GPUs zu je 141 GB hat zusammen etwa 1,1 TB und reicht deshalb nicht. Ohne API muss das Modell über mehrere Knoten verteilt laufen. In den Safetensors-Metadaten steht: „"total": 2780110363392“.
   - DeepSeek Ultrafast: Der Selbstbetrieb der Engine setzt 4 bis 8 Blackwell-Rechenzentrums-GPUs voraus. Die HN-Diskussion spottet: „I'll just go get my 8 x B300 (TP8) from the shed and start this up real quick“. Für kleine Teams bleibt praktisch nur die gehostete Variante.
@@ -78,15 +80,16 @@ Stand: 2026-11-18 · 27 Quellen · 60 Learnings
 
 ### Agenten und Datenhoheit
 
-- **Agenten-Tools und Anleitungen setzen Anbieter-Clouds voraus und sparen Datenhoheit aus (4 Quellen).**
+- **Agenten-Tools und Anleitungen setzen Anbieter-Clouds voraus und sparen Datenhoheit aus (5 Quellen).**
   - Das sichtbare AgentRun-README nennt nur OpenRouter, Anthropic und OpenAI als Modellquellen. Zu EU-Hosting, Datenschutz oder Open-Weight-Modellen sagt es nichts.
   - Der Kurs „Building AI Agents“ leitet E-Mails, Meeting-Notizen, Zahlungs- und Kundendaten über US-Cloud-Modelle (Claude, GPT, Gemini). DSGVO, Auftragsverarbeitung oder lokale Alternativen spricht er nicht an.
   - Threads in Claude Code Projects laufen derzeit nur in der Anthropic Cloud. Lokale Ausführung ist ohne Datum angekündigt: „Threads run in the cloud today; running on your machine alongside your local tools and code and behind your network is coming very soon.“ Für Organisationen mit Vorgaben zur Datenhaltung ist das Produkt vorerst ungeeignet.
   - Eine Demo zu Google AI Studio preist die Bildschirmfreigabe an ein Cloud-Modell als Produktivitätsgewinn um das 1,5- bis 3-Fache an: „I see this is the future of work“ (24:52). Ob Eingaben im Free Tier zum Training genutzt werden und wo die Daten verarbeitet werden, sagt die Folge nicht.
+  - Claude Cowork läuft nur auf Anthropic-Modellen. Eine Demo zu Cowork und Claude Code behandelt weder Datenresidenz noch EU-Betrieb noch die Frage, welche Inhalte aus lokalen Dateien und Browsersitzungen bei Anthropic landen. Für regulierte Daten ist das vor dem Einsatz separat zu klären.
   - Wer souverän betreiben will, muss das vor dem Nachbau oder der Einführung selbst klären. Zur selbst gehosteten Variante von Anthropic siehe „Werkzeuge“, zum Lock-in siehe „Warnungen und Fehler“.
-  - *Bedingung:* Teams mit Anforderungen an Datenhoheit, Firmen mit Sitz oder Kunden in der EU, Unternehmen, die Code oder Daten nicht in einer Anbieter-Cloud verarbeiten dürfen. Bei AI Studio Unternehmenseinsatz mit vertraulichen Daten.
-  - *Beleglage:* Beim Kurs Einschätzung ohne Beleg, bei AgentRun aus dem README abgeleitet, bei Projects Herstellerangabe, bei AI Studio Behauptung ohne Beleg.
-  - [AgentRun (Show HN)](../quellen/2026/11/2026-11-13-show-hn-agentrun-open-source-self-improving-managed-agents.md), [Building AI Agents (Kurs)](../quellen/2026/11/2026-11-13-building-ai-agents-that-actually-work-full-course.md), [Claude Code Projects](../quellen/2026/11/2026-11-14-anthropic-upgrades-claude-code-projects-to-run-parallel-ai-w.md), [Google AI Studio (Demo)](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
+  - *Bedingung:* Teams mit Anforderungen an Datenhoheit, Firmen mit Sitz oder Kunden in der EU, Unternehmen, die Code oder Daten nicht in einer Anbieter-Cloud verarbeiten dürfen. Bei AI Studio Unternehmenseinsatz mit vertraulichen Daten. Bei Cowork Unternehmen mit Datenschutz- oder Souveränitätsanforderungen.
+  - *Beleglage:* Beim Kurs Einschätzung ohne Beleg, bei AgentRun aus dem README abgeleitet, bei Projects Herstellerangabe, bei AI Studio und Cowork Behauptung ohne Beleg.
+  - [AgentRun (Show HN)](../quellen/2026/11/2026-11-13-show-hn-agentrun-open-source-self-improving-managed-agents.md), [Building AI Agents (Kurs)](../quellen/2026/11/2026-11-13-building-ai-agents-that-actually-work-full-course.md), [Claude Code Projects](../quellen/2026/11/2026-11-14-anthropic-upgrades-claude-code-projects-to-run-parallel-ai-w.md), [Google AI Studio (Demo)](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md), [Claude Cowork und Claude Code (Lektion)](../quellen/2026/11/2026-11-19-i-got-a-private-lesson-on-claude-cowork-claude-code.md)
 - **Selbst gehostete Agenten-Infrastruktur hält Daten nur bis zum Modellaufruf intern (2 Quellen).**
   - Coral wirbt als selbst gehostetes Agenten-Gateway mit „zero data egress“. Das gilt nur für das Gateway. Was nach dem Filtern an ein externes LLM geht, verlässt trotzdem die eigene Infrastruktur.
   - Bei Self-hosted Claude Managed Agents liegen Agents, Credentials und Session History beim Kunden. Das Modell bleibt aber Claude, die Anfragen gehen an einen Endpunkt außerhalb der eigenen Gewichte (siehe „Werkzeuge“).
@@ -279,6 +282,13 @@ Stand: 2026-11-18 · 27 Quellen · 60 Learnings
   - *Bedingung:* Eigenes Produkt, kein Ersatz für Projects. Zur Cloud-Bindung von Projects siehe „Was mehrfach belegt ist“.
   - *Beleglage:* Herstellerangabe.
   - [Claude Code Projects](../quellen/2026/11/2026-11-14-anthropic-upgrades-claude-code-projects-to-run-parallel-ai-w.md)
+- **Mastra Factory: offene Software-Factory für den Betrieb auf eigener Infrastruktur.**
+  - Start mit `npm create factory`, Vorlage im Repo mastra-ai/template-factory.
+  - Laut Hersteller vollständig auf eigener Infrastruktur betreibbar, daneben gibt es eine gehostete Version: „It's fully open-source, so you can run it entirely on your infra (we also offer a hosted version).“
+  - Lizenz, nötige Modelle, Sandbox-Anbieter und EU-Hosting nennt der Beitrag nicht. Zur Grenze selbst gehosteter Agenten-Infrastruktur beim Modellaufruf siehe „Was mehrfach belegt ist“.
+  - *Bedingung:* Vor souveränem Einsatz Lizenz und Modellabhängigkeiten selbst prüfen.
+  - *Beleglage:* Herstellerangabe.
+  - [Mastra Factory (Show HN)](../quellen/2026/11/2026-11-19-show-hn-mastra-factory-the-open-source-software-factory-we-u.md)
 
 ## Warnungen und Fehler
 
@@ -364,7 +374,7 @@ Stand: 2026-11-18 · 27 Quellen · 60 Learnings
 
 - **Bei Kimi K3.1 Pro bleibt vieles offen, das man für den Betrieb selbst klären muss.**
   - Die Card nennt keine unterstützten Sprachen, keine Inferenz-Engine und keine Hardwareanforderungen. Angegeben ist nur „library_name: transformers“.
-  - Zum mitgelieferten Code siehe „Was mehrfach belegt ist“.
+  - Zum mitgelieferten Code siehe „Was mehrfach belegt ist“. Ähnliche Lücken bei Laufzeiten und Trainingsdaten zeigt SenseNova-Loop-9B, ebenfalls dort.
   - Wer das Modell souverän in Europa betreiben will, muss Sprache, Laufzeitumgebung und Code-Prüfung selbst klären.
   - *Bedingung:* Selbst-Hosting in abgeschotteten oder regulierten Umgebungen.
   - [Kimi K3.1 Pro Model Card](../quellen/2026/11/2026-11-09-moonshotai-kimi-k3-1-pro-model-card-auf-hugging-face.md)
@@ -399,6 +409,16 @@ Stand: 2026-11-18 · 27 Quellen · 60 Learnings
   - *Bedingung:* Nutzung US-gemeinfreier Korpora außerhalb der USA. Im Projekt selbst nicht geprüft.
   - *Beleglage:* Eigene Daten des Projekts.
   - [DeepSeek V3 in Jax (Show HN)](../quellen/2026/11/2026-11-15-show-hn-deepseek-v3-in-200-lines-of-pure-jax.md)
+
+### Regulierung von KI in der Abschlussprüfung
+
+- **KI darf Unabhängigkeit, Integrität und professionelle Skepsis des Prüfers nicht untergraben.**
+  - Der britische Financial Reporting Council warnt laut Artikel davor: „AI must not undermine auditor independence, integrity or professional scepticism“.
+  - Die Verantwortung für das Prüfungsurteil bleibt beim menschlichen Prüfer, auch wenn KI-Agenten im Prüfungsablauf eingesetzt werden.
+  - Eine konkrete FRC-Publikation zitiert der Artikel nicht.
+  - *Bedingung:* Britischer Prüfungsmarkt.
+  - *Beleglage:* Behauptung ohne Beleg.
+  - [KI-Agenten im KPMG-Prüfungstest](../quellen/2026/11/2026-11-19-ai-agents-ask-better-questions-than-kpmg-accountants-in-audi.md)
 
 ## Strittig
 
@@ -454,9 +474,18 @@ Stand: 2026-11-18 · 27 Quellen · 60 Learnings
 - **Läuft LongCat-2.5 mit vertretbarem Aufwand auf NVIDIA-GPUs, und auf welchen Chips beruhen die Effizienzangaben?**
   - Die Card dokumentiert nur NPU-Deployment und nennt den Chiphersteller nicht.
   - [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md)
+- **Braucht SenseNova-Loop-9B tatsächlich trust_remote_code=True, und läuft es mit vLLM, llama.cpp oder als GGUF?**
+  - Das Erfordernis ist nur aus dem Tag custom_code geschlossen. Laufzeiten jenseits von transformers sind nicht genannt.
+  - [SenseNova-Loop-9B](../quellen/2026/11/2026-11-19-sensenova-sensenova-loop-9b.md)
 - **Wann laufen Projects-Threads lokal hinter dem eigenen Netzwerk?**
   - Angekündigt ist „coming very soon“, ein Datum fehlt.
   - [Claude Code Projects](../quellen/2026/11/2026-11-14-anthropic-upgrades-claude-code-projects-to-run-parallel-ai-w.md)
+- **Welche Inhalte aus lokalen Dateien und Browsersitzungen landen bei Claude Cowork bei Anthropic, und gibt es EU-Betrieb?**
+  - Die Demo behandelt weder Datenresidenz noch EU-Betrieb.
+  - [Claude Cowork und Claude Code (Lektion)](../quellen/2026/11/2026-11-19-i-got-a-private-lesson-on-claude-cowork-claude-code.md)
+- **Unter welcher Lizenz steht Mastra Factory, und welche Modelle und Sandbox-Anbieter setzt sie voraus?**
+  - Der Beitrag nennt weder Lizenz noch Modelle, Sandbox-Anbieter oder EU-Hosting.
+  - [Mastra Factory (Show HN)](../quellen/2026/11/2026-11-19-show-hn-mastra-factory-the-open-source-software-factory-we-u.md)
 - **Nutzt Google AI Studio Eingaben im Free Tier zum Training, und wo werden die Daten verarbeitet?**
   - Die Demo nennt beides nicht.
   - [Google AI Studio (Demo)](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md)
@@ -478,3 +507,6 @@ Stand: 2026-11-18 · 27 Quellen · 60 Learnings
 - **Welchen Rechtsstatus haben US-gemeinfreie Trainingskorpora in der EU?**
   - Die Quelle weist nur auf mögliche Unterschiede hin und hat sie selbst nicht geprüft.
   - [DeepSeek V3 in Jax (Show HN)](../quellen/2026/11/2026-11-15-show-hn-deepseek-v3-in-200-lines-of-pure-jax.md)
+- **Auf welche Veröffentlichung des FRC stützt sich die Warnung zu KI in der Abschlussprüfung?**
+  - Der Artikel zitiert keine konkrete FRC-Publikation.
+  - [KI-Agenten im KPMG-Prüfungstest](../quellen/2026/11/2026-11-19-ai-agents-ask-better-questions-than-kpmg-accountants-in-audi.md)
