@@ -1,14 +1,14 @@
 # Sovereign AI
 
-Diese Seite sammelt, was Unternehmen beachten müssen, wenn sie KI-Modelle unabhängig von einzelnen Anbietern, Regionen und Vertragsbedingungen betreiben wollen. Sie fasst Belege zu Verfügbarkeit, Exit-Strategien, Hardware- und Compute-Kosten, Bindung an Cloud-Hardware, lokalem, hybridem und Offline-Betrieb, Lizenzen und Offenheit, Herkunft und Rechtsstatus von Trainingsdaten, Code-Prüfung, Hintertüren in Modellen, Cloud-Bindung und Datenabfluss von Agenten-Tools, Telemetrie zu Coding-Agenten unter Windows, politischer Verzerrung offener Modelle und Regulierung von KI in der Abschlussprüfung zusammen.
+Diese Seite sammelt, was Unternehmen beachten müssen, wenn sie KI-Modelle unabhängig von einzelnen Anbietern, Regionen und Vertragsbedingungen betreiben wollen. Sie fasst Belege zu Verfügbarkeit, Exit-Strategien, Hardware- und Compute-Kosten, Bindung an Cloud-Hardware, lokalem, hybridem und Offline-Betrieb, Lizenzen und Offenheit, Herkunft und Rechtsstatus von Trainingsdaten, Code-Prüfung, Hintertüren in Modellen, Cloud-Bindung und Datenabfluss von Agenten-Tools und Anwendungen, Telemetrie in Entwickler-Werkzeugen und unter Windows, politischer Verzerrung offener Modelle und Regulierung von KI in der Abschlussprüfung zusammen.
 
-Stand: 2026-11-19 · 31 Quellen · 65 Learnings
+Stand: 2026-11-20 · 34 Quellen · 69 Learnings
 
 ## Was mehrfach belegt ist
 
 ### Lizenz, Herkunft und Dokumentation
 
-- **Lizenz offener Modelle vor kommerziellem Einsatz selbst prüfen (8 Quellen).**
+- **Lizenz offener Modelle vor kommerziellem Einsatz selbst prüfen (9 Quellen).**
   - LFM3-1.7B steht unter der LFM Open License v1.0. Das ist keine Standardlizenz wie Apache 2.0 oder MIT, und die Card nennt keine Bedingungen zu kommerzieller Nutzung oder EU.
   - Edge0-145B nennt nach dem Material überhaupt keine Lizenz, die kommerzielle Nutzung ist damit offen.
   - Bei Mirage steht im Lizenzfeld „license: apache-2.0“, was kommerzielle Nutzung grundsätzlich erlaubt. Die Runtime liegt aber in einem separaten Repo (Cactus-Compute/cactus). Deren Lizenz und den Lizenztext im Modell-Repo getrennt prüfen.
@@ -17,11 +17,12 @@ Stand: 2026-11-19 · 31 Quellen · 65 Learnings
   - Bei TrnRT steht die Inferenz-Engine unter Apache 2.0. Die Lizenz des eingesetzten Modells GLM-5.3-Flash nennt das Material nicht. Wie bei DSpine zählt für den Betrieb auch die Lizenz des Modells.
   - Inkling 2 Small steht unter Apache 2.0. Die Karte verlinkt daneben eine separate Acceptable Use Policy, ohne Inhalt oder Verhältnis zur Lizenz zu erklären.
   - LongCat-2.5 steht unter MIT-Lizenz ohne Einschränkung nach Branche oder Region, also ohne EU-Ausschluss. Marken und Patente sind ausgenommen: „This license does not grant any rights to use Meituan trademarks or patents.“ Eine Patentlizenz wie bei Apache 2.0 fehlt, das sollte rechtlich geprüft werden. Diese Bewertung ist eine Einordnung, kein Teil der Karte.
+  - Hy4 flash steht unter der Tencent Hy License, deren Inhalt nicht auf der Karte steht: „Hy4 flash is released under the Tencent Hy License. See LICENSE for details.“ Kommerzielle Nutzung und EU-Einsatz müssen anhand der LICENSE-Datei rechtlich geprüft werden.
   - In allen Fällen gilt: Vor dem Einsatz den LICENSE-Text im Repo lesen. Zusätzlich bei Mirage die Lizenz der Runtime, bei DSpine und TrnRT die des Modells, bei Inkling die Acceptable Use Policy.
   - Zu Qwen4-Max, bei dem schon offen ist, ob es überhaupt offene Gewichte gibt, siehe „Warnungen und Fehler“. Zur ebenfalls ungenannten Lizenz von Mastra Factory siehe „Werkzeuge“.
-  - *Bedingung:* Kommerzielle, souveräne und Sovereign-AI-Setups, insbesondere in der EU. Bei Inkling alle, die das Modell in Produkten einsetzen oder weitergeben.
-  - *Beleglage:* Bei LFM3, Mirage, DSpine, TrnRT und LongCat Herstellerangaben, bei Edge0, Unsloth und Inkling Behauptung ohne Beleg.
-  - [LFM3-1.7B Model Card](../quellen/2026/11/2026-11-13-liquidai-lfm3-1-7b-model-card-auf-hugging-face.md), [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [Unsloth Qwen3.8-27B](../quellen/2026/11/2026-11-14-unsloth-qwen3-8-27b-quantizations-dynamic-v3-1-update.md), [DSpine for Qwen3.8-27B](../quellen/2026/11/2026-11-14-tencent-qwen3-8-27b-dspine-b16-dspine-for-qwen3-8-27b.md), [TrnRT (Show HN)](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md), [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md)
+  - *Bedingung:* Kommerzielle, souveräne und Sovereign-AI-Setups, insbesondere in der EU. Bei Inkling alle, die das Modell in Produkten einsetzen oder weitergeben. Bei Hy4 flash vor jedem kommerziellen oder EU-Einsatz.
+  - *Beleglage:* Bei LFM3, Mirage, DSpine, TrnRT, LongCat und Hy4 flash Herstellerangaben, bei Edge0, Unsloth und Inkling Behauptung ohne Beleg.
+  - [LFM3-1.7B Model Card](../quellen/2026/11/2026-11-13-liquidai-lfm3-1-7b-model-card-auf-hugging-face.md), [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [Unsloth Qwen3.8-27B](../quellen/2026/11/2026-11-14-unsloth-qwen3-8-27b-quantizations-dynamic-v3-1-update.md), [DSpine for Qwen3.8-27B](../quellen/2026/11/2026-11-14-tencent-qwen3-8-27b-dspine-b16-dspine-for-qwen3-8-27b.md), [TrnRT (Show HN)](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md), [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md), [Hy4 flash Model Card](../quellen/2026/11/2026-11-20-hy4-flash-tencent-hy4-flash-model-card.md)
 - **Trainingsdaten, Datenherkunft und Evaluierung bleiben bei offenen Modellen unbelegt (6 Quellen).**
   - Edge0 veröffentlicht nach dem Material nur Gewichte, Framework und Tools, aber keine Trainingsdaten und keinen Trainingscode.
   - Die Mirage-Card enthält keine Angaben zu Trainingsdaten, Datenherkunft oder EU-Konformität.
@@ -53,19 +54,20 @@ Stand: 2026-11-19 · 31 Quellen · 65 Learnings
   - *Bedingung:* Selbst-Hosting in abgeschotteten, On-Premise- oder regulierten Umgebungen. Bei LFM3 gilt das nur für die Transformers-Variante. Bei SenseNova ist das trust_remote_code-Erfordernis aus dem Tag geschlossen, nicht aus einer Anleitung belegt.
   - *Beleglage:* Bei DSpine und SenseNova Herstellerangabe.
   - [Kimi K3.1 Pro Model Card](../quellen/2026/11/2026-11-09-moonshotai-kimi-k3-1-pro-model-card-auf-hugging-face.md), [LFM3-1.7B Model Card](../quellen/2026/11/2026-11-13-liquidai-lfm3-1-7b-model-card-auf-hugging-face.md), [DSpine for Qwen3.8-27B](../quellen/2026/11/2026-11-14-tencent-qwen3-8-27b-dspine-b16-dspine-for-qwen3-8-27b.md), [SenseNova-Loop-9B](../quellen/2026/11/2026-11-19-sensenova-sensenova-loop-9b.md)
-- **Eigener Betrieb hängt an großer oder spezieller Hardware (4 Quellen).**
+- **Eigener Betrieb hängt an großer oder spezieller Hardware (5 Quellen).**
   - Kimi K3.1 Pro: Rechnerisch belegen allein die Gewichte rund 2,84 TB, der KV-Cache kommt noch dazu. Ein Server mit 8 GPUs zu je 141 GB hat zusammen etwa 1,1 TB und reicht deshalb nicht. Ohne API muss das Modell über mehrere Knoten verteilt laufen. In den Safetensors-Metadaten steht: „"total": 2780110363392“.
   - DeepSeek Ultrafast: Der Selbstbetrieb der Engine setzt 4 bis 8 Blackwell-Rechenzentrums-GPUs voraus. Die HN-Diskussion spottet: „I'll just go get my 8 x B300 (TP8) from the shed and start this up real quick“. Für kleine Teams bleibt praktisch nur die gehostete Variante.
+  - Hy4 flash: Beide Referenz-Setups brauchen acht GPUs. Überschlag aus 220,24B Parametern: rund 440 GB Gewichte in BF16, rund 220 GB in FP8, dazu der KV-Cache. Die 12B aktiven Parameter senken die Rechenlast, nicht den Speicherbedarf.
   - LongCat-2.5 dokumentiert Deployment nur für NPU-Plattformen über einen Branch von SGLang-FluentLLM: „LongCat-2.5 can be deployed on NPU platforms.“ Eine Anleitung für NVIDIA-GPUs, vLLM, llama.cpp oder GGUF fehlt. Die beworbenen Effizienzvorteile hängen an inländischen Beschleunigern des Herstellers, deren Chiphersteller nicht genannt wird.
   - TrnRT: Die Inferenz-Engine ist offen (Apache 2.0) und läuft mit einem offenen Modell, die Hardware bleibt aber an AWS Trainium gebunden. Preise nennt das Material nur für us-east-2. Ob trn2.48xlarge in der EU verfügbar ist, steht nicht drin.
   - Offene Gewichte und offene Engines heißen deshalb nicht souveräner Betrieb. Eigene Kontrolle über die Inferenz ist an große Hardware-Budgets, an Portierungsaufwand oder an einen einzelnen Cloud-Anbieter gebunden.
-  - *Bedingung:* Kimi: souveräner Betrieb ohne API, die Zahl ist eine eigene Ableitung aus den Metadaten des Original-Checkpoints. DeepSeek: Einzelpersonen und kleine Teams ohne eigenen GPU-Cluster. LongCat: Betreiber in der EU mit GPU-Infrastruktur, die die Portierung selbst leisten müssten. TrnRT: Einsatz mit Datenhoheitsanforderungen, Region und Bedingungen vorher bei AWS und beim Modellanbieter prüfen.
-  - *Beleglage:* Bei Kimi eigene Ableitung, bei DeepSeek Anekdote, bei LongCat und TrnRT Herstellerangabe.
-  - [Kimi K3.1 Pro Model Card](../quellen/2026/11/2026-11-09-moonshotai-kimi-k3-1-pro-model-card-auf-hugging-face.md), [DeepSeek Ultrafast](../quellen/2026/11/2026-11-14-deepseek-ultrafast.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md), [TrnRT (Show HN)](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md)
+  - *Bedingung:* Kimi: souveräner Betrieb ohne API, die Zahl ist eine eigene Ableitung aus den Metadaten des Original-Checkpoints. DeepSeek: Einzelpersonen und kleine Teams ohne eigenen GPU-Cluster. Hy4 flash: Die Speicherzahlen sind eine Überschlagsrechnung auf Basis der Herstellerangaben. LongCat: Betreiber in der EU mit GPU-Infrastruktur, die die Portierung selbst leisten müssten. TrnRT: Einsatz mit Datenhoheitsanforderungen, Region und Bedingungen vorher bei AWS und beim Modellanbieter prüfen.
+  - *Beleglage:* Bei Kimi eigene Ableitung, bei DeepSeek Anekdote, bei Hy4 flash, LongCat und TrnRT Herstellerangabe.
+  - [Kimi K3.1 Pro Model Card](../quellen/2026/11/2026-11-09-moonshotai-kimi-k3-1-pro-model-card-auf-hugging-face.md), [DeepSeek Ultrafast](../quellen/2026/11/2026-11-14-deepseek-ultrafast.md), [Hy4 flash Model Card](../quellen/2026/11/2026-11-20-hy4-flash-tencent-hy4-flash-model-card.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md), [TrnRT (Show HN)](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md)
 - **Lokaler Betrieb heißt nicht offline (2 Quellen).**
   - Mirage: Das Paket cactus-compute lädt Engine und Gewichte beim ersten Aufruf automatisch aus dem Netz: „The package downloads and caches the engine and weights on first use.“ Für Air-Gap- oder souveräne Umgebungen müssen Engine und Gewichte vorab bezogen werden. Den Offline-Betrieb muss man selbst verifizieren, die Card beschreibt ihn nicht.
   - CCORE Qwen3.5-4B-GLB-3D-Coder: Das Modell läuft lokal, die erzeugten Three.js-Seiten laden Bibliotheken aber unter Umständen per CDN: „The page may load Three.js and its add-ons from a CDN.“ Für Offline- oder Air-Gap-Betrieb müssen Three.js und Add-ons selbst lokal bereitgestellt werden.
-  - Netzabhängigkeiten können also in der Runtime und im erzeugten Output stecken. Beides vor dem Einsatz in abgeschotteten Umgebungen prüfen. Zur Prüfung von mitgeliefertem Code siehe oben, zum Datenabfluss bei selbst gehosteter Agenten-Infrastruktur siehe unten.
+  - Netzabhängigkeiten können also in der Runtime und im erzeugten Output stecken. Beides vor dem Einsatz in abgeschotteten Umgebungen prüfen. Zur Prüfung von mitgeliefertem Code siehe oben, zum Datenabfluss bei selbst gehosteter Agenten-Infrastruktur und zu Telemetrie trotz Local-first-Werbung siehe unten.
   - *Bedingung:* Abgeschottete, regulierte oder souveräne Infrastruktur, Vorgaben ohne externe Abhängigkeiten.
   - *Beleglage:* Herstellerangabe bei beiden.
   - [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [CCORE Qwen3.5-4B-GLB-3D-Coder](../quellen/2026/11/2026-11-15-ccore-qwen3-5-4b-glb-3d-coder.md)
@@ -86,7 +88,7 @@ Stand: 2026-11-19 · 31 Quellen · 65 Learnings
   - Threads in Claude Code Projects laufen derzeit nur in der Anthropic Cloud. Lokale Ausführung ist ohne Datum angekündigt: „Threads run in the cloud today; running on your machine alongside your local tools and code and behind your network is coming very soon.“ Für Organisationen mit Vorgaben zur Datenhaltung ist das Produkt vorerst ungeeignet.
   - Eine Demo zu Google AI Studio preist die Bildschirmfreigabe an ein Cloud-Modell als Produktivitätsgewinn um das 1,5- bis 3-Fache an: „I see this is the future of work“ (24:52). Ob Eingaben im Free Tier zum Training genutzt werden und wo die Daten verarbeitet werden, sagt die Folge nicht.
   - Claude Cowork läuft nur auf Anthropic-Modellen. Eine Demo zu Cowork und Claude Code behandelt weder Datenresidenz noch EU-Betrieb noch die Frage, welche Inhalte aus lokalen Dateien und Browsersitzungen bei Anthropic landen. Für regulierte Daten ist das vor dem Einsatz separat zu klären.
-  - Wer souverän betreiben will, muss das vor dem Nachbau oder der Einführung selbst klären. Zur selbst gehosteten Variante von Anthropic siehe „Werkzeuge“, zum Lock-in siehe „Warnungen und Fehler“.
+  - Wer souverän betreiben will, muss das vor dem Nachbau oder der Einführung selbst klären. Zur selbst gehosteten Variante von Anthropic siehe „Werkzeuge“, zum Lock-in und zu Anwendungen, die Anbieter und Modell ihrer KI nicht nennen, siehe „Warnungen und Fehler“.
   - *Bedingung:* Teams mit Anforderungen an Datenhoheit, Firmen mit Sitz oder Kunden in der EU, Unternehmen, die Code oder Daten nicht in einer Anbieter-Cloud verarbeiten dürfen. Bei AI Studio Unternehmenseinsatz mit vertraulichen Daten. Bei Cowork Unternehmen mit Datenschutz- oder Souveränitätsanforderungen.
   - *Beleglage:* Beim Kurs Einschätzung ohne Beleg, bei AgentRun aus dem README abgeleitet, bei Projects Herstellerangabe, bei AI Studio und Cowork Behauptung ohne Beleg.
   - [AgentRun (Show HN)](../quellen/2026/11/2026-11-13-show-hn-agentrun-open-source-self-improving-managed-agents.md), [Building AI Agents (Kurs)](../quellen/2026/11/2026-11-13-building-ai-agents-that-actually-work-full-course.md), [Claude Code Projects](../quellen/2026/11/2026-11-14-anthropic-upgrades-claude-code-projects-to-run-parallel-ai-w.md), [Google AI Studio (Demo)](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md), [Claude Cowork und Claude Code (Lektion)](../quellen/2026/11/2026-11-19-i-got-a-private-lesson-on-claude-cowork-claude-code.md)
@@ -97,6 +99,17 @@ Stand: 2026-11-19 · 31 Quellen · 65 Learnings
   - *Bedingung:* Teams mit Anforderungen an Datenhoheit, die Agenten-Infrastruktur selbst betreiben, das Modell aber extern beziehen.
   - *Beleglage:* Bei Coral Behauptung ohne Beleg, bei Claude Managed Agents Herstellerangabe.
   - [Coral (Show HN)](../quellen/2026/11/2026-11-17-show-hn-coral-open-source-gateway-where-agents-write-their-o.md), [Claude Code Projects](../quellen/2026/11/2026-11-14-anthropic-upgrades-claude-code-projects-to-run-parallel-ai-w.md)
+
+### Telemetrie in Entwickler-Werkzeugen
+
+- **Telemetrie ist ab Werk aktiv, auch bei Werkzeugen mit Local-first-Anspruch (2 Quellen).**
+  - Onlook wirbt mit Local-first, im offiziellen Download sind Produkt-Analytics trotzdem standardmäßig aktiv: „In the official download they are on by default; a build from source asks first.“ Abschalten lässt sich das in den Einstellungen oder mit `STUDIO_TELEMETRY=0`. Der Source-Build fragt vorher und braucht laut README keinen Account.
+  - Windows 11: Bei einer sauberen Installation von Windows 11 Home ARM64, Region USA, waren optionale Diagnosedaten schon ab Werk aktiv. Nach dem Setup mit Standardwerten stand AllowTelemetry auf 3: „After completing setup with those defaults, AllowTelemetry was 3“. Firmen sollten diesen Wert auf Entwicklerrechnern zentral prüfen.
+  - In beiden Fällen ist die datensparsame Einstellung nicht der Standard. Telemetrie-Einstellungen deshalb vor dem Rollout je Werkzeug prüfen und zentral setzen.
+  - Zur Erfassung der Agent-Nutzung unter Windows siehe „Warnungen und Fehler“, zum Abschalten der Diagnosedaten „Taktiken und Abläufe“.
+  - *Bedingung:* Teams mit Datenschutz- oder Souveränitätsanforderungen. Bei Windows nur für eine US-Home-Installation belegt, EU sowie Pro und Enterprise sind nicht geprüft.
+  - *Beleglage:* Bei Onlook Herstellerangabe, bei Windows eigene Daten des Autors.
+  - [Onlook (Launch HN)](../quellen/2026/11/2026-11-20-launch-hn-onlook-yc-w25-an-open-source-developer-tool-for-de.md), [Windows-11-Telemetrie zu Coding-Agenten](../quellen/2026/11/2026-11-17-windows-11-is-collecting-data-on-which-coding-agents-and-dev.md)
 
 ## Taktiken und Abläufe
 
@@ -168,7 +181,7 @@ Stand: 2026-11-19 · 31 Quellen · 65 Learnings
 - **Optionale Diagnosedaten abschalten, um die Erfassung der Agent-Nutzung zu verhindern.**
   - Unter Einstellungen, Datenschutz und Sicherheit, Diagnose und Feedback die optionalen Diagnosedaten abschalten oder sie schon beim Setup ablehnen.
   - Der Report ist als optional markiert. Den abgeschalteten Fall hat der Autor nicht selbst getestet.
-  - In Firmen zusätzlich den Wert AllowTelemetry auf Entwicklerrechnern zentral prüfen, weil optionale Diagnosedaten ab Werk aktiv sein können. Zu Befund und Grenzen siehe „Warnungen und Fehler“.
+  - In Firmen zusätzlich den Wert AllowTelemetry auf Entwicklerrechnern zentral prüfen, weil optionale Diagnosedaten ab Werk aktiv sein können (siehe „Was mehrfach belegt ist“). Zu Befund und Grenzen siehe „Warnungen und Fehler“.
   - *Bedingung:* Windows 11. Die Wirkung des Abschaltens ist nicht gemessen.
   - *Beleglage:* Eigene Daten des Autors, der abgeschaltete Fall ungetestet.
   - [Windows-11-Telemetrie zu Coding-Agenten](../quellen/2026/11/2026-11-17-windows-11-is-collecting-data-on-which-coding-agents-and-dev.md)
@@ -222,9 +235,9 @@ Stand: 2026-11-19 · 31 Quellen · 65 Learnings
 
 ### Hardwarebedarf beim Selbst-Hosting
 
-- **Kimi K3.1 Pro braucht rund 2,84 TB allein für die Gewichte, DeepSeek Ultrafast 4 bis 8 Blackwell-GPUs.**
+- **Kimi K3.1 Pro braucht rund 2,84 TB allein für die Gewichte, DeepSeek Ultrafast 4 bis 8 Blackwell-GPUs, Hy4 flash acht GPUs bei rund 440 GB (BF16) oder 220 GB (FP8) Gewichten.**
   - Die Herleitung und die Einordnung zusammen mit LongCat-2.5 und TrnRT stehen unter „Was mehrfach belegt ist“.
-  - [Kimi K3.1 Pro Model Card](../quellen/2026/11/2026-11-09-moonshotai-kimi-k3-1-pro-model-card-auf-hugging-face.md), [DeepSeek Ultrafast](../quellen/2026/11/2026-11-14-deepseek-ultrafast.md)
+  - [Kimi K3.1 Pro Model Card](../quellen/2026/11/2026-11-09-moonshotai-kimi-k3-1-pro-model-card-auf-hugging-face.md), [DeepSeek Ultrafast](../quellen/2026/11/2026-11-14-deepseek-ultrafast.md), [Hy4 flash Model Card](../quellen/2026/11/2026-11-20-hy4-flash-tencent-hy4-flash-model-card.md)
 
 ### Kosten von Compute
 
@@ -328,6 +341,16 @@ Stand: 2026-11-19 · 31 Quellen · 65 Learnings
   - *Beleglage:* Behauptung ohne Beleg.
   - [Claude Code Projects](../quellen/2026/11/2026-11-14-anthropic-upgrades-claude-code-projects-to-run-parallel-ai-w.md)
 
+### Datenweitergabe an KI in Anwendungen
+
+- **Eine „privat“-Option verrät, dass alle übrigen Inhalte an eine KI gehen.**
+  - Foolscap sagt zu: „Mark a book private, and nothing of it goes to any AI at all.“ Im Umkehrschluss werden nicht private Inhalte an eine KI übermittelt.
+  - Wer so formuliert, sollte Anbieter, Modell und Speicherort nennen. Foolscap tut das nicht.
+  - Zu ähnlichen Lücken bei Agenten-Tools siehe „Was mehrfach belegt ist“.
+  - *Bedingung:* Relevant für DSGVO-Prüfung und souveräne KI.
+  - *Beleglage:* Herstellerangabe.
+  - [Foolscap (Show HN)](../quellen/2026/11/2026-11-20-show-hn-foolscap-a-writing-app-that-reads-your-book-and-neve.md)
+
 ### Telemetrie über Coding-Agenten unter Windows 11
 
 - **Windows 11 erkennt, welche Coding-Agenten genutzt werden, und reiht das als Diagnosedaten zum Upload ein.**
@@ -335,7 +358,7 @@ Stand: 2026-11-19 · 31 Quellen · 65 Learnings
   - Belegt ist das Einreihen, nicht der Empfang bei Microsoft.
   - Die Erkennung ist nicht auf WSL beschränkt. Die Komponente hört auf bestehende Windows-Events (KernelProcess.AppStateChangeSummary, Win32kTraceLogging.AppInteractivitySummary, Lxss.Manager.Exec), sodass auch ein normales Windows-codex.exe erfasst wird.
   - Zitat: „Why would a Windows system DLL need a list of coding agents and developer tools?“
-  - Zum Abschalten siehe „Taktiken und Abläufe“.
+  - Zum Abschalten siehe „Taktiken und Abläufe“. Dass optionale Diagnosedaten ab Werk aktiv sein können, steht unter „Was mehrfach belegt ist“.
   - *Bedingung:* Windows 11 mit aktivem Feature CLICodingAgentUsage und erlaubten optionalen Diagnosedaten.
   - *Beleglage:* Eigene Daten des Autors.
   - [Windows-11-Telemetrie zu Coding-Agenten](../quellen/2026/11/2026-11-17-windows-11-is-collecting-data-on-which-coding-agents-and-dev.md)
@@ -344,13 +367,6 @@ Stand: 2026-11-19 · 31 Quellen · 65 Learnings
   - Laufzeit und Interaktionszähler der Quell-Events scheinen verworfen zu werden.
   - Zitat: „Although I found no prompt text or source code in this report, collecting which agents and developer tools someone uses already has significant privacy implications.“
   - *Bedingung:* Gilt nur für diesen Report, nicht für die gesamte Windows-Telemetrie.
-  - *Beleglage:* Eigene Daten des Autors.
-  - [Windows-11-Telemetrie zu Coding-Agenten](../quellen/2026/11/2026-11-17-windows-11-is-collecting-data-on-which-coding-agents-and-dev.md)
-- **Optionale Diagnosedaten können ab Werk aktiv sein.**
-  - Bei einer sauberen Installation von Windows 11 Home ARM64, Region USA, waren optionale Diagnosedaten schon ab Werk aktiv. Nach dem Setup mit Standardwerten stand AllowTelemetry auf 3.
-  - Zitat: „After completing setup with those defaults, AllowTelemetry was 3“.
-  - Firmen sollten diesen Wert auf Entwicklerrechnern zentral prüfen.
-  - *Bedingung:* Nur für eine US-Home-Installation belegt. EU sowie Pro und Enterprise sind nicht geprüft.
   - *Beleglage:* Eigene Daten des Autors.
   - [Windows-11-Telemetrie zu Coding-Agenten](../quellen/2026/11/2026-11-17-windows-11-is-collecting-data-on-which-coding-agents-and-dev.md)
 - **Nicht belegt ist, dass die Erfassung auf jeder Windows-11-Installation läuft.**
@@ -452,6 +468,9 @@ Stand: 2026-11-19 · 31 Quellen · 65 Learnings
 - **Was erlaubt die LFM Open License v1.0 kommerziell und in der EU?**
   - Die Card schweigt dazu, der LICENSE-Text ist noch nicht ausgewertet.
   - [LFM3-1.7B Model Card](../quellen/2026/11/2026-11-13-liquidai-lfm3-1-7b-model-card-auf-hugging-face.md)
+- **Was erlaubt die Tencent Hy License für Hy4 flash kommerziell und in der EU?**
+  - Die Karte verweist nur auf die LICENSE-Datei, deren Inhalt noch nicht ausgewertet ist.
+  - [Hy4 flash Model Card](../quellen/2026/11/2026-11-20-hy4-flash-tencent-hy4-flash-model-card.md)
 - **Unter welcher Lizenz stehen Edge0-145B und die Cactus-Runtime?**
   - Edge0 nennt keine Lizenz.
   - Bei Mirage ist nur das Lizenzfeld des Modells bekannt, nicht die Lizenz des separaten Runtime-Repos.
@@ -483,6 +502,9 @@ Stand: 2026-11-19 · 31 Quellen · 65 Learnings
 - **Welche Inhalte aus lokalen Dateien und Browsersitzungen landen bei Claude Cowork bei Anthropic, und gibt es EU-Betrieb?**
   - Die Demo behandelt weder Datenresidenz noch EU-Betrieb.
   - [Claude Cowork und Claude Code (Lektion)](../quellen/2026/11/2026-11-19-i-got-a-private-lesson-on-claude-cowork-claude-code.md)
+- **An welchen Anbieter und welches Modell gehen bei Foolscap die nicht privaten Inhalte, und wo werden sie gespeichert?**
+  - Die Zusage nennt nur, dass private Bücher an keine KI gehen. Anbieter, Modell und Speicherort fehlen.
+  - [Foolscap (Show HN)](../quellen/2026/11/2026-11-20-show-hn-foolscap-a-writing-app-that-reads-your-book-and-neve.md)
 - **Unter welcher Lizenz steht Mastra Factory, und welche Modelle und Sandbox-Anbieter setzt sie voraus?**
   - Der Beitrag nennt weder Lizenz noch Modelle, Sandbox-Anbieter oder EU-Hosting.
   - [Mastra Factory (Show HN)](../quellen/2026/11/2026-11-19-show-hn-mastra-factory-the-open-source-software-factory-we-u.md)
