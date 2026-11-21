@@ -1,39 +1,42 @@
 # Sovereign AI
 
-Diese Seite sammelt, was Unternehmen beachten müssen, wenn sie KI-Modelle unabhängig von einzelnen Anbietern, Regionen und Vertragsbedingungen betreiben wollen. Sie fasst Belege zu Verfügbarkeit, Exit-Strategien, Hardware- und Compute-Kosten, Bindung an Cloud-Hardware, lokalem, hybridem und Offline-Betrieb, Lizenzen und Offenheit, Herkunft und Rechtsstatus von Trainingsdaten, Code-Prüfung, Hintertüren in Modellen, Cloud-Bindung und Datenabfluss von Agenten-Tools und Anwendungen, Telemetrie in Entwickler-Werkzeugen und unter Windows, politischer Verzerrung offener Modelle und Regulierung von KI in der Abschlussprüfung zusammen.
+Diese Seite sammelt, was Unternehmen beachten müssen, wenn sie KI-Modelle unabhängig von einzelnen Anbietern, Regionen und Vertragsbedingungen betreiben wollen. Sie fasst Belege zu Verfügbarkeit, Exit-Strategien, Hardware- und Compute-Kosten, Bindung an Cloud-Hardware und Cloud-Plattformen, lokalem, hybridem und Offline-Betrieb, Lizenzen und Offenheit, Herkunft und Rechtsstatus von Trainingsdaten, Code-Prüfung, Hintertüren in Modellen, Cloud-Bindung und Datenabfluss von Agenten-Tools und Anwendungen, bildschirmlesenden KI-Agenten im Betriebssystem, Telemetrie in Entwickler-Werkzeugen und unter Windows, politischer Verzerrung offener Modelle, der Lieferkette für KI-Chips und Regulierung von KI in der Abschlussprüfung zusammen.
 
-Stand: 2026-11-20 · 34 Quellen · 69 Learnings
+Stand: 2026-11-21 · 39 Quellen · 81 Learnings
 
 ## Was mehrfach belegt ist
 
 ### Lizenz, Herkunft und Dokumentation
 
-- **Lizenz offener Modelle vor kommerziellem Einsatz selbst prüfen (9 Quellen).**
+- **Lizenz offener Modelle vor kommerziellem Einsatz selbst prüfen (11 Quellen).**
   - LFM3-1.7B steht unter der LFM Open License v1.0. Das ist keine Standardlizenz wie Apache 2.0 oder MIT, und die Card nennt keine Bedingungen zu kommerzieller Nutzung oder EU.
   - Edge0-145B nennt nach dem Material überhaupt keine Lizenz, die kommerzielle Nutzung ist damit offen.
   - Bei Mirage steht im Lizenzfeld „license: apache-2.0“, was kommerzielle Nutzung grundsätzlich erlaubt. Die Runtime liegt aber in einem separaten Repo (Cactus-Compute/cactus). Deren Lizenz und den Lizenztext im Modell-Repo getrennt prüfen.
   - Die Unsloth-Seite zu Qwen3.8-27B nennt weder Lizenz noch Bedingungen für kommerzielle Nutzung. Das muss man an anderer Stelle prüfen.
   - Das DSpine-Draft-Modell für Qwen3.8-27B steht unter Apache 2.0 („license: apache-2.0“), ohne zusätzliche Einschränkungen zu kommerzieller Nutzung oder EU. Für den Betrieb zählt aber auch die Lizenz von Qwen3.8-27B, die diese Karte nicht nennt.
-  - Bei TrnRT steht die Inferenz-Engine unter Apache 2.0. Die Lizenz des eingesetzten Modells GLM-5.3-Flash nennt das Material nicht. Wie bei DSpine zählt für den Betrieb auch die Lizenz des Modells.
+  - Dasselbe gilt für den Adapter Qwen3.8-27B-pi-adapted: Er steht unter Apache 2.0 und läuft komplett selbst gehostet (vLLM, transformers serve, llama.cpp) ohne externe API. Die Lizenz des Basismodells Qwen3.8-27B nennt auch diese Karte nicht.
+  - Bei TrnRT steht die Inferenz-Engine unter Apache 2.0. Die Lizenz des eingesetzten Modells GLM-5.3-Flash nennt das Material nicht. Wie bei DSpine und dem Adapter zählt für den Betrieb auch die Lizenz des Modells.
   - Inkling 2 Small steht unter Apache 2.0. Die Karte verlinkt daneben eine separate Acceptable Use Policy, ohne Inhalt oder Verhältnis zur Lizenz zu erklären.
+  - Inkling 2 Mini zeigt dasselbe Muster: Apache 2.0, dazu eine verlinkte Acceptable Use Policy ohne Inhalt. Vor kommerziellem Einsatz ist zu prüfen, ob diese Policy zusätzliche Pflichten begründet. EU-Hinweise und Urheberrecht nennt die Karte nicht.
   - LongCat-2.5 steht unter MIT-Lizenz ohne Einschränkung nach Branche oder Region, also ohne EU-Ausschluss. Marken und Patente sind ausgenommen: „This license does not grant any rights to use Meituan trademarks or patents.“ Eine Patentlizenz wie bei Apache 2.0 fehlt, das sollte rechtlich geprüft werden. Diese Bewertung ist eine Einordnung, kein Teil der Karte.
   - Hy4 flash steht unter der Tencent Hy License, deren Inhalt nicht auf der Karte steht: „Hy4 flash is released under the Tencent Hy License. See LICENSE for details.“ Kommerzielle Nutzung und EU-Einsatz müssen anhand der LICENSE-Datei rechtlich geprüft werden.
-  - In allen Fällen gilt: Vor dem Einsatz den LICENSE-Text im Repo lesen. Zusätzlich bei Mirage die Lizenz der Runtime, bei DSpine und TrnRT die des Modells, bei Inkling die Acceptable Use Policy.
+  - In allen Fällen gilt: Vor dem Einsatz den LICENSE-Text im Repo lesen. Zusätzlich bei Mirage die Lizenz der Runtime, bei DSpine, dem Qwen3.8-Adapter und TrnRT die des Modells, bei Inkling 2 Small und Inkling 2 Mini die Acceptable Use Policy.
   - Zu Qwen4-Max, bei dem schon offen ist, ob es überhaupt offene Gewichte gibt, siehe „Warnungen und Fehler“. Zur ebenfalls ungenannten Lizenz von Mastra Factory siehe „Werkzeuge“.
-  - *Bedingung:* Kommerzielle, souveräne und Sovereign-AI-Setups, insbesondere in der EU. Bei Inkling alle, die das Modell in Produkten einsetzen oder weitergeben. Bei Hy4 flash vor jedem kommerziellen oder EU-Einsatz.
-  - *Beleglage:* Bei LFM3, Mirage, DSpine, TrnRT, LongCat und Hy4 flash Herstellerangaben, bei Edge0, Unsloth und Inkling Behauptung ohne Beleg.
-  - [LFM3-1.7B Model Card](../quellen/2026/11/2026-11-13-liquidai-lfm3-1-7b-model-card-auf-hugging-face.md), [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [Unsloth Qwen3.8-27B](../quellen/2026/11/2026-11-14-unsloth-qwen3-8-27b-quantizations-dynamic-v3-1-update.md), [DSpine for Qwen3.8-27B](../quellen/2026/11/2026-11-14-tencent-qwen3-8-27b-dspine-b16-dspine-for-qwen3-8-27b.md), [TrnRT (Show HN)](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md), [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md), [Hy4 flash Model Card](../quellen/2026/11/2026-11-20-hy4-flash-tencent-hy4-flash-model-card.md)
-- **Trainingsdaten, Datenherkunft und Evaluierung bleiben bei offenen Modellen unbelegt (6 Quellen).**
+  - *Bedingung:* Kommerzielle, souveräne und Sovereign-AI-Setups, insbesondere in der EU. Bei Inkling alle, die das Modell in Produkten einsetzen oder weitergeben, bei Inkling 2 Mini besonders in regulierten Branchen. Bei Hy4 flash vor jedem kommerziellen oder EU-Einsatz. Beim Qwen3.8-Adapter gilt die Apache-Lizenz nur für den Adapter, die Lizenz des Basismodells ist offen.
+  - *Beleglage:* Bei LFM3, Mirage, DSpine, dem Qwen3.8-Adapter, TrnRT, Inkling 2 Mini, LongCat und Hy4 flash Herstellerangaben, bei Edge0, Unsloth und Inkling 2 Small Behauptung ohne Beleg.
+  - [LFM3-1.7B Model Card](../quellen/2026/11/2026-11-13-liquidai-lfm3-1-7b-model-card-auf-hugging-face.md), [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [Unsloth Qwen3.8-27B](../quellen/2026/11/2026-11-14-unsloth-qwen3-8-27b-quantizations-dynamic-v3-1-update.md), [DSpine for Qwen3.8-27B](../quellen/2026/11/2026-11-14-tencent-qwen3-8-27b-dspine-b16-dspine-for-qwen3-8-27b.md), [Qwen3.8-27B-pi-adapted Model Card](../quellen/2026/11/2026-11-21-harness-hub-qwen3-8-27b-pi-adapted-model-card.md), [TrnRT (Show HN)](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md), [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [Inkling 2 Mini Model Card](../quellen/2026/11/2026-11-21-inkling-2-mini-model-card-thinkingmachines-inkling-2-mini.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md), [Hy4 flash Model Card](../quellen/2026/11/2026-11-20-hy4-flash-tencent-hy4-flash-model-card.md)
+- **Trainingsdaten, Datenherkunft und Evaluierung bleiben bei offenen Modellen unbelegt (7 Quellen).**
   - Edge0 veröffentlicht nach dem Material nur Gewichte, Framework und Tools, aber keine Trainingsdaten und keinen Trainingscode.
   - Die Mirage-Card enthält keine Angaben zu Trainingsdaten, Datenherkunft oder EU-Konformität.
   - Die Card von Inkling 2 Small nennt keine Datenmenge, keinen Wissensstichtag, keinen Rechenaufwand und keine Sicherheitsevaluierung. Datenquellen stehen nur grob da (öffentlich, zugekauft, intern, synthetisch), zur Aufbereitung heißt es nur: „may include deduplication and filtering to remove junk or other low-quality data“.
+  - Inkling 2 Mini erlaubt mit offenen Gewichten, einem Checkpoint auf einem Einzelgerät und Apache 2.0 vollständig lokalen Betrieb ohne Cloud-API. Für Souveränitätsanforderungen fehlen aber auch hier Trainingsdatenherkunft, Datenmenge und Stichtag.
   - Die LongCat-2.5-Card enthält keine Angaben zu Trainingsdaten, Datenrechten, Safety-Evaluation oder EU-Regulierung. Datenschutz, Privatsphäre und Inhaltssicherheit liegen ausdrücklich beim Betreiber.
   - Das CCORE-Modell Qwen3.5-4B-GLB-3D-Coder ist ein Feintuning auf Qwen/Qwen3.5-4B. Für die Herkunft zählen die Basisgewichte, zu deren Trainingsdaten die Karte nichts sagt. Zur Bezeichnung „independently developed“ siehe „Warnungen und Fehler“.
   - Für SenseNova-Loop-9B fehlen Angaben zu Trainingsdaten und Sicherheitsbewertung. Auch Laufzeiten jenseits von transformers (vLLM, llama.cpp, GGUF) sind nicht genannt. Für einen EU-Einsatz bleiben damit neben der Datenherkunft auch der Betriebsweg ungeklärt. Zum mitgelieferten Code siehe unten.
-  - Für Sovereign-AI-Anforderungen und Dokumentationspflichten etwa nach AI Act ist ein solches Modell auf Basis der Card allein nicht bewertbar.
-  - *Bedingung:* Öffentliche Hand, regulierte Branchen, EU-Beschaffung, kommerzielle Umgebungen, Compliance-Dokumentation, Herkunfts- und Lizenzkettenprüfung. Bei SenseNova Einsatz in der EU oder in abgeschotteten Umgebungen.
-  - *Beleglage:* Bei Edge0 und Mirage Behauptung ohne Beleg, bei Inkling, LongCat, CCORE und SenseNova Herstellerangabe.
-  - [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md), [CCORE Qwen3.5-4B-GLB-3D-Coder](../quellen/2026/11/2026-11-15-ccore-qwen3-5-4b-glb-3d-coder.md), [SenseNova-Loop-9B](../quellen/2026/11/2026-11-19-sensenova-sensenova-loop-9b.md)
+  - Für Sovereign-AI-Anforderungen und Dokumentationspflichten etwa nach AI Act ist ein solches Modell auf Basis der Card allein nicht bewertbar. Lokale Betreibbarkeit ersetzt diese Dokumentation nicht.
+  - *Bedingung:* Öffentliche Hand, regulierte Branchen, EU-Beschaffung, kommerzielle Umgebungen, Compliance-Dokumentation, Herkunfts- und Lizenzkettenprüfung. Bei SenseNova Einsatz in der EU oder in abgeschotteten Umgebungen. Bei Inkling 2 Mini gilt der lokale Betrieb nur, wenn die Acceptable Use Policy den Einsatz nicht einschränkt.
+  - *Beleglage:* Bei Edge0 und Mirage Behauptung ohne Beleg, bei Inkling 2 Small, Inkling 2 Mini, LongCat, CCORE und SenseNova Herstellerangabe.
+  - [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md), [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [Inkling 2 Mini Model Card](../quellen/2026/11/2026-11-21-inkling-2-mini-model-card-thinkingmachines-inkling-2-mini.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md), [CCORE Qwen3.5-4B-GLB-3D-Coder](../quellen/2026/11/2026-11-15-ccore-qwen3-5-4b-glb-3d-coder.md), [SenseNova-Loop-9B](../quellen/2026/11/2026-11-19-sensenova-sensenova-loop-9b.md)
 - **Für deutschsprachigen Einsatz fehlen bei offenen Modellen oft die Belege (3 Quellen).**
   - Die Card von Kimi K3.1 Pro nennt keine unterstützten Sprachen und sagt nichts zur Qualität auf Deutsch.
   - Die Unsloth-Seite zu Qwen3.8-27B nennt ebenfalls keine unterstützten Sprachen.
@@ -60,7 +63,7 @@ Stand: 2026-11-20 · 34 Quellen · 69 Learnings
   - Hy4 flash: Beide Referenz-Setups brauchen acht GPUs. Überschlag aus 220,24B Parametern: rund 440 GB Gewichte in BF16, rund 220 GB in FP8, dazu der KV-Cache. Die 12B aktiven Parameter senken die Rechenlast, nicht den Speicherbedarf.
   - LongCat-2.5 dokumentiert Deployment nur für NPU-Plattformen über einen Branch von SGLang-FluentLLM: „LongCat-2.5 can be deployed on NPU platforms.“ Eine Anleitung für NVIDIA-GPUs, vLLM, llama.cpp oder GGUF fehlt. Die beworbenen Effizienzvorteile hängen an inländischen Beschleunigern des Herstellers, deren Chiphersteller nicht genannt wird.
   - TrnRT: Die Inferenz-Engine ist offen (Apache 2.0) und läuft mit einem offenen Modell, die Hardware bleibt aber an AWS Trainium gebunden. Preise nennt das Material nur für us-east-2. Ob trn2.48xlarge in der EU verfügbar ist, steht nicht drin.
-  - Offene Gewichte und offene Engines heißen deshalb nicht souveräner Betrieb. Eigene Kontrolle über die Inferenz ist an große Hardware-Budgets, an Portierungsaufwand oder an einen einzelnen Cloud-Anbieter gebunden.
+  - Offene Gewichte und offene Engines heißen deshalb nicht souveräner Betrieb. Eigene Kontrolle über die Inferenz ist an große Hardware-Budgets, an Portierungsaufwand oder an einen einzelnen Cloud-Anbieter gebunden. Zur ähnlichen Bindung eines Agenten-Stacks an Cloudflare siehe „Warnungen und Fehler“.
   - *Bedingung:* Kimi: souveräner Betrieb ohne API, die Zahl ist eine eigene Ableitung aus den Metadaten des Original-Checkpoints. DeepSeek: Einzelpersonen und kleine Teams ohne eigenen GPU-Cluster. Hy4 flash: Die Speicherzahlen sind eine Überschlagsrechnung auf Basis der Herstellerangaben. LongCat: Betreiber in der EU mit GPU-Infrastruktur, die die Portierung selbst leisten müssten. TrnRT: Einsatz mit Datenhoheitsanforderungen, Region und Bedingungen vorher bei AWS und beim Modellanbieter prüfen.
   - *Beleglage:* Bei Kimi eigene Ableitung, bei DeepSeek Anekdote, bei Hy4 flash, LongCat und TrnRT Herstellerangabe.
   - [Kimi K3.1 Pro Model Card](../quellen/2026/11/2026-11-09-moonshotai-kimi-k3-1-pro-model-card-auf-hugging-face.md), [DeepSeek Ultrafast](../quellen/2026/11/2026-11-14-deepseek-ultrafast.md), [Hy4 flash Model Card](../quellen/2026/11/2026-11-20-hy4-flash-tencent-hy4-flash-model-card.md), [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md), [TrnRT (Show HN)](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md)
@@ -88,7 +91,7 @@ Stand: 2026-11-20 · 34 Quellen · 69 Learnings
   - Threads in Claude Code Projects laufen derzeit nur in der Anthropic Cloud. Lokale Ausführung ist ohne Datum angekündigt: „Threads run in the cloud today; running on your machine alongside your local tools and code and behind your network is coming very soon.“ Für Organisationen mit Vorgaben zur Datenhaltung ist das Produkt vorerst ungeeignet.
   - Eine Demo zu Google AI Studio preist die Bildschirmfreigabe an ein Cloud-Modell als Produktivitätsgewinn um das 1,5- bis 3-Fache an: „I see this is the future of work“ (24:52). Ob Eingaben im Free Tier zum Training genutzt werden und wo die Daten verarbeitet werden, sagt die Folge nicht.
   - Claude Cowork läuft nur auf Anthropic-Modellen. Eine Demo zu Cowork und Claude Code behandelt weder Datenresidenz noch EU-Betrieb noch die Frage, welche Inhalte aus lokalen Dateien und Browsersitzungen bei Anthropic landen. Für regulierte Daten ist das vor dem Einsatz separat zu klären.
-  - Wer souverän betreiben will, muss das vor dem Nachbau oder der Einführung selbst klären. Zur selbst gehosteten Variante von Anthropic siehe „Werkzeuge“, zum Lock-in und zu Anwendungen, die Anbieter und Modell ihrer KI nicht nennen, siehe „Warnungen und Fehler“.
+  - Wer souverän betreiben will, muss das vor dem Nachbau oder der Einführung selbst klären. Zur selbst gehosteten Variante von Anthropic siehe „Werkzeuge“, zum Lock-in, zu Anwendungen, die Anbieter und Modell ihrer KI nicht nennen, und zu bildschirmlesenden KI-Agenten im Betriebssystem siehe „Warnungen und Fehler“.
   - *Bedingung:* Teams mit Anforderungen an Datenhoheit, Firmen mit Sitz oder Kunden in der EU, Unternehmen, die Code oder Daten nicht in einer Anbieter-Cloud verarbeiten dürfen. Bei AI Studio Unternehmenseinsatz mit vertraulichen Daten. Bei Cowork Unternehmen mit Datenschutz- oder Souveränitätsanforderungen.
   - *Beleglage:* Beim Kurs Einschätzung ohne Beleg, bei AgentRun aus dem README abgeleitet, bei Projects Herstellerangabe, bei AI Studio und Cowork Behauptung ohne Beleg.
   - [AgentRun (Show HN)](../quellen/2026/11/2026-11-13-show-hn-agentrun-open-source-self-improving-managed-agents.md), [Building AI Agents (Kurs)](../quellen/2026/11/2026-11-13-building-ai-agents-that-actually-work-full-course.md), [Claude Code Projects](../quellen/2026/11/2026-11-14-anthropic-upgrades-claude-code-projects-to-run-parallel-ai-w.md), [Google AI Studio (Demo)](../quellen/2026/11/2026-11-17-google-ai-studio-replaces-your-ai-tech-stack-full-demo.md), [Claude Cowork und Claude Code (Lektion)](../quellen/2026/11/2026-11-19-i-got-a-private-lesson-on-claude-cowork-claude-code.md)
@@ -171,10 +174,39 @@ Stand: 2026-11-20 · 34 Quellen · 69 Learnings
 - **Confidential Computing für Daten in Verarbeitung.**
   - Confidential Computing schützt Daten während der Verarbeitung in hardwarebasierten Trusted Execution Environments, auch gegenüber dem Cloud-Anbieter.
   - Schritte laut Gartner: betroffene Workloads kartieren, TEEs mit eigenen und offenen Modellen testen, eigene Schlüsselverwaltung aufbauen.
-  - Mehr Kontrolle heißt mehr Kosten und Betriebsaufwand. Zur Prognose für 2029 siehe „Zahlen und Richtwerte“.
+  - Mehr Kontrolle heißt mehr Kosten und Betriebsaufwand. Zur Prognose für 2029 siehe „Zahlen und Richtwerte“, zum Einwand, dass Confidential Computing das Kernproblem nicht löst, siehe „Strittig“.
   - *Bedingung:* Sensible Workloads in fremder Infrastruktur.
   - *Beleglage:* Prognose ohne Methodik.
   - [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
+
+### Apps vor bildschirmlesenden KI-Agenten schützen
+
+- **Unter macOS 27 die App bei Siri unter „Excluded Apps“ eintragen.**
+  - Unter Systemeinstellungen, Siri die App bei „Excluded Apps“ eintragen, damit Siri AI nicht proaktiv auf ihre Inhalte zugreift.
+  - Zitat: „add Signal to the Excluded Apps section in System Settings > Siri to protect message content from proactive access by Siri AI“.
+  - Das ist eine Nutzereinstellung, kein technischer Schutz durch die App selbst. Zum zugrunde liegenden Risiko siehe „Warnungen und Fehler“.
+  - *Bedingung:* macOS 27 mit Siri AI.
+  - *Beleglage:* Eigene Daten der Quelle.
+  - [Signal und OS-KI-Agenten (HN)](../quellen/2026/11/2026-11-21-signal-is-serious-about-protecting-your-privacy-hn-restricti.md)
+- **Forderungen an Betriebssystemhersteller als Prüfliste für eigene Plattformanforderungen nutzen.**
+  - Signal fordert von Apple, Google und Microsoft zwei Dinge:
+    - einen einfachen, dokumentierten Opt-out für Entwickler, der Screen Reading, Dateisystem, Benachrichtigungen, APIs und Frameworks umfasst, ohne den Kernnutzen der App zu beschädigen,
+    - Dokumentation und technische Spezifikation, wie die KI-Agenten des Betriebssystems Daten abgreifen und verarbeiten.
+  - Zitat: „Developers should have an easy and well-documented way to opt their app out of AI data access and processing“.
+  - Ohne die zweite Forderung kann laut Signal keine App robusten Datenschutz liefern: „Operating system companies should create better documentation and technical specifications around how these AI agents function“.
+  - *Bedingung:* Entwickler von Apps mit vertraulichen Inhalten, Einkauf und Architektur mit Datenschutzanforderungen an Endgeräte.
+  - *Beleglage:* Behauptung ohne Beleg.
+  - [Signal und OS-KI-Agenten (HN)](../quellen/2026/11/2026-11-21-signal-is-serious-about-protecting-your-privacy-hn-restricti.md)
+
+### Kommunikation ohne einzelnen Anbieter
+
+- **Für kleine Gruppen einen föderierten Messenger wie Matrix aufsetzen.**
+  - Ein Kommentator empfiehlt Matrix, aufgesetzt von einer technisch versierten Person, um die Abhängigkeit von einem einzelnen US-Anbieter und Massenüberwachung zu vermeiden.
+  - Zitat: „use something like Matrix amongst friends, you only need a slightly technical friend to set it up for you“.
+  - Die Kritik des Kommentators an Signal selbst (CLOUD Act, Honeypot) bleibt unbelegt.
+  - *Bedingung:* Kleiner Nutzerkreis mit mindestens einer technisch versierten Person.
+  - *Beleglage:* Anekdote.
+  - [Signal und OS-KI-Agenten (HN)](../quellen/2026/11/2026-11-21-signal-is-serious-about-protecting-your-privacy-hn-restricti.md)
 
 ### Entwicklerrechner unter Windows 11
 
@@ -268,7 +300,7 @@ Stand: 2026-11-20 · 34 Quellen · 69 Learnings
   - *Beleglage:* Prognose ohne Methodik.
   - [Gartner 2027](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2027.md)
 - **Bis 2029 sollen 75 % der Verarbeitung auf nicht vertrauenswürdiger Infrastruktur per Confidential Computing geschützt sein.**
-  - Zu Ablauf und Aufwand siehe „Taktiken und Abläufe“.
+  - Zu Ablauf und Aufwand siehe „Taktiken und Abläufe“, zum Einwand gegen Confidential Computing siehe „Strittig“.
   - *Beleglage:* Prognose ohne Methodik.
   - [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
 
@@ -298,7 +330,7 @@ Stand: 2026-11-20 · 34 Quellen · 69 Learnings
 - **Mastra Factory: offene Software-Factory für den Betrieb auf eigener Infrastruktur.**
   - Start mit `npm create factory`, Vorlage im Repo mastra-ai/template-factory.
   - Laut Hersteller vollständig auf eigener Infrastruktur betreibbar, daneben gibt es eine gehostete Version: „It's fully open-source, so you can run it entirely on your infra (we also offer a hosted version).“
-  - Lizenz, nötige Modelle, Sandbox-Anbieter und EU-Hosting nennt der Beitrag nicht. Zur Grenze selbst gehosteter Agenten-Infrastruktur beim Modellaufruf siehe „Was mehrfach belegt ist“.
+  - Lizenz, nötige Modelle, Sandbox-Anbieter und EU-Hosting nennt der Beitrag nicht. Zur Grenze selbst gehosteter Agenten-Infrastruktur beim Modellaufruf siehe „Was mehrfach belegt ist“, zu einem ähnlichen Werkzeug mit Plattformbindung siehe „Warnungen und Fehler“.
   - *Bedingung:* Vor souveränem Einsatz Lizenz und Modellabhängigkeiten selbst prüfen.
   - *Beleglage:* Herstellerangabe.
   - [Mastra Factory (Show HN)](../quellen/2026/11/2026-11-19-show-hn-mastra-factory-the-open-source-software-factory-we-u.md)
@@ -332,6 +364,15 @@ Stand: 2026-11-20 · 34 Quellen · 69 Learnings
   - *Beleglage:* Behauptung ohne Beleg.
   - [I'm Obsessed With Local AI](../quellen/2026/11/2026-11-16-i-m-obsessed-with-local-ai-here-s-why.md)
 
+### Lieferkette für KI-Chips
+
+- **Kalifornien untersucht, ob fortgeschrittene Nvidia-Chips in China gelandet sind.**
+  - Kalifornien hat Nvidia im Rahmen dieser Untersuchung eine Subpoena zugestellt: „California served the chip company with a subpoena as part of an investigation into whether its advanced semiconductors ended up in China.“
+  - Der Zusammenhang mit dem im Artikel beschriebenen Kursrückgang ist wegen defekten Artikeltexts unklar.
+  - *Bedingung:* Folgen für Lieferbarkeit oder Exportauflagen nennt die Quelle nicht.
+  - *Beleglage:* Eigene Daten der Quelle.
+  - [Nasdaq und Anthropic-IPO](../quellen/2026/11/2026-11-21-global-stock-markets-slump-as-anthropic-s-record-ipo-fails-t.md)
+
 ### Lock-in bei Anbieter-Clouds
 
 - **Je mehr Dev-Setup und Memory in der Anbieter-Cloud liegt, desto schwerer der Ausstieg.**
@@ -340,6 +381,13 @@ Stand: 2026-11-20 · 34 Quellen · 69 Learnings
   - *Bedingung:* Teams, die Entwicklungsprozess und Projektwissen komplett in Projects ablegen.
   - *Beleglage:* Behauptung ohne Beleg.
   - [Claude Code Projects](../quellen/2026/11/2026-11-14-anthropic-upgrades-claude-code-projects-to-run-parallel-ai-w.md)
+- **„Im eigenen Cloud-Account“ heißt nicht frei von US-Plattformen.**
+  - OpenComputer, eine offene Alternative zu Devin, beansprucht, alles im eigenen Cloud-Account zu betreiben. Der übrige Stack läuft aber auf Cloudflare: „The rest of the stack runs on Cloudflare Workers and Durable Objects.“
+  - Andere Plattformen sind nur angekündigt. Vor einem Einsatz mit Souveränitätsanforderungen SELFHOSTING.md prüfen.
+  - Dieselbe Bindung einer offenen Software an einen einzelnen Anbieter zeigt TrnRT mit AWS Trainium, siehe „Was mehrfach belegt ist“.
+  - *Bedingung:* Organisationen, die keine US-Plattformabhängigkeit wollen.
+  - *Beleglage:* Herstellerangabe.
+  - [OpenComputer (Show HN)](../quellen/2026/11/2026-11-21-show-hn-opencomputer-an-open-source-alternative-to-devin.md)
 
 ### Datenweitergabe an KI in Anwendungen
 
@@ -350,6 +398,22 @@ Stand: 2026-11-20 · 34 Quellen · 69 Learnings
   - *Bedingung:* Relevant für DSGVO-Prüfung und souveräne KI.
   - *Beleglage:* Herstellerangabe.
   - [Foolscap (Show HN)](../quellen/2026/11/2026-11-20-show-hn-foolscap-a-writing-app-that-reads-your-book-and-neve.md)
+
+### Bildschirmlesende KI-Agenten im Betriebssystem
+
+- **OS-integrierte KI-Agenten können Ende-zu-Ende-Verschlüsselung unterlaufen.**
+  - Agenten, die den Bildschirm lesen, erfassen Inhalte nach der Entschlüsselung. Danach liegen die Daten außerhalb der Kontrolle der App.
+  - Betroffen sind alle Gesprächsteilnehmer, nicht nur der Gerätebesitzer: „All of this is outside of Signal’s control once the data has been captured, and imperils the privacy of all the participants in a conversation.“
+  - Zur Nutzereinstellung unter macOS 27 und zu den Forderungen an Plattformen siehe „Taktiken und Abläufe“.
+  - *Bedingung:* Sofern der OS-Agent Inhalte tatsächlich speichert oder an Server überträgt. Das belegt der Artikel nicht.
+  - *Beleglage:* Behauptung ohne Beleg.
+  - [Signal und OS-KI-Agenten (HN)](../quellen/2026/11/2026-11-21-signal-is-serious-about-protecting-your-privacy-hn-restricti.md)
+- **Das Bedrohungsmodell endet nicht am eigenen Gerät.**
+  - Auch wer selbst keine KI-App nutzt, kann über das Gerät eines Kontakts mit bildschirmlesendem Agenten betroffen sein: „even if you don’t have an AI app installed, your contact could and thereby still leaks your chat.“
+  - Eigene Geräteeinstellungen schützen daher nur die eigene Seite eines Gesprächs.
+  - *Bedingung:* Wenn das Gerät des Kontakts KI-Zugriff auf den Bildschirm hat.
+  - *Beleglage:* Anekdote.
+  - [Signal und OS-KI-Agenten (HN)](../quellen/2026/11/2026-11-21-signal-is-serious-about-protecting-your-privacy-hn-restricti.md)
 
 ### Telemetrie über Coding-Agenten unter Windows 11
 
@@ -444,6 +508,12 @@ Stand: 2026-11-20 · 34 Quellen · 69 Learnings
   - *Vermutete Ursache:* unterschiedliche Grundgesamtheit (Markt). Für europäische Planung ist die Lesart der Pressemitteilung die passende.
   - *Beleglage:* Prognose ohne Methodik.
   - [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md)
+- **Schützt Confidential Computing vertrauliche Daten bei Cloud-KI ausreichend?**
+  - Gartner: Confidential Computing schützt Daten während der Verarbeitung in Trusted Execution Environments, auch gegenüber dem Cloud-Anbieter. Bis 2029 sollen 75 % der Verarbeitung auf nicht vertrauenswürdiger Infrastruktur so geschützt sein.
+  - Signal: Der Ansatz löst das Kernproblem nicht, weil weiterhin der Anbieter festlegt, wie viel Privatsphäre bleibt: „Confidential computing approaches are not a complete solution, and do not address these core concerns.“ Wer Cloud-KI mit vertraulicher Verarbeitung bewirbt, sollte diesen Einwand im Verkaufsgespräch erwarten.
+  - *Vermutete Ursache:* unterschiedliches Bedrohungsmodell. Gartner betrachtet den Zugriff des Infrastrukturbetreibers während der Verarbeitung. Signal betrachtet, wer überhaupt entscheidet, welche Daten ein KI-Agent erfasst und verarbeitet, etwa im Betriebssystem. Beide Seiten haben eigene Interessen: Gartner verkauft Beratung, Signal betreibt einen verschlüsselten Messenger.
+  - *Beleglage:* Bei Gartner Prognose ohne Methodik, bei Signal Behauptung ohne Beleg.
+  - [Gartner 2026](../quellen/2026/11/2026-11-15-gartner-top-10-strategic-technology-trends-for-2026.md), [Signal und OS-KI-Agenten (HN)](../quellen/2026/11/2026-11-21-signal-is-serious-about-protecting-your-privacy-hn-restricti.md)
 
 ## Offene Fragen
 
@@ -476,8 +546,8 @@ Stand: 2026-11-20 · 34 Quellen · 69 Learnings
   - Bei Mirage ist nur das Lizenzfeld des Modells bekannt, nicht die Lizenz des separaten Runtime-Repos.
   - [Edge0-145B](../quellen/2026/11/2026-11-14-edge0-145b-frontier-ai-capabilities-on-your-own-computer.md), [Mirage (Cactus-Compute)](../quellen/2026/11/2026-11-14-mirage-cactus-compute-mirage.md)
 - **Unter welcher Lizenz steht Qwen3.8-27B selbst?**
-  - Die Unsloth-Seite nennt keine Lizenz, die DSpine-Karte nur die Apache-2.0-Lizenz des Draft-Modells.
-  - [Unsloth Qwen3.8-27B](../quellen/2026/11/2026-11-14-unsloth-qwen3-8-27b-quantizations-dynamic-v3-1-update.md), [DSpine for Qwen3.8-27B](../quellen/2026/11/2026-11-14-tencent-qwen3-8-27b-dspine-b16-dspine-for-qwen3-8-27b.md)
+  - Die Unsloth-Seite nennt keine Lizenz. Die DSpine-Karte und die Karte des Adapters Qwen3.8-27B-pi-adapted nennen nur die Apache-2.0-Lizenz ihres eigenen Artefakts.
+  - [Unsloth Qwen3.8-27B](../quellen/2026/11/2026-11-14-unsloth-qwen3-8-27b-quantizations-dynamic-v3-1-update.md), [DSpine for Qwen3.8-27B](../quellen/2026/11/2026-11-14-tencent-qwen3-8-27b-dspine-b16-dspine-for-qwen3-8-27b.md), [Qwen3.8-27B-pi-adapted Model Card](../quellen/2026/11/2026-11-21-harness-hub-qwen3-8-27b-pi-adapted-model-card.md)
 - **Unter welcher Lizenz steht GLM-5.3-Flash, und ist trn2.48xlarge in EU-Regionen verfügbar?**
   - Das Material zu TrnRT nennt Preise nur für us-east-2 und schweigt zu Modelllizenz und EU-Verfügbarkeit.
   - [TrnRT (Show HN)](../quellen/2026/11/2026-11-18-show-hn-trnrt-open-source-llm-inference-engine-for-aws-train.md)
@@ -487,9 +557,9 @@ Stand: 2026-11-20 · 34 Quellen · 69 Learnings
 - **Verhält sich Qwen4-Max je nach Zugangsweg und Systemprompt anders bei politisch heiklen Fragen?**
   - Der informelle Test nennt weder Zugangsweg noch Systemprompt.
   - [Qwen4-Max](../quellen/2026/11/2026-11-17-qwen4-max.md)
-- **Was regelt die Acceptable Use Policy von Inkling 2 Small, und in welchen Regionen hosten die Drittanbieter?**
-  - Die Karte verlinkt die Policy ohne Inhalt und nennt weder Regionen noch Preise.
-  - [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md)
+- **Was regeln die Acceptable Use Policies von Inkling 2 Small und Inkling 2 Mini, und in welchen Regionen hosten die Drittanbieter?**
+  - Beide Karten verlinken eine Policy ohne Inhalt. Ob sie über Apache 2.0 hinaus Pflichten begründet, ist offen. Die Karte von Inkling 2 Small nennt zudem weder Regionen noch Preise.
+  - [Inkling 2 Small Model Card](../quellen/2026/11/2026-11-14-inkling-2-small-model-card-hugging-face.md), [Inkling 2 Mini Model Card](../quellen/2026/11/2026-11-21-inkling-2-mini-model-card-thinkingmachines-inkling-2-mini.md)
 - **Läuft LongCat-2.5 mit vertretbarem Aufwand auf NVIDIA-GPUs, und auf welchen Chips beruhen die Effizienzangaben?**
   - Die Card dokumentiert nur NPU-Deployment und nennt den Chiphersteller nicht.
   - [LongCat-2.5 Model Card](../quellen/2026/11/2026-11-14-longcat-2-5-model-card-meituan-longcat-longcat-2-5.md)
@@ -505,6 +575,12 @@ Stand: 2026-11-20 · 34 Quellen · 69 Learnings
 - **An welchen Anbieter und welches Modell gehen bei Foolscap die nicht privaten Inhalte, und wo werden sie gespeichert?**
   - Die Zusage nennt nur, dass private Bücher an keine KI gehen. Anbieter, Modell und Speicherort fehlen.
   - [Foolscap (Show HN)](../quellen/2026/11/2026-11-20-show-hn-foolscap-a-writing-app-that-reads-your-book-and-neve.md)
+- **Speichern oder übertragen bildschirmlesende OS-Agenten wie Siri AI erfasste Inhalte tatsächlich?**
+  - Signal beschreibt das Risiko, belegt aber weder Speicherung noch Übertragung an Server. Auch ob die Einstellung „Excluded Apps“ den Zugriff vollständig verhindert, ist nicht geprüft.
+  - [Signal und OS-KI-Agenten (HN)](../quellen/2026/11/2026-11-21-signal-is-serious-about-protecting-your-privacy-hn-restricti.md)
+- **Lässt sich OpenComputer ohne Cloudflare betreiben, und wann kommen andere Plattformen?**
+  - Andere Plattformen sind nur angekündigt, der Inhalt von SELFHOSTING.md ist noch nicht ausgewertet.
+  - [OpenComputer (Show HN)](../quellen/2026/11/2026-11-21-show-hn-opencomputer-an-open-source-alternative-to-devin.md)
 - **Unter welcher Lizenz steht Mastra Factory, und welche Modelle und Sandbox-Anbieter setzt sie voraus?**
   - Der Beitrag nennt weder Lizenz noch Modelle, Sandbox-Anbieter oder EU-Hosting.
   - [Mastra Factory (Show HN)](../quellen/2026/11/2026-11-19-show-hn-mastra-factory-the-open-source-software-factory-we-u.md)
